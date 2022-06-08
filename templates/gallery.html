@@ -1,0 +1,80 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Breadcrumbs Section Start -->
+        <div class="rs-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img src="{% static 'images/breadcrumbs/inner8.jpg' %}" alt="Breadcrumbs Image">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title mb-17">Gallery</h1>
+                            <div class="categories">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active">Gallery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <!-- Breadcrumbs Section End -->
+
+        <!-- Match Gallery Start -->
+        <div class="rs-gallery style1 pt-100 md-pt-80">
+            <div class="container">
+                <div class="row pb-100 md-pb-80">
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/1.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/1.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/2.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/2.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/3.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/3.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/4.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/4.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 sm-mb-30">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/5.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/5.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-grid">
+                            <img src="images/gallery/6.jpg" alt="Gallery Image">
+                            <a class="image-popup view-btn" href="images/gallery/6.jpg">
+                                <i class="flaticon-add-circular-button"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+               {% endblock %}

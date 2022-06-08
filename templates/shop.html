@@ -1,0 +1,136 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Breadcrumbs Section Start -->
+        <div class="rs-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img src="{% static 'images/breadcrumbs/inner5.jpg' %}" alt="Breadcrumbs Image">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title mb-17">Shop</h1>
+                            <div class="categories">
+                                <ul>
+                                    <li><a href="index">Home</a></li>
+                                    <li class="active">Products</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <!-- Breadcrumbs Section End -->
+
+        <!-- Top Products Start -->
+        <div class="rs-products pt-100 md-pt-80">
+            <div class="container">
+                <div class="shop-guide mb-30">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-lg-6 col-md-6 col-sm-6 xs-mb-15">
+                            <div class="showing-item">Showing 1–9 of 12 results</div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-right xs-text-left">
+                            <div class="sorting">
+                                <form>
+                                    <select>
+                                        <option>Default sorting</option>
+                                        <option>Sort by popularity</option>
+                                        <option>Sort by average rating</option>
+                                        <option>Sort by latest</option>
+                                        <option>Sort by price: low to high</option>
+                                        <option>Sort by price: high to low</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-100 md-pb-80">
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/1.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">T-shirt Lol Red</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/2.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">T-shirt Pet Yellow</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/3.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">T-shirt Dark Green</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/4.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">T-shirt Creem Pink</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 sm-mb-30">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/5.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">T-shirt Drak Blue</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="products">
+                            <div class="product-img">
+                                <a href="#"><img src="images/products/6.png" alt=""></a>
+                            </div>
+                            <h4 class="product-title"><a href="#">Sports Back Cap</a></h4>
+                            <span class="product-price">
+                                <span class="symbol">£</span>65.00
+                            </span>
+                            <div class="cart-button">
+                                <a href="#"><i class="flaticon-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}
