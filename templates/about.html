@@ -1,0 +1,68 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Breadcrumbs Section Start -->
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/breadcrumbs/inner11.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title mb-17">History</h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">History</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Section End -->
+
+<!-- About Section Start -->
+<div class="rs-about pt-100 pb-100 md-pt-80 md-pb-73">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 md-mb-30">
+                <div class="about-img">
+                    <img src="{% static 'images/about/about-inner.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-7 pl-40 col-padding-md">
+                <div class="title-style mb-50 md-mb-30">
+                    <h2 class="margin-0 uppercase">Best Soccer Club in USA</h2>
+                    <span class="line-bg y-b left-line pt-10"></span>
+                </div>
+                <div class="about-wrap">
+                    <p class="title-color">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque. Nam eget dui. Etiam
+                        rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                        adipiscing sem neque sed ipsum.</p>
+                    <ul class="stylelisting inner-about">
+                        <li>Diam sed mattis facilisi, elementum pellentesque phasellus.</li>
+                        <li>Dis odio accumsan nullam aptent tempor porttitor enim eget.</li>
+                        <li>Proin libero ut felis iaculis turpis ad facilisis venenatis mollis!</li>
+                        <li>Natoque pharetra, sed nullam magnis dictumst hendrerit id proin quis.</li>
+                        <li>Orci primis semper elementum montes curabitur nunc ultrices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Section End -->
+
+<div class="rs-gallery style1 pt-92 md-pt-72">
+    <div class="container">
+
+        <!-- Subscribe Section Start -->
+        {% include 'partials/subscription.html' %}
+        <!-- Subscribe Section End -->
+    </div>
+</div>
+<!-- Match Gallery End -->
+{% endblock %}

@@ -9,51 +9,44 @@
 <!-- Slider Section Start -->
 <div id="rs-slider" class="rs-slider home-slider slider-navigation">
     <div class="slider-carousel owl-carousel">
+        {% for banner in banner %}
         <div class="single-slider">
             <div class="container">
                 <div class="text-part">
                     <h2 class="sub-title wow fadeInLeft" data-wow-delay="1s">Welcome to Khelo</h2>
-                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="primary-color">Sporting</span>
-                        Club</h1>
-                    <div class="desc wow fadeInLeft" data-wow-delay="1s">We denounce with righteous indignation and
-                        dislike men who are so beguiled <br> and demoralized by the charms of pleasure of the moment.
+                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="primary-color">{{banner.heading }}</span>
+                        </h1>
+                    <div class="desc wow fadeInLeft" data-wow-delay="1s">
+                        {{banner.desc}}
                     </div>
-                    <div class="slider-btn wow fadeInRight" data-wow-delay="1s">
-                        <a class="readon" href="#">Book a ticket</a>
-                    </div>
+                  
                 </div>
                 <div class="fly-layer">
                     <div class="layer-image">
-                        <div class="parallax-ball">
-                            <img class="animate3" src="{% static 'images/slider/ball1.png' %}" alt="img">
-                        </div>
+                       
                         <div class="animate4">
-                            <img src="{% static 'images/slider/h1-layer1.png' %}" alt="Slider Layer Image">
+                            <img src="{{banner.banner_image.url}}" alt="Slider Layer Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single-slider slide2">
+        <!-- <div class="single-slider slide2">
             <div class="container">
                 <div class="image-part common">
                     <div class="image-wrap">
-                        <img class="player animate5" src="{% static 'images/slider/h1-layer2.png' %}" alt="">
-                        <img class="ball animate6" src="{% static 'images/slider/ball2.png' %}" alt="">
+                        <img class="player animate5" src=" {% static 'images/slider/h1-layer2.png' %} " alt="">
+                        <img class="ball animate6" src="images/slider/ball2.png' %}" alt="">
                     </div>
                 </div>
                 <div class="text-part common">
                     <h2 class="sub-title">Best Soccer</h2>
-                    <h1 class="title"><span class="primary-color">Html</span> Template</h1>
-                    <div class="desc">We denounce with righteous indignation and dislike men who are so beguiled <br>
-                        and demoralized by the charms of pleasure of the moment.</div>
-                    <!-- <div class="slider-btn">
-                        <a class="readon" href="#">Buy Now !</a>
-                    </div> -->
-                </div>
+                    <h1 class="title"><span class="primary-color">{{banner.id}}</span> </h1>
+                    <div class="desc">{{banner.desc}}</div>
             </div>
         </div>
-    </div>
+    </div> -->
+    {% endfor %}
 </div>
 <!-- Slider Section End -->
 
@@ -63,19 +56,22 @@
         <div class="row">
             <div class="col-lg-4 pr-0 col-padding-md md-mb-30">
                 <div class="rs-upcoming-match bg1 text-center">
+                   
                     <div class="title-style">
                         <h4 class="margin-0 white-color">Upcoming Match</h4>
                         <span class="line-bg pt-18 y-w"></span>
                     </div>
+                    {% if upComingMatch %}
                     <div class="rs-countdown mt-45 md-mt-30">
                         <div id="countdown" class="countdown"></div>
                     </div>
+                    
                     <div class="teams mt-25 md-mt-50">
                         <div class="row rs-vertical-middle">
                             <div class="col-md-4 col-sm-4 col-4">
                                 <div class="team-logo">
-                                    <img class="size-80" src="{% static 'images/team-logo/1.png' %}" alt="Valencia">
-                                    <div class="name white-color">Valencia</div>
+                                    <img class="size-80" src="{{upComingMatch.team2_logo.url}}" alt="Valencia">
+                                    <div class="name white-color">{{upComingMatch.team1}}</div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-4">
@@ -83,26 +79,33 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-4">
                                 <div class="team-logo">
-                                    <img class="size-80" src="{% static 'images/team-logo/2.png' %}" alt="Real Sociedad">
-                                    <div class="name white-color">Real Sociedad</div>
+                                    <img class="size-80" src="{{upComingMatch.team1_logo.url}}" alt="Real Sociedad">
+                                    <div class="name white-color">{{upComingMatch.team2}}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="match-info mt-28">
                         <ul>
-                            <li>Mestalla Stadium</li>
-                            <li>August 14, 2019</li>
+                            <li>{{upComingMatch.stadium}}</li>
+                            <li>{{upComingMatch.match_date}}</li>
                         </ul>
-                        <div class="time pt-15 white-color">19:00:00</div>
+                        <div class="time pt-15 white-color">{{upComingMatch.time}}</div>
                     </div>
+                    {% else %}
+                    <h6 class="text-white my-5">No Match Is Scheduled</h6>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-lg-8 pl-30 col-padding-md">
                 <div class="rs-video big-space bg2 bdru-4 text-center">
                     <div class="video-contents">
-                        <a class="popup-videos play-btn" href="https://www.youtube.com/watch?v=t17O6JoU2Ew"><i
-                                class="fa fa-play"></i></a>
+                        <!-- <video id="video" class=""  controls>
+                            <source src="{{video.video.url}}" type="video/mp4">
+                        </video> -->
+                        <a class=" play-btn" href="#" onclick="lightbox_open();"><i
+                                class="fa fa-play"></i>
+                             </a>
                         <h3 class="title white-color mt-18 mb-0">Last Match Highlights</h3>
                     </div>
                 </div>
@@ -121,196 +124,27 @@
             data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
             data-md-device-dots="false">
+            {% for matches in completedMatches %}
             <div class="items">
                 <a href="#">
                     <div class="vanues">
-                        <div class="stadium">Camp Nou Stadium</div>
-                        <div class="date">April 04, 2019</div>
+                        <div class="stadium">{{matches.stadium}}</div>
+                        <div class="date">{{matches.match_date}}</div>
                     </div>
                     <div class="teams">
                         <div class="logo">
-                            <img class="size-80" src="{% static 'images/team-logo/8.png' %}" alt="Manchester City">
-                            <div class="name">Manchester City</div>
+                            <img class="size-80" src="{{matches.team1_logo.url}}" alt="Manchester City">
+                            <div class="name">{{matches.team1}}</div>
                         </div>
-                        <div class="score">1-2</div>
+                        <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
                         <div class="logo">
-                            <img class="size-80" src="{% static 'images/team-logo/9.png' %}" alt="Barcelona">
-                            <div class="name">Barcelona</div>
+                            <img class="size-80" src="{{matches.team2_logo.url}}" alt="Barcelona">
+                            <div class="name">{{matches.team2}}</div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Stamford Bridge</div>
-                        <div class="date">April 04, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="{% static 'images/team-logo/8.png' %}" alt="Manchester City">
-                            <div class="name">Manchester City</div>
-                        </div>
-                        <div class="score">1-0</div>
-                        <div class="logo">
-                            <img class="size-80" src="{% static 'images/team-logo/10.png' %}" alt="Chelsea">
-                            <div class="name">Chelsea</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Central Olympic Stadium</div>
-                        <div class="date">May 17, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/2.png" alt="Real Sociedad">
-                            <div class="name">Real Sociedad</div>
-                        </div>
-                        <div class="score">2-2</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/3.png" alt="Liverpool">
-                            <div class="name">Atletico Madrid</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Central Olympic Stadium</div>
-                        <div class="date">April 09, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/4.png" alt="Real Madrid">
-                            <div class="name">Real Madrid</div>
-                        </div>
-                        <div class="score">3-3</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/3.png" alt="Liverpool">
-                            <div class="name">Manchester City</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Wanda Metropolitano Stadium</div>
-                        <div class="date">April 01, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/5.png" alt="Manchester Unt">
-                            <div class="name">Manchester Unt</div>
-                        </div>
-                        <div class="score">2-3</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/6.png" alt="Atletico Madrid">
-                            <div class="name">Atletico Madrid</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Mestalla Stadium</div>
-                        <div class="date">April 05, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/5.png" alt="Manchester Unt">
-                            <div class="name">Manchester Unt</div>
-                        </div>
-                        <div class="score">3-3</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/1.png" alt="Valencia">
-                            <div class="name">Valencia</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Central Olympic Stadium</div>
-                        <div class="date">April 02, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/5.png" alt="Manchester Unt">
-                            <div class="name">Manchester Unt</div>
-                        </div>
-                        <div class="score">3-2</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/3.png" alt="Liverpool">
-                            <div class="name">Liverpool</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Emirates Stadium</div>
-                        <div class="date">April 02, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/5.png" alt="Manchester Unt">
-                            <div class="name">Manchester Unt</div>
-                        </div>
-                        <div class="score">2-1</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/7.png" alt="Arsenal">
-                            <div class="name">Arsenal</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Etihad Stadium</div>
-                        <div class="date">April 05, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/8.png" alt="Manchester City">
-                            <div class="name">Manchester City</div>
-                        </div>
-                        <div class="score">4-1</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/1.png" alt="Valencia">
-                            <div class="name">Valencia</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="items">
-                <a href="#">
-                    <div class="vanues">
-                        <div class="stadium">Wanda Metropolitano Stadium</div>
-                        <div class="date">April 04, 2019</div>
-                    </div>
-                    <div class="teams">
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/8.png" alt="Manchester City">
-                            <div class="name">Manchester City</div>
-                        </div>
-                        <div class="score">3-1</div>
-                        <div class="logo">
-                            <img class="size-80" src="images/team-logo/6.png" alt="Atletico Madrid">
-                            <div class="name">Atletico Madrid</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -329,79 +163,42 @@
                     <div class="col-lg-12 mb-30">
                         <div class="latest-news-grid">
                             <div class="news-img">
-                                <a href="#"><img src="{% static 'images/latest-news/1.jpg' %}" alt="News Image"></a>
+                                <a href="#"><img src="{{latestNews.image.crop.797x550}}" alt="News Image"></a>
                             </div>
                             <div class="news-info">
                                 <div class="news-date">
                                     <i class="fa fa-calendar-check-o"></i>
-                                    <span>May 25, 2019</span>
+                                    <span>{{latestNews.date}}</span>
                                 </div>
                                 <h3 class="news-title">
-                                    <a href="#">Latest Point Table For The Premier League</a>
+                                    <a href="#">{{latestNews.heading}}</a>
                                 </h3>
-                                <div class="news-desc mt-10">The snatch is a wide-grip, one-move lift. The clean and
-                                    jerk is a close-grip...
+                                <div class="news-desc mt-10">{{latestNews.news_description}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 md-mb-30">
-                        <div class="latest-news-grid small-grid">
-                            <div class="news-img">
-                                <a href="#"><img src="{% static 'images/latest-news/2.jpg' %}" alt="News Image"></a>
+                    {% for news in news %}
+                    <div class="col-lg-4  md-mb-30 mb-3 ">
+                        <div class="latest-news-grid small-grid ">
+                            <div class="news-img ">
+                                <a href="#"><img src="{{news.image.crop.246x303}}" style="width: 100%;"  alt="News Image"></a>
                             </div>
                             <div class="news-info">
                                 <div class="news-date">
                                     <i class="fa fa-calendar-check-o"></i>
-                                    <span>May 13, 2019</span>
+                                    <span>{{news.date}}</span>
                                 </div>
                                 <h3 class="news-title">
-                                    <a href="#">Everything In Soccer Starts Premier League</a>
+                                    <a href="#">{{news.heading}}</a>
                                 </h3>
-                                <div class="news-desc mt-10">The snatch is a wide-grip, one-move lift. The clean and
-                                    jerk is a close-grip...
+                                <div class="news-desc mt-10">{{news.news_description}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 md-mb-30">
-                        <div class="latest-news-grid small-grid">
-                            <div class="news-img">
-                                <a href="#"><img src="{% static 'images/latest-news/3.jpg' %}" alt="News Image"></a>
-                            </div>
-                            <div class="news-info">
-                                <div class="news-date">
-                                    <i class="fa fa-calendar-check-o"></i>
-                                    <span>May 14, 2019</span>
-                                </div>
-                                <h3 class="news-title">
-                                    <a href="#">City Tops Chelsea in Community Shield Here</a>
-                                </h3>
-                                <div class="news-desc mt-10">The snatch is a wide-grip, one-move lift. The clean and
-                                    jerk is a close-grip...
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="latest-news-grid small-grid">
-                            <div class="news-img">
-                                <a href="#"><img src="{% static 'images/latest-news/4.jpg' %}" alt="News Image"></a>
-                            </div>
-                            <div class="news-info">
-                                <div class="news-date">
-                                    <i class="fa fa-calendar-check-o"></i>
-                                    <span>May 14, 2019</span>
-                                </div>
-                                <h3 class="news-title">
-                                    <a href="#">Ground Round Meatball Starts Right Here</a>
-                                </h3>
-                                <div class="news-desc mt-10">The snatch is a wide-grip, one-move lift. The clean and
-                                    jerk is a close-grip...
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                  
                 </div>
             </div>
             
@@ -430,7 +227,7 @@
                             tempus.</p>
                     </div>
                     <div class="read-btn mt-39">
-                        <a class="readon" href="#">Read more</a>
+                        <a class="readon" href="/about">Read more</a>
                     </div>
                 </div>
             </div>
@@ -457,84 +254,22 @@
             data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
             data-md-device-dots="false">
+            {% for players in players %}
             <div class="player-item">
                 <div class="player-img">
-                    <img src="{% static 'images/team/1.jpg' %}" alt="">
+                    <img src="{{players.photo.crop.383x479}}" alt="">
                 </div>
                 <div class="detail-wrap">
                     <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">18</span>
-                            <a href="team-single.html">Semus Jemkro</a>
-                            <span class="player-position">Forward</span>
+                        <h3 class="player-title"><span class="squad-numbers">{{players.kit_number}}</span>
+                            <a href="player_profile/{{players.id}}">{{players.name}}</a>
+                            <span class="player-position">{{players.position}}</span>
                         </h3>
                     </div>
                 </div>
             </div>
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="images/team/2.jpg" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">03</span>
-                            <a href="team-single.html">Venose Ferdon</a>
-                            <span class="player-position">Midfielder</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="images/team/3.jpg" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">11</span>
-                            <a href="team-single.html">Debasti Nikor</a>
-                            <span class="player-position">Defender</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="images/team/4.jpg" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">10</span>
-                            <a href="team-single.html">Sebasti Nikola</a>
-                            <span class="player-position">striker</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="images/team/5.jpg" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">06</span>
-                            <a href="team-single.html">Ores Luperto</a>
-                            <span class="player-position">Forward</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="images/team/6.jpg" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">15</span>
-                            <a href="team-single.html">Jores Leperto</a>
-                            <span class="player-position">Defender</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+           
         </div>
     </div>
 </div>
@@ -545,30 +280,30 @@
     <div class="container">
         <div class="rs-count">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 md-mb-30">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-6 md-mb-30">
                     <div class="rs-counter-list text-center">
                         <h2 class="counter-number primary-color">350</h2>
                         <h3 class="counter-text uppercase white-color">Total matches</h3>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 md-mb-30">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 md-mb-30 mx-auto">
                     <div class="rs-counter-list text-center">
                         <h2 class="counter-number primary-color">25</h2>
                         <h3 class="counter-text uppercase white-color">Total trainers</h3>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mx-auto ">
                     <div class="rs-counter-list text-center">
-                        <h2 class="counter-number primary-color">95</h2>
+                        <h2 class="counter-number primary-color">{{players_count}}</h2>
                         <h3 class="counter-text uppercase white-color">Total players</h3>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 mx-auto">
                     <div class="rs-counter-list text-center">
-                        <h2 class="counter-number primary-color">26</h2>
+                        <h2 class="counter-number primary-color">{{award_count}}</h2>
                         <h3 class="counter-text uppercase white-color">Total awards</h3>
                     </div>
                 </div>
@@ -586,54 +321,17 @@
             <span class="line-bg y-b pt-10"></span>
         </div>
         <div class="row pl-15 pr-15">
+            {% for images in gallery %}
             <div class="col-lg-4 col-md-6 padding-0 sm-mb-30">
                 <div class="gallery-grid">
-                    <img src="{% static 'images/gallery/1.jpg' %}" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="{% static 'images/gallery/1.jpg' %}">
+                    <img src="{{images.images.crop.403x293}}" alt="Gallery Image">
+                    <a class="image-popup view-btn" href="{{images.images.url}}">
                         <i class="flaticon-add-circular-button"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 padding-0 sm-mb-30">
-                <div class="gallery-grid">
-                    <img src="images/gallery/2.jpg" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="images/gallery/2.jpg">
-                        <i class="flaticon-add-circular-button"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 padding-0 sm-mb-30">
-                <div class="gallery-grid">
-                    <img src="images/gallery/3.jpg" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="images/gallery/3.jpg">
-                        <i class="flaticon-add-circular-button"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 padding-0 sm-mb-30">
-                <div class="gallery-grid">
-                    <img src="images/gallery/4.jpg" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="images/gallery/4.jpg">
-                        <i class="flaticon-add-circular-button"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 padding-0 sm-mb-30">
-                <div class="gallery-grid">
-                    <img src="images/gallery/5.jpg" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="images/gallery/5.jpg">
-                        <i class="flaticon-add-circular-button"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 padding-0">
-                <div class="gallery-grid">
-                    <img src="images/gallery/6.jpg" alt="Gallery Image">
-                    <a class="image-popup view-btn" href="images/gallery/6.jpg">
-                        <i class="flaticon-add-circular-button"></i>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
+           
         </div>
     </div>
 </div>
@@ -652,58 +350,22 @@
             data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="false"
             data-md-device-dots="false">
+            {% for awards in awards %}
             <div class="item">
                 <div class="award-wrap">
                     <div class="champion-logo">
-                        <img src="{% static 'images/award/1.png' %}" alt="">
+                        <img src="{{awards.trophy_image.crop.199x260}}" alt="">
                     </div>
                     <div class="champion-details">
                         <div class="year-details">
-                            <h3>UEFA Champions League</h3>
+                            <h3>{{awards.tournament_name}}</h3>
                         </div>
-                        <div class="champion-no">05</div>
+                        <div class="champion-no">{{awards.trophy_count}}</div>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="award-wrap">
-                    <div class="champion-logo">
-                        <img src="images/award/2.png" alt="">
-                    </div>
-                    <div class="champion-details">
-                        <div class="year-details">
-                            <h3>UEFA Europa League</h3>
-                        </div>
-                        <div class="champion-no">07</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="award-wrap">
-                    <div class="champion-logo">
-                        <img src="images/award/3.png" alt="">
-                    </div>
-                    <div class="champion-details">
-                        <div class="year-details">
-                            <h3>UEFA Super Cup</h3>
-                        </div>
-                        <div class="champion-no">06</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="award-wrap">
-                    <div class="champion-logo">
-                        <img src="images/award/4.png" alt="">
-                    </div>
-                    <div class="champion-details">
-                        <div class="year-details">
-                            <h3>FIFA Club World Cup</h3>
-                        </div>
-                        <div class="champion-no">03</div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+            
         </div>
     </div>
 </div>
@@ -722,101 +384,24 @@
             data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
             data-md-device-dots="false">
+            {% for products in products %}
             <div class="products">
                 <div class="product-img">
-                    <a href="#"><img src="images/products/1.png" alt=""></a>
+                    <a href="#"><img src="{{products.product_image.crop.220x211}}" alt=""></a>
                 </div>
-                <h4 class="product-title"><a href="#">T-shirt Lol Red</a></h4>
+                <h4 class="product-title"><a href="#">{{products.category.category_name}}</a></h4>
                 <span class="product-price">
-                    <span class="symbol">£</span>65.00
+                    <span class="symbol">₹</span>{{products.price}}
                 </span>
-                <div class="cart-button">
+                <!-- <div class="cart-button">
                     <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
+                </div> -->
             </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="images/products/2.png" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Pet Yellow</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="images/products/3.png" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Dark Green</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="images/products/4.png" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Creem Pink</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="images/products/5.png" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Drak Blue</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="images/products/6.png" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">Sports Back Cap</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="#"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
+            {% endfor %}
+            
         </div>
 
-        <!-- Subscribe Section Start -->
-        <div class="rs-subscribe bg7">
-            <form class="subscribe-form">
-                <div class="row rs-vertical-middle">
-                    <div class="col-lg-6 col-md-12 md-mb-30">
-                        <div class="title-part">
-                            <h2 class="title white-color"> Subscribe Our Newsletter</h2>
-                            <p class="desc margin-0 white-color"> Subscribe to our newsletter for getting regular
-                                updates.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="subscribe-form-fields">
-                            <input type="submit" class="news-submit" value="Subscribe">
-                            <input type="email" class="news-email" name="EMAIL" placeholder="EMAIL ADDRESS" required="">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <!-- Subscribe Section End -->
+        {% include 'partials/subscription.html' %}
     </div>
 </div>
 <!-- Top Products End -->
@@ -848,4 +433,40 @@
     </div>
 </div>
 <!-- Search Modal End -->
+
+
+<div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  <video id="VisaChipCardVideo" width="600" controls>
+      <source src="{{video.video.url}}" type="video/mp4">
+    </video>
+</div>
+
+
+<script>
+    window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.pause();
+}
+</script>
+
 {% endblock %}

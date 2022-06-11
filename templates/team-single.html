@@ -1,0 +1,75 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Breadcrumbs Section Start -->
+        <div class="rs-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img src="{% static 'images/breadcrumbs/inner11.jpg' %}" alt="Breadcrumbs Image">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title margin-0">Player Profile</h1>
+                            <div class="categories">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active">Player Profile</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <!-- Breadcrumbs Section End -->
+
+        <!-- Single Club Section Start -->
+        <div class="rs-single-team sec-bg pt-100 md-pt-80 md-pb-80">
+            <div class="container">
+                <div class="row pb-100 md-pb-80">
+                    <div class="col-lg-4 md-mb-50">
+                        <div class="player-image">
+                            <img src="{{player.photo.url}}" alt="">
+                            <div class="name-box">
+                                <h3 class="player-name">{{player.name}}</h3>
+                                <span class="player-position">{{player.position}}</span>
+                                <div class="squad-no"> {{player.kit_number}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 pl-35 md-pl-15">
+                        <div class="player-detail mb-50">
+                            <h3 class="title">Player Profile</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Date of Birth</td>
+                                        <td>{{player.date_of_birth}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Place of Birth</td>
+                                        <td>{{player.place_of_birth}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Height</td>
+                                        <td>{{player.height}}Cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight</td>
+                                        <td>{{player.weight}}kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Citizenship</td>
+                                        <td>{{player.citizenship}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                      
+                    </div>
+                </div>
+                {% include 'partials/subscription.html' %}
+            </div>
+        </div>
+{% endblock %}
