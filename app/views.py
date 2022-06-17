@@ -2,21 +2,24 @@ from turtle import position
 from django.shortcuts import render
 
 from app.models import Award, Banner, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
-from datetime import date
+from datetime import date, datetime
  # Create your views here.
 
 
 def index(request):
-    banner=Banner.objects.all()
-    upComingMatch = Matche.objects.filter(match_date__gte=date.today(),status =False).order_by('match_date').first()
-    completedMatches= Matche.objects.filter(status= True)
+    banner1=Banner.objects.all().first()
+    banner2=Banner.objects.all().last()
+    print(datetime.now())
+    upComingMatch = Matche.objects.filter(match_date__gte=datetime.now(),completed =False).order_by('match_date').first()
+    print(upComingMatch)
+    completedMatches= Matche.objects.filter(completed = True)
     video =LastMatchHighlight.objects.all().last()
     players = TeamPlayer.objects.all()
-    gallery = Gallery.objects.all()
+    gallery = Gallery.objects.all().order_by('-date')[:6]
     awards = Award.objects.all()
     sponsors = SponsorLogo.objects.all()
-    latestNews= LatestNews.objects.filter(date__lte=date.today()).last()     
-    news = LatestNews.objects.filter(date__lte=date.today())
+    latestNews= LatestNews.objects.last()     
+    news = LatestNews.objects.all().order_by('-date')[1:7]
     products = Product.objects.all()
     players_count = TeamPlayer.objects.all().count()
     award_count = Award.objects.all().count()
@@ -33,18 +36,21 @@ def index(request):
         'video':video,
         'completedMatches':completedMatches,
         'upComingMatch':upComingMatch,
-        'banner':banner,
+        'banner':banner1,
+        'banner2':banner2,
         'is_index':True
     }
     return render(request, "index.html", context)
     
 
 
-def about(request):
+def history(request):
+    sponsors = SponsorLogo.objects.all()
     context={
+        'sponsors':sponsors,
         'is_history':True
     }
-    return render(request, 'about.html', context)
+    return render(request, 'history.html', context)
 
 
 
@@ -85,7 +91,7 @@ def contact(request):
 
 def news(request):
     sponsors = SponsorLogo.objects.all()
-    news = LatestNews.objects.all()
+    news = LatestNews.objects.all().order_by('-date')[:15]
     context = {
         'sponsors':sponsors,
         'news':news,
@@ -123,7 +129,7 @@ def team(request):
 
 def gallery(request):
     sponsors = SponsorLogo.objects.all()
-    gallery = Gallery.objects.all()
+    gallery = Gallery.objects.all().order_by('-date')
     context = {
         'sponsors':sponsors,
         'gallery':gallery,
@@ -159,3 +165,16 @@ def player_profile(request, player_id):
         'player':player
     }
     return render(request, 'team-single.html',context)
+
+
+def single_news(request, news_id):
+    news = LatestNews.objects.get(id=news_id)
+    sponsors = SponsorLogo.objects.all()
+    latest_newses = LatestNews.objects.all().order_by('-date')[:6]
+    context = {
+        'latest_newses':latest_newses,
+        'sponsors':sponsors,
+        'news':news
+    }
+
+    return render(request, 'single-news.html', context)

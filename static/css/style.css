@@ -760,7 +760,7 @@ blockquote i:before {
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   color: #ffffff;
   font-size: 25px;
   width: 45px;
@@ -781,7 +781,7 @@ blockquote i:before {
 }
 .slider-navigation .owl-carousel .owl-nav [class*="owl-"]:hover {
   border-color: #fbc02d;
-  background-color: #fbc02d;
+  /* background-color: #fbc02d; */
   color: #ffffff;
 }
 .slider-navigation .owl-carousel:hover [class*="owl-"] {
@@ -1479,6 +1479,9 @@ blockquote i:before {
   display: grid;
   align-items: center;
   overflow: hidden;
+}
+.rs-slider.home-slider .single-slider .text-part{
+  width: 50%;
 }
 .rs-slider.home-slider .single-slider .text-part .sub-title {
   font-size: 60px;
@@ -6268,4 +6271,8 @@ blockquote i:before {
   }
 }
 
-@me
+@media (max-width:767px) {
+  .rs-slider.home-slider .single-slider .text-part{
+    width: 100%;
+  }
+}

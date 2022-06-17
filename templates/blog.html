@@ -9,11 +9,11 @@
                 <div class="breadcrumbs-inner">
                     <div class="container">
                         <div class="breadcrumbs-text">
-                            <h1 class="breadcrumbs-title mb-17">Blog</h1>
+                            <h1 class="breadcrumbs-title mb-17">news</h1>
                             <div class="categories">
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li class="active">Blog</li>
+                                    <li class="active">News</li>
                                 </ul>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                             <div class="blog-item">
                                 <div class="blog-img">
                                     <div class="image-wrap">
-                                        <a href="#"><img src="{{news.image.crop.590x364}}" alt=""></a>
+                                        <a href="/news/{{news.id}}"><img src="{{news.image.crop.590x364}}" alt=""></a>
                                     </div>
                                     <div class="all-meta">
                                         <div class="meta meta-date">
@@ -48,10 +48,12 @@
                                 </div>
                                 <div class="blog-content">
                                     <h4 class="blog-title">
-                                        <a href="#">{{news.heading}}</a>
+                                        <a href="/news/{{news.id}}" class="text-capitalize">{{news.heading}}</a>
                                     </h4>
-                                    <div class="blog-desc">T{{news.news_description}}...</div>
-                                   
+                                    <div class="blog-desc">{{news.news_description|slice:":80"}}...</div>
+                                    <div class="read-button">
+                                        <a href="/news/{{news.id}}">Continue Reading</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

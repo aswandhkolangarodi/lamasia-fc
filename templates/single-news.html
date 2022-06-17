@@ -1,0 +1,65 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Breadcrumbs Section Start -->
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/breadcrumbs/inner8.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title mb-17">News</h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">News</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Section End -->
+<div class="rs-blog modify sec-bg pt-100 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="pb-100 md-pb-74">
+            <div class="row">
+                <div class="col-lg-9 order-last md-mb-50">
+                    <div class="single-blog-wrap">
+                        <div class="bs-img text-center">
+                            <img src="{{news.image.crop.900x555}}" alt="" style="width: 100%;">
+                        </div>
+                        <div class="single-content-full white-bg">
+                            <div class="bs-desc">
+                                <h3 class="blog-title">
+                                    {{news.heading}}
+                                </h3>
+                                <p>{{news.news_description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 pr-40 md-pr-15">
+                    <div class="cl-sidebar">
+                        <div class="cl-recentpost mb-30">
+                            <h4 class="cl-widget-title">Latest News</h4>
+                            <ul>
+                                {% for newses in latest_newses%}
+                                <li><a href="/news/{{newses.id}}" class="text-capitalize">{{newses.heading|slice:":20"}}...</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscribe Section Start -->
+        {% include 'partials/subscription.html' %}
+        <!-- Subscribe Section End -->
+    </div>
+</div>
+<!-- Blog Section End -->
+
+{% endblock %}
