@@ -29,126 +29,25 @@
     <div class="container">
         <div class="staf-wrap pb-100 md-pb-80">
             <ul class="staf-area">
+               {% for managements in boardManagement %}
                 <li class="staff-item">
                     <div class="item-wrap">
                         <div class="staff-img">
-                            <img src="images/board-staff/1.jpg" alt="">
+                            <img src="{{managements.photo.crop.210x265}}" style="width: 100%;" alt="">
                         </div>
                         <div class="staff-desc">
                             <div class="inner-desc">
-                                <h3 class="staff-title">Juak Corlos Carkeds</h3>
-                                <h4 class="staff-sub">Director</h4>
-                                <span class="sub1"><i>Position</i>: Assistant of Head Coach</span>
-                                <span class="sub2"><i>Born </i>: August 19, 1970</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
+                                <h3 class="staff-title">{{managements.name}}</h3>
+                                <h4 class="staff-sub">{{managements.position}}</h4>
+                                <span class="sub1 text-capitalize"><i>Citizenship </i>:{{managements.citizenship}}</span>
+                                <span class="sub3"><i>Born </i>:{{managements.date_of_birth}}</span>
+                                
+                            
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="staff-item">
-                    <div class="item-wrap">
-                        <div class="staff-img">
-                            <img src="images/board-staff/2.jpg" alt="">
-                        </div>
-                        <div class="staff-desc">
-                            <div class="inner-desc">
-                                <h3 class="staff-title">Dkenser Burgesk</h3>
-                                <h4 class="staff-sub">Manager</h4>
-                                <span class="sub1"><i>Position</i>: Manager of Head</span>
-                                <span class="sub2"><i>Born </i>: May 19, 1975</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="staff-item">
-                    <div class="item-wrap">
-                        <div class="staff-img">
-                            <img src="images/board-staff/3.jpg" alt="">
-                        </div>
-                        <div class="staff-desc">
-                            <div class="inner-desc">
-                                <h3 class="staff-title">Shkd Forsyke</h3>
-                                <h4 class="staff-sub">Head Coach</h4>
-                                <span class="sub1"><i>Position</i>: Assistant of Head Coach</span>
-                                <span class="sub2"><i>Born </i>: August 19, 1980</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="staff-item">
-                    <div class="item-wrap">
-                        <div class="staff-img">
-                            <img src="images/board-staff/4.jpg" alt="">
-                        </div>
-                        <div class="staff-desc">
-                            <div class="inner-desc">
-                                <h3 class="staff-title">Mikhs Zikan</h3>
-                                <h4 class="staff-sub">Data Analyst</h4>
-                                <span class="sub1"><i>Position</i>: Assistant of Data Analyst</span>
-                                <span class="sub2"><i>Born </i>: Jun 19, 1875</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="staff-item">
-                    <div class="item-wrap">
-                        <div class="staff-img">
-                            <img src="images/board-staff/5.jpg" alt="">
-                        </div>
-                        <div class="staff-desc">
-                            <div class="inner-desc">
-                                <h3 class="staff-title">Corlos Carkeds</h3>
-                                <h4 class="staff-sub">Team Analyst</h4>
-                                <span class="sub1"><i>Position</i>: First Team Analyst</span>
-                                <span class="sub2"><i>Born </i>: August 19, 1870</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="staff-item">
-                    <div class="item-wrap">
-                        <div class="staff-img">
-                            <img src="images/board-staff/6.jpg" alt="">
-                        </div>
-                        <div class="staff-desc">
-                            <div class="inner-desc">
-                                <h3 class="staff-title">Juak Corlos</h3>
-                                <h4 class="staff-sub">Club Doctor</h4>
-                                <span class="sub1"><i>Position</i>: Assistant of Head doctor</span>
-                                <span class="sub2"><i>Born </i>: August 19, 1950</span>
-                                <span class="sub3"><i>Joined Club</i>: Man City</span>
-                                <p class="margin-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+               {% endfor %}
             </ul>
         </div>
        

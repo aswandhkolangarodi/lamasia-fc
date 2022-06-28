@@ -8,11 +8,11 @@
         <div class="breadcrumbs-inner">
             <div class="container">
                 <div class="breadcrumbs-text inner-team">
-                    <h1 class="breadcrumbs-title mb-17">First Team</h1>
+                    <h1 class="breadcrumbs-title mb-17">Club</h1>
                     <div class="categories">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li class="active">First Team</li>
+                            <li class="active">Club</li>
                         </ul>
                     </div>
                 </div>
@@ -34,12 +34,12 @@
                 {% for goalKeepers in goalKeepers %}
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
                     <div class="team-item-inner">
-                        <a href="#">
+                        <a href="/player_profile/{{goalKeepers.id}}">
                             <img src="{{goalKeepers.photo.crop.307x388}}" alt="Team">
                         </a>
                         <div class="normal-text">
                             <span class="squad-numbers">{{goalKeepers.kit_number}}</span>
-                            <a href="player_profile/{{goalKeepers.id}}">{{goalKeepers.name}}</a>
+                            <a href="/player_profile/{{goalKeepers.id}}" class="text-capitalize">{{goalKeepers.name}}</a>
                             <span class="player-position">Goalkeeper</span>
                         </div>
                     </div>
@@ -57,13 +57,13 @@
                 {% for defenders in defenders %}
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
                     <div class="team-item-inner">
-                        <a href="#">
+                        <a href="/player_profile/{{defenders.id}}">
                             <img src="{{defenders.photo.crop.307x388}}" alt="Team">
                         </a>
                         <div class="normal-text">
                             <span class="squad-numbers">{{defenders.kit_number}}</span>
-                            <a href="player_profile/{{defenders.id}}">{{defenders.name}}</a>
-                            <span class="player-position">Defender</span>
+                            <a href="/player_profile/{{defenders.id}}" class="text-capitalize" >{{defenders.name}}</a>
+                            <span class="player-position text-uppercase">{{defenders.position}}</span>
                         </div>
                     </div>
                 </div>
@@ -80,13 +80,13 @@
                 {% for midfielder in midfielder%}
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
                     <div class="team-item-inner">
-                        <a href="#">
+                        <a href="/player_profile/{{midfielder.id}}">
                             <img src="{{midfielder.photo.crop.307x388}}" alt="Team">
                         </a>
                         <div class="normal-text">
                             <span class="squad-numbers">{{midfielder.kit_number}}</span>
-                            <a href="player_profile/{{midfielder.id}}">{{midfielder.name}}</a>
-                            <span class="player-position">Midfielder</span>
+                            <a href="/player_profile/{{midfielder.id}}" class="text-capitalize">{{midfielder.name}}</a>
+                            <span class="player-position">{{midfielder.position}}</span>
                         </div>
                     </div>
                 </div>
@@ -103,13 +103,13 @@
                 {% for forwarder in forwarder %}
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
                     <div class="team-item-inner">
-                        <a href="#">
+                        <a href="/player_profile/{{forwarder.id}}">
                             <img src="{{forwarder.photo.crop.307x388}}" alt="Team">
                         </a>
                         <div class="normal-text">
                             <span class="squad-numbers">{{forwarder.kit_number}}</span>
-                            <a href="player_profile/{{forwarder.id}}">{{forwarder.name}}</a>
-                            <span class="player-position">Forward</span>
+                            <a href="/player_profile/{{forwarder.id}}" class="text-capitalize">{{forwarder.name}}</a>
+                            <span class="player-position">{{forwarder.position}}</span>
                         </div>
                     </div>
                 </div>

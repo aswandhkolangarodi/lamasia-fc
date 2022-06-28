@@ -1,13 +1,13 @@
 {% load static %}
 <!--Preloader area start here-->
-{% comment %} <div id="loading" class="loading">
+ <div id="loading" class="loading">
     <div class="rs-loader">
         <div class="rs-shadow"></div>
         <div class="rs-gravity">
             <div class="rs-ball"></div>
         </div>
     </div>
-</div> {% endcomment %}
+</div> 
 <!--Preloader area End here-->
 
 <!--Full width header Start-->
@@ -20,7 +20,7 @@
                 <div class="row rs-vertical-middle">
                     <div class="col-lg-2">
                         <div class="logo-area">
-                            <a href="/"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+                            <a href="/"><img src="{% static 'images/logo-1.png' %}"  alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-10 mobile-menu-area">
@@ -38,14 +38,30 @@
                                         <!-- End Home -->
 
                                         <!-- club -->
-                                        <li class="{% if is_club %} current-menu-item {% endif %}"> <a
-                                                href="/team">club</a></li>
+                                        <li class="menu-item-has-children {% if is_club %} current-menu-item {% endif %}"> <a
+                                               >club</a>
+                                                <ul class="sub-menu">
+
+                                                    <li class="{% if is_board_management %} current-menu-item {% endif %}">
+                                                        <a href="/team/reserve-senior">Reserve Senior</a>
+                                                    </li>
+                                                    <li class="{% if is_sponsors %} current-menu-item {% endif %}"><a
+                                                            href="/team/under-18">Under 18</a></li>
+                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                            href="/team/under-15">Under 15</a></li>
+                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                            href="/team/under-13">Under 13</a></li>
+                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                            href="/team/under-12">Under 12</a></li>
+    
+                                                </ul>    
+                                        </li>
                                         <!-- end club -->
 
                                         <!-- About Start -->
                                         <li
                                             class="menu-item-has-children {% if is_board_management %} current-menu-item {% endif %} {% if is_sponsors %} current-menu-item {% endif %} {% if is_history %} current-menu-item {% endif %}">
-                                            <a href="#">About</a>
+                                            <a >About</a>
                                             <ul class="sub-menu">
 
                                                 <li class="{% if is_board_management %} current-menu-item {% endif %}">

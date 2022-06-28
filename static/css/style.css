@@ -115,7 +115,7 @@ h6 {
   font-weight: 600;
 }
 a {
-  color: #fbc02d;
+  color: #d2202e;
   transition: all 0.3s ease 0s;
   text-decoration: none !important;
   outline: none !important;
@@ -140,13 +140,13 @@ ul {
 .versase {
   font-size: 25px;
   font-weight: 500;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .z-index-0 {
   z-index: 0 !important;
 }
 .primary-color {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .title-color {
   color: #111111;
@@ -230,13 +230,13 @@ ul {
   background-color: #ffffff !important;
 }
 .primary-color {
-  color: #fbc02d !important;
+  color: #d2202e !important;
 }
 .black-color {
   color: #000;
 }
 .primary-bg {
-  background: #fbc02d !important;
+  background: #d2202e !important;
 }
 .secondary-bg {
   background: #214790 !important;
@@ -370,13 +370,13 @@ ul {
   border-radius: 0 10px 0 0;
 }
 .title-style .line-bg.y-w:after {
-  background: #fbc02d;
+  background: #d2202e;
 }
 .title-style .line-bg.y-w:before {
   background: #ffffff;
 }
 .title-style .line-bg.y-b:after {
-  background: #fbc02d;
+  background: #d2202e;
 }
 .title-style .line-bg.y-b:before {
   background: #214790;
@@ -395,7 +395,7 @@ ul {
 }
 .title-style.bracket .title:after,
 .title-style.bracket .title:before {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .title-style.bracket .title:before {
   content: "[";
@@ -421,7 +421,7 @@ ul {
   border-radius: 4px;
 }
 .readon {
-  background-image: linear-gradient(to right, #fbc02d 0%, #ea950b 51%, #fbc02d 100%);
+  background-image: linear-gradient(to right, #d2202e 0%, #ea950b 51%, #d2202e 100%);
   color: #111111;
   border: none;
   padding: 15px 35px 13px;
@@ -445,7 +445,7 @@ ul {
   font-size: 20px;
 }
 .readon.solid {
-  background: #fbc02d;
+  background: #d2202e;
   padding: 11px 24px;
   font-size: 15px;
 }
@@ -463,7 +463,7 @@ ul {
   color: #111111;
 }
 .readon.black {
-  color: #fbc02d;
+  color: #d2202e;
   background-image: linear-gradient(to right, #313a47 0%, #313a47 51%, #313a47 100%);
   border-color: #313a47;
 }
@@ -497,12 +497,12 @@ ul {
   align-items: center;
 }
 ::-moz-selection {
-  background: #fbc02d;
+  background: #d2202e;
   text-shadow: none;
   color: #ffffff;
 }
 ::selection {
-  background: #fbc02d;
+  background: #d2202e;
   text-shadow: none;
   color: #ffffff;
 }
@@ -561,10 +561,10 @@ ul.offcanvas-icon:hover li span:nth-child(2) {
   font-size: 18px;
 }
 .page-nav ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .page-nav ul li.active a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .page-nav ul li:last-child {
   padding: 0;
@@ -579,7 +579,7 @@ ul.offcanvas-icon:hover li span:nth-child(2) {
 }
 .stylelisting li:before {
   font-family: FontAwesome;
-  color: #fbc02d;
+  color: #d2202e;
   content: "\f058";
   margin-right: 15px;
   font-size: 20px;
@@ -719,8 +719,8 @@ blockquote i:before {
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  border: 1px solid #fbc02d;
-  color: #fbc02d;
+  border: 1px solid #d2202e;
+  color: #d2202e;
   font-size: 25px;
   width: 45px;
   height: 45px;
@@ -739,7 +739,7 @@ blockquote i:before {
   right: 0;
 }
 .nav-style .owl-carousel .owl-nav [class*="owl-"]:hover {
-  background-color: #fbc02d;
+  background-color: #d2202e;
   color: #ffffff;
 }
 .nav-style .owl-carousel:hover [class*="owl-"] {
@@ -780,8 +780,8 @@ blockquote i:before {
   right: 0px;
 }
 .slider-navigation .owl-carousel .owl-nav [class*="owl-"]:hover {
-  border-color: #fbc02d;
-  /* background-color: #fbc02d; */
+  border-color: #d2202e;
+  /* background-color: #d2202e; */
   color: #ffffff;
 }
 .slider-navigation .owl-carousel:hover [class*="owl-"] {
@@ -811,7 +811,7 @@ blockquote i:before {
   cursor: pointer;
 }
 .gridFilter button.active {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .gridFilter button + button {
   margin-left: 20px;
@@ -866,7 +866,7 @@ blockquote i:before {
   font-size: 14px;
 }
 .full-width-header .rs-header .topbar-area .topbar-sl-share .social-icon li a i:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .topbar-area .topbar-sl-share .social-icon li:last-child {
   margin-right: 0;
@@ -886,7 +886,7 @@ blockquote i:before {
   position: relative;
 }
 .full-width-header .rs-header .menu-area .logo-area img {
-  max-width: 182px;
+  max-width: 80px;
   margin: 0;
   max-height: 100%;
   transition: all 0.3s ease 0s !important;
@@ -1014,7 +1014,7 @@ blockquote i:before {
   right: -2px;
 }
 .full-width-header .rs-header .menu-area .main-menu .expand-btn .menu-cart-area a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .menu-area .main-menu .expand-btn span {
   display: inline-block;
@@ -1049,7 +1049,7 @@ blockquote i:before {
   transition: all 0.3s ease 0s;
 }
 .full-width-header .rs-header .menu-area .main-menu .rs-menu .nav-menu li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .menu-area .main-menu .rs-menu .nav-menu li:last-child {
   margin-right: 0!important;
@@ -1061,7 +1061,7 @@ blockquote i:before {
   margin: 0;
 }
 .full-width-header .rs-header .menu-area .main-menu .rs-menu .sub-menu {
-  background-color: #fbc02d;
+  background-color: #ffffff;
   margin: 0;
   padding: 15px 0 10px;
   -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
@@ -1092,7 +1092,7 @@ blockquote i:before {
   color: #214790 !important;
 }
 .full-width-header .rs-header .menu-area .main-menu .rs-menu .rs-mega-menu .mega-menu {
-  background-color: #fbc02d;
+  background-color: #d2202e;
   -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
@@ -1130,7 +1130,7 @@ blockquote i:before {
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li a:hover,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.active a,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item > a {
-  color: #fbc02d !important;
+  color: #d2202e !important;
 }
 .full-width-header .rs-header .menu-area.menu-sticky {
   box-shadow: none;
@@ -1200,10 +1200,10 @@ blockquote i:before {
   color: #111111;
 }
 .full-width-header .rs-header.home-style5 .menu-area.sticky .main-menu .rs-menu ul.nav-menu li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header.home-style5 .menu-area.sticky .main-menu .rs-menu ul.nav-menu li.current-menu-item > a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header.home-style6 .menu-area {
   background: #313a47;
@@ -1284,10 +1284,10 @@ blockquote i:before {
   color: #111111;
 }
 .full-width-header .rs-header.home-style6 .menu-area.sticky .row-table .main-menu .rs-menu ul.nav-menu li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header.home-style6 .menu-area.sticky .row-table .main-menu .rs-menu ul.nav-menu li.current-menu-item > a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .right_menu_togle {
   background: #fafafa;
@@ -1346,10 +1346,10 @@ blockquote i:before {
   display: block;
 }
 .full-width-header .rs-header .right_menu_togle .sidebarnav_menu li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .right_menu_togle .sidebarnav_menu li.active a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .right_menu_togle .sidebarnav_menu li:last-child {
   margin: 0;
@@ -1363,7 +1363,7 @@ blockquote i:before {
 .full-width-header .rs-header .right_menu_togle .canvas-contact .canvas-contact-title:before {
   content: "";
   position: absolute;
-  background: #fbc02d;
+  background: #d2202e;
   height: 2px;
   width: 50px;
   left: 0;
@@ -1384,7 +1384,7 @@ blockquote i:before {
   color: #555555;
 }
 .full-width-header .rs-header .right_menu_togle .canvas-contact .contact li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .full-width-header .rs-header .right_menu_togle .canvas-contact .contact li:last-child {
   padding: 0;
@@ -1439,7 +1439,7 @@ blockquote i:before {
   color: #555555;
 }
 .rs-canvas-menu .nav-menu li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-canvas-menu .nav-menu li .sub-menu {
   opacity: 0;
@@ -1455,7 +1455,7 @@ blockquote i:before {
   border-bottom: 1px solid #f6f5f5;
 }
 .rs-canvas-menu .nav-menu li .sub-menu li.active > a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-canvas-menu .nav-menu li:hover .sub-menu {
   opacity: 1;
@@ -1463,7 +1463,7 @@ blockquote i:before {
   transform: translateX(0px);
 }
 .rs-canvas-menu .nav-menu li.current-menu-item > a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 /* ------------------------------------
     04. Slider Section CSS
@@ -1599,7 +1599,7 @@ blockquote i:before {
   font-weight: 700;
   font-size: 40px !important;
   margin: 0 0 9px 0;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-banner.home2banner .banner-content .timecounter-inner .time_circles div h4 {
   color: #ffffff;
@@ -1686,7 +1686,7 @@ blockquote i:before {
   padding-bottom: 25px;
 }
 .rs-banner.home5banner .item .bl-meta .cat a {
-  background: #fbc02d;
+  background: #d2202e;
   color: #111;
   padding: 3px 10px 1px;
   font-weight: 500;
@@ -1762,7 +1762,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li.active {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li:last-child:after {
   content: unset;
@@ -1871,7 +1871,7 @@ blockquote i:before {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: #fbc02d;
+  background: #d2202e;
 }
 .rs-upcoming-match .match-info ul li:last-child {
   padding: 0;
@@ -1891,7 +1891,7 @@ blockquote i:before {
   text-transform: uppercase;
 }
 .rs-upcoming-match.sl-style .items .vanues .date {
-  color: #fbc02d;
+  color: #d2202e;
   font-size: 17px;
   font-weight: 500;
   line-height: 26px;
@@ -1903,7 +1903,7 @@ blockquote i:before {
   padding-top: 5px;
 }
 .rs-upcoming-match.sl-style .items .vanues .vs {
-  color: #fbc02d;
+  color: #d2202e;
   font-size: 25px;
   font-weight: 600;
   padding: 50px 0;
@@ -1954,7 +1954,7 @@ blockquote i:before {
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-upcoming-match.sl-style2 .items .teams .logo {
   display: flex;
@@ -1966,7 +1966,7 @@ blockquote i:before {
   margin: 0 auto;
 }
 .rs-upcoming-match.sl-style2 .items .teams .logo .name {
-  color: #fbc02d;
+  color: #d2202e;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -2013,7 +2013,7 @@ blockquote i:before {
   margin: 0 auto;
 }
 .rs-upcoming-match.sl-style3 .today-match .items .today-score .today-match-team .name {
-  color: #fbc02d;
+  color: #d2202e;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -2024,7 +2024,7 @@ blockquote i:before {
   position: relative;
   font-size: 24px;
   font-weight: 600;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-upcoming-match.sl-style3 .today-match .items .rs-vanues .vanue {
   color: #111111;
@@ -2037,7 +2037,7 @@ blockquote i:before {
   display: inline-flex;
 }
 .rs-countdown .countdown div {
-  color: #fbc02d;
+  color: #d2202e;
   display: inline-block;
   font-size: 35px;
   font-weight: 600;
@@ -2110,7 +2110,7 @@ blockquote i:before {
   margin: 0 auto;
 }
 .rs-countdown.home5-sports-grid .today-score .today-match-team .name {
-  color: #fbc02d;
+  color: #d2202e;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -2121,7 +2121,7 @@ blockquote i:before {
   position: relative;
   font-size: 25px;
   font-weight: 500;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-countdown.home5-sports-grid .timecounter-inner2 .CountDownTimer2 .time_circles {
   position: relative;
@@ -2151,7 +2151,7 @@ blockquote i:before {
   font-weight: 600;
   font-size: 35px !important;
   margin: 0 0 9px 0;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-countdown.home5-sports-grid .timecounter-inner2 .CountDownTimer2 .time_circles div h4 {
   color: #ffffff;
@@ -2169,7 +2169,7 @@ blockquote i:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #fbc02d;
+  background: #d2202e;
   height: 3px;
 }
 /* ------------------------------------
@@ -2200,7 +2200,7 @@ blockquote i:before {
   font-size: 40px;
 }
 .rs-about.style2 .image-wrap a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-about.style2 .image-wrap:after {
   position: absolute;
@@ -2263,22 +2263,22 @@ blockquote i:before {
   font-size: 20px;
 }
 .rs-tab .club-details_data ul.nav li a.active {
-  border: 1px solid #fbc02d;
-  background: #fbc02d;
+  border: 1px solid #d2202e;
+  background: #d2202e;
 }
 .rs-tab .club-details_data ul.nav li a.active:after {
   bottom: -11px;
   opacity: 1;
 }
 .rs-tab .club-details_data ul.nav li a:hover {
-  border: 1px solid #fbc02d;
-  background: #fbc02d;
+  border: 1px solid #d2202e;
+  background: #d2202e;
 }
 .rs-tab .club-details_data ul.nav li a:after {
   position: absolute;
   bottom: 2px;
   left: 50%;
-  background: #fbc02d;
+  background: #d2202e;
   display: block;
   width: 15px;
   height: 15px;
@@ -2312,7 +2312,7 @@ blockquote i:before {
   color: #111111;
 }
 .rs-tab .club-details_data .tab-content .tab-pane .squad-list .squad-list-item .name a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-tab .club-details_data .tab-content .tab-pane .squad-list .squad-list-item .position {
   font-size: 18px;
@@ -2325,7 +2325,7 @@ blockquote i:before {
   right: 20px;
   font-size: 50px;
   font-weight: 700;
-  color: #fbc02d;
+  color: #d2202e;
   opacity: .3;
   padding: 0;
 }
@@ -2357,7 +2357,7 @@ blockquote i:before {
   margin-top: 15px;
   text-align: center;
   padding: 5px 15px;
-  color: #fbc02d;
+  color: #d2202e;
   display: inline-block;
   border-radius: 3px;
   font-weight: 900;
@@ -2388,7 +2388,7 @@ blockquote i:before {
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background: #fbc02d;
+  background: #d2202e;
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
@@ -2434,22 +2434,22 @@ blockquote i:before {
   font-size: 20px;
 }
 .rs-tab .single-team-data ul.nav li a.active {
-  border: 1px solid #fbc02d;
-  background: #fbc02d;
+  border: 1px solid #d2202e;
+  background: #d2202e;
 }
 .rs-tab .single-team-data ul.nav li a.active:after {
   bottom: -11px;
   opacity: 1;
 }
 .rs-tab .single-team-data ul.nav li a:hover {
-  border: 1px solid #fbc02d;
-  background: #fbc02d;
+  border: 1px solid #d2202e;
+  background: #d2202e;
 }
 .rs-tab .single-team-data ul.nav li a:after {
   position: absolute;
   bottom: 2px;
   left: 50%;
-  background: #fbc02d;
+  background: #d2202e;
   display: block;
   width: 15px;
   height: 15px;
@@ -2493,7 +2493,7 @@ blockquote i:before {
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background: #fbc02d;
+  background: #d2202e;
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
@@ -2550,7 +2550,7 @@ blockquote i:before {
   height: 80px;
   line-height: 90px;
   border-radius: 50%;
-  background: #fbc02d;
+  background: #d2202e;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -2574,7 +2574,7 @@ blockquote i:before {
   display: block;
   width: 75px;
   height: 75px;
-  background: #fbc02d;
+  background: #d2202e;
   border-radius: 50%;
   animation: pulse-border 1200ms ease-out infinite;
   transition: all 0.3s ease 0s;
@@ -2669,7 +2669,7 @@ blockquote i:before {
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-result.style2 .items .teams .logo {
   display: flex;
@@ -2681,7 +2681,7 @@ blockquote i:before {
   margin: 0 auto;
 }
 .rs-result.style2 .items .teams .logo .result {
-  color: #fbc02d;
+  color: #d2202e;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -2708,7 +2708,7 @@ blockquote i:before {
   font-size: 45px;
 }
 .rs-result.style2 .video-frame a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 /* ------------------------------------
     14. Today Match Teams Section CSS
@@ -2746,7 +2746,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-match-result.style1.modify-style .items a .vanues .date {
-  color: #fbc02d;
+  color: #d2202e;
   font-size: 16px;
   line-height: 26px;
 }
@@ -2785,7 +2785,7 @@ blockquote i:before {
   margin-top: 10px;
 }
 .rs-match-result.style1.modify-style .items a .teams div.time-vs span.vs {
-  color: #fbc02d;
+  color: #d2202e;
   font-size: 16px;
 }
 .rs-match-result.style1.modify-style .items a:hover {
@@ -2826,7 +2826,7 @@ blockquote i:before {
   border-radius: 50%;
   text-align: center;
   border: none;
-  background: #fbc02d;
+  background: #d2202e;
   transition: all 0.3s ease 0s;
   font-size: 20px;
 }
@@ -2886,7 +2886,7 @@ blockquote i:before {
 .rs-match-result.style2 .items .result-item .today-final-score .info i {
   margin-right: 7px;
   font-size: 15px;
-  color: #fbc02d;
+  color: #fff;
 }
 .rs-match-result.style2 .items .result-item .today-final-score .info:last-child {
   margin-bottom: 0;
@@ -2908,10 +2908,10 @@ blockquote i:before {
   width: 30px;
   height: 30px;
   line-height: 27px;
-  color: #fbc02d;
+  color: #ffffff;
   border-radius: 50%;
   text-align: center;
-  border: 1.5px solid #fbc02d;
+  border: 1.5px solid #ffffff;
   background: transparent;
   transition: all 0.3s ease 0s;
   opacity: 0.7;
@@ -2951,7 +2951,7 @@ blockquote i:before {
   z-index: 1;
 }
 .rs-lates-news .latest-news-grid .news-info .news-date {
-  color: #fbc02d;
+  color: #ffffff;
   margin-bottom: 13px;
 }
 .rs-lates-news .latest-news-grid .news-info .news-title {
@@ -2963,7 +2963,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-lates-news .latest-news-grid .news-info .news-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news .latest-news-grid .news-info:after {
   position: absolute;
@@ -3027,7 +3027,7 @@ blockquote i:before {
   color: #ccc;
 }
 .rs-lates-news .latest-news-slider .news-slider-full .slider-item .contents .meta li span a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news .latest-news-slider .news-slider-full .slider-item .contents .meta li:last-child {
   margin: 0;
@@ -3042,7 +3042,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-lates-news .latest-news-slider .news-slider-full .slider-item .contents .news-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news .latest-news-slider .news-slider-full .slider-item .contents .desc {
   color: #ffffff;
@@ -3105,7 +3105,7 @@ blockquote i:before {
   cursor: pointer;
 }
 .rs-lates-news .latest-news-slider .news-slider-nav .nav-item.slick-current .contents .news-title {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news .latest-news-slider .news-slider-nav .nav-item:last-child {
   margin: 0;
@@ -3129,23 +3129,23 @@ blockquote i:before {
   width: 0;
   height: 0;
   border-top: 12px solid transparent;
-  border-left: 15px solid #fbc02d;
+  border-left: 15px solid #d2202e;
   border-bottom: 12px solid transparent;
-  border-left-color: #fbc02d;
+  border-left-color: #d2202e;
 }
 .rs-lates-news.home6-latest-news .match-details .link a {
-  color: #fbc02d;
-  border: 1px solid #fbc02d;
+  color: #d2202e;
+  border: 1px solid #d2202e;
   padding: 14px 0;
   width: 320px;
   font-size: 16px;
   margin-top: 10px;
   display: inline-block;
-  border-color: #fbc02d;
+  border-color: #d2202e;
   text-transform: uppercase;
 }
 .rs-lates-news.home6-latest-news .match-details .link a:hover {
-  background: #fbc02d;
+  background: #d2202e;
   color: #111;
 }
 .rs-lates-news.home6-latest-news .match-details .match-list-sidebar {
@@ -3197,7 +3197,7 @@ blockquote i:before {
   display: block;
 }
 .rs-lates-news.home6-latest-news .match-details .match-list-sidebar .match-list .sidebar-fixture .list-2 table tbody tr td .match-time {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news.home6-latest-news .match-details .match-list-sidebar .match-list .sidebar-fixture .list-3 {
   flex: 0 0 25%;
@@ -3261,7 +3261,7 @@ blockquote i:before {
   font-weight: 600;
   padding: 15px 0;
   letter-spacing: 6px;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-lates-news.home6-latest-news .match-details .sidebar-result .sidebar-part .list-2-team {
   flex: 0 0 20%;
@@ -3327,7 +3327,7 @@ blockquote i:before {
   margin-bottom: 0;
 }
 .rs-feature.home-style5 .overlay-feature a .title:hover {
-  color: #fbc02d !important;
+  color: #d2202e !important;
 }
 .rs-feature.home-style5 .item-thumb {
   display: flex;
@@ -3353,7 +3353,7 @@ blockquote i:before {
   pointer-events: none;
 }
 .rs-feature.home-style5 .item-thumb .overlay-feature a:hover {
-  color: #fbc02d !important;
+  color: #d2202e !important;
 }
 .rs-blog .blog-item .blog-img {
   position: relative;
@@ -3379,7 +3379,7 @@ blockquote i:before {
   color: #909090;
 }
 .rs-blog .blog-item .blog-img .all-meta .meta a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .blog-item .blog-img .all-meta .meta i:before {
   font-weight: 600;
@@ -3388,7 +3388,7 @@ blockquote i:before {
   margin: 0;
 }
 .rs-blog .blog-item .blog-img .all-meta .meta-date {
-  background: #fbc02d;
+  background: #d2202e;
   border-radius: 3px;
   color: #111111;
   width: 75px;
@@ -3433,7 +3433,7 @@ blockquote i:before {
   color: #111111;
 }
 .rs-blog .blog-item .blog-content .blog-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .blog-item .blog-content .read-button {
   margin-top: 26px;
@@ -3454,7 +3454,7 @@ blockquote i:before {
   font-family: Flaticon;
 }
 .rs-blog .blog-item .blog-content .read-button a:hover {
-  color: #fbc02d;
+  color: #d2202e;
   padding-right: 26px;
 }
 .rs-blog .blog-item:hover .blog-img .image-wrap a img {
@@ -3471,7 +3471,7 @@ blockquote i:before {
   content: '';
   height: 2px;
   width: 50px;
-  background: #fbc02d;
+  background: #d2202e;
   left: 0;
   top: 40px;
 }
@@ -3510,7 +3510,7 @@ blockquote i:before {
   font-weight: 600;
 }
 .rs-blog .cl-sidebar .cl-search button:hover {
-  background: #fbc02d;
+  background: #d2202e;
   color: #ffffff;
 }
 .rs-blog .cl-sidebar .cl-recentpost ul li {
@@ -3522,7 +3522,7 @@ blockquote i:before {
   font-weight: 500;
 }
 .rs-blog .cl-sidebar .cl-recentpost ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .cl-sidebar .cl-recentpost ul li:last-child {
   padding-bottom: 0;
@@ -3540,7 +3540,7 @@ blockquote i:before {
   color: #101010;
 }
 .rs-blog .cl-sidebar .cl-recent-comments ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .cl-sidebar .cl-recent-comments ul li:last-child {
   padding-bottom: 0;
@@ -3558,7 +3558,7 @@ blockquote i:before {
   font-weight: 500;
 }
 .rs-blog .cl-sidebar .cl-archives ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .cl-sidebar .cl-archives ul li:before {
   content: "\f105";
@@ -3575,7 +3575,7 @@ blockquote i:before {
   transition: all 0.3s ease 0s;
 }
 .rs-blog .cl-sidebar .cl-categories ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .cl-sidebar .cl-categories ul li:before {
   content: "\f105";
@@ -3591,7 +3591,7 @@ blockquote i:before {
   color: #505050;
 }
 .rs-blog .cl-sidebar .cl-meta ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .cl-sidebar .cl-meta ul li:last-child {
   padding-bottom: 0;
@@ -3615,9 +3615,9 @@ blockquote i:before {
   border-radius: 5px;
 }
 .rs-blog .cl-sidebar .cl-tags a:hover {
-  background-color: #fbc02d;
+  background-color: #d2202e;
   color: #fff;
-  border: 1px solid #fbc02d;
+  border: 1px solid #d2202e;
 }
 .rs-blog.style2 .blog-item .blog-img {
   position: relative;
@@ -3640,7 +3640,7 @@ blockquote i:before {
   color: #909090;
 }
 .rs-blog.style2 .blog-item .blog-img .all-meta .meta a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog.style2 .blog-item .blog-img .all-meta .meta i {
   margin-right: 7px;
@@ -3742,7 +3742,7 @@ blockquote i:before {
   color: #909090;
 }
 .rs-blog .single-blog-wrap .single-content-full .single-page-info .meta a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog .single-blog-wrap .single-content-full .single-page-info .meta i {
   margin-right: 7px;
@@ -3784,7 +3784,7 @@ blockquote i:before {
   transition: all 0.3s ease 0s;
 }
 .rs-blog .single-blog-wrap .ps-navigation ul li a:hover span {
-  color: #fbc02d !important;
+  color: #d2202e !important;
 }
 .rs-blog .single-blog-wrap .ps-navigation ul li.next {
   float: right;
@@ -3807,7 +3807,7 @@ blockquote i:before {
 .rs-blog .single-blog-wrap .comments-area .comment-title:before {
   content: "";
   position: absolute;
-  background: #fbc02d;
+  background: #d2202e;
   height: 2px;
   width: 50px;
   left: 0;
@@ -3870,7 +3870,7 @@ blockquote i:before {
   border: 0;
   width: 10px;
   height: 100%;
-  background: #fbc02d;
+  background: #d2202e;
   z-index: 9;
   margin-left: 0;
   left: 0;
@@ -3909,7 +3909,7 @@ blockquote i:before {
   padding: 6px 10px;
   border-radius: 2px;
   margin-right: 15px;
-  background: #fbc02d;
+  background: #d2202e;
   color: #111;
 }
 .rs-blog.homestyle5-blog .blog-item .blog-img .blog-dates .post-dates {
@@ -3937,7 +3937,7 @@ blockquote i:before {
   color: #111;
 }
 .rs-blog.homestyle5-blog .blog-item .blog-bottom .blog-meta .blog-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-blog.homestyle5-blog .blog-item .blog-bottom .blog-meta .blog-desc {
   margin: 0;
@@ -3953,6 +3953,7 @@ blockquote i:before {
   box-shadow: 0px 5px 40px 0px rgba(230, 230, 230, 0.5);
   padding: 50px;
   border-radius: 5px;
+  height: 286px;
 }
 .rs-contact .single-icon .icon-part {
   position: relative;
@@ -3961,7 +3962,7 @@ blockquote i:before {
   line-height: 70px;
   border-radius: 100%;
   text-align: center;
-  background: #fbc02d;
+  background: #d2202e;
   margin: 0 auto 20px;
   z-index: 1;
 }
@@ -3982,7 +3983,7 @@ blockquote i:before {
   display: block;
   width: 70px;
   height: 70px;
-  background: #fbc02d;
+  background: #d2202e;
   border-radius: 50%;
   animation: pulse-border 1200ms ease-out infinite;
   visibility: hidden;
@@ -4001,7 +4002,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-contact .single-icon .icon-text a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-contact .single-icon:hover .icon-part:before {
   opacity: 1;
@@ -4053,7 +4054,7 @@ blockquote i:before {
 }
 .rs-pointtable table tr th {
   padding: 12px 15px;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-pointtable table tr td {
   padding: 7px 15px;
@@ -4108,10 +4109,10 @@ blockquote i:before {
   color: #111111;
   text-transform: capitalize;
   font-weight: 500;
-  border-bottom: 1px solid #fbc02d;
+  border-bottom: 1px solid #d2202e;
 }
 .rs-pointtable.style3 .bracket-btn a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-pointtable.style3 .bracket-btn i {
   margin-left: 5px;
@@ -4148,7 +4149,7 @@ blockquote i:before {
   color: #111111;
 }
 .rs-pointtable.home-style5-pointtable table .bg-color {
-  background-color: #fbc02d;
+  background-color: #d2202e;
 }
 .rs-pointtable.home-style5-pointtable table .bg-color th {
   color: #111111;
@@ -4174,7 +4175,7 @@ blockquote i:before {
   border-bottom: unset;
 }
 .rs-pointtable.home6-pointable table tbody .bg-colors th {
-  color: #fbc02d;
+  color: #d2202e;
   padding: 10px;
 }
 .rs-pointtable.home6-pointable table tbody .row-border {
@@ -4283,12 +4284,12 @@ blockquote i:before {
   margin-left: 10px;
   font-weight: 600;
   position: relative;
-  background: #fbc02d;
+  background: #d2202e;
 }
 .rs-portfolio.home5-portfolio .portfolio-filter .default-title:before {
   content: "";
   position: absolute;
-  background: #fbc02d;
+  background: #d2202e;
   left: 0;
   right: 0;
   bottom: -12px;
@@ -4299,7 +4300,7 @@ blockquote i:before {
 .rs-portfolio.home5-portfolio .portfolio-filter .default-title:after {
   content: "";
   position: absolute;
-  background: #fbc02d;
+  background: #d2202e;
   left: 0;
   right: 0;
   top: -12px;
@@ -4326,7 +4327,7 @@ blockquote i:before {
 .rs-portfolio.home5-portfolio .gallery-item .inner-content .c-text .category {
   display: inline-block;
   padding: 3px 15px;
-  background: #fbc02d;
+  background: #d2202e;
   color: #111;
   border-radius: 3px;
   margin-right: 12px;
@@ -4354,7 +4355,7 @@ blockquote i:before {
   color: #111111;
 }
 .rs-portfolio.home5-portfolio .gallery-item .inner-content .c-text .title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-portfolio.home5-portfolio .gallery-item .inner-content .c-text .desc-txt {
   margin: 0;
@@ -4397,7 +4398,7 @@ blockquote i:before {
 .rs-team.style1 .player-item .person-details .player-title .squad-numbers {
   font-size: 55px;
   line-height: 60px;
-  color: #fbc02d;
+  color: #d2202e;
   float: left;
   padding-right: 16px;
 }
@@ -4410,7 +4411,7 @@ blockquote i:before {
   color: #111111;
 }
 .rs-team.style1 .player-item .person-details .player-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style1 .player-item .person-details .player-title .player-position {
   display: block;
@@ -4440,7 +4441,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style1.modify-style .player-item .person-details .player-title .squad-numbers {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style1.modify-style .player-item .person-details .player-title a {
   color: #ffffff;
@@ -4481,10 +4482,10 @@ blockquote i:before {
   width: 30px;
   height: 30px;
   line-height: 27px;
-  color: #fbc02d;
+  color: #d2202e;
   border-radius: 50%;
   text-align: center;
-  border: 1.5px solid #fbc02d;
+  border: 1.5px solid #d2202e;
   background: transparent;
   transition: all 0.3s ease 0s;
   opacity: 0.5;
@@ -4527,7 +4528,7 @@ blockquote i:before {
 .rs-team.style2 .player-item .person-details .player-title .squad-numbers {
   font-size: 55px;
   line-height: 55px;
-  color: #fbc02d;
+  color: #d2202e;
   float: left;
   padding-right: 16px;
 }
@@ -4538,7 +4539,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style2 .player-item .person-details .player-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style2 .player-item .person-details .player-title .player-position {
   display: block;
@@ -4566,7 +4567,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style2.modify-style .player-item .person-details .player-title .squad-numbers {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style2.modify-style .player-item .person-details .player-title a {
   color: #ffffff;
@@ -4607,10 +4608,10 @@ blockquote i:before {
   width: 30px;
   height: 30px;
   line-height: 27px;
-  color: #fbc02d;
+  color: #d2202e;
   border-radius: 50%;
   text-align: center;
-  border: 1.5px solid #fbc02d;
+  border: 1.5px solid #d2202e;
   background: transparent;
   transition: all 0.3s ease 0s;
   opacity: 0.5;
@@ -4640,7 +4641,7 @@ blockquote i:before {
   right: -50px;
   opacity: 0;
   padding: 10px 0;
-  background: #fbc02d;
+  background: #d2202e;
   width: 50px;
   z-index: 2;
   text-align: center;
@@ -4677,7 +4678,7 @@ blockquote i:before {
   color: #232023;
 }
 .rs-team.style3 .single-team .team-item-text .team-details .team-name a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style3 .single-team:hover .team-img a img {
   opacity: 0.8;
@@ -4715,7 +4716,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style4 .team-grid .text-bottom h4.person-name a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style4 .team-grid .text-bottom span.designation {
   padding: 0 0 15px;
@@ -4731,7 +4732,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style4 .team-grid .social-links ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style4 .team-grid .social-links ul li:last-child {
   margin: 0;
@@ -4752,7 +4753,7 @@ blockquote i:before {
 }
 .rs-team.style5 .team-grid .text-bottom {
   text-align: center;
-  border-bottom: 3px solid #fbc02d;
+  border-bottom: 3px solid #d2202e;
   border-radius: 0 0 5px 5px;
   background: #ffffff;
   padding: 15px 0 10px 0;
@@ -4770,7 +4771,7 @@ blockquote i:before {
   margin-bottom: 10px;
 }
 .rs-team.style5 .team-grid .text-bottom h4.person-name a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style5 .team-grid .text-bottom h4.person-name a:hover {
   color: #111111;
@@ -4802,7 +4803,7 @@ blockquote i:before {
   transform: scale(1.1);
 }
 .rs-team.style5 .team-grid:hover .text-bottom {
-  background: #fbc02d;
+  background: #d2202e;
 }
 .rs-team.style5 .team-grid:hover .text-bottom .person-name a {
   color: #111111;
@@ -4831,12 +4832,12 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-team.style6 .player-item .detail-wrap .player-title .title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style6 .player-item .detail-wrap .player-title .player-position {
   font-size: 15px;
   display: block;
-  color: #fbc02d;
+  color: #d2202e;
   text-transform: capitalize;
 }
 .rs-team.style6 .player-item .detail-wrap .squad-numbers {
@@ -4846,7 +4847,7 @@ blockquote i:before {
   top: -12px;
   font-size: 55px;
   font-weight: 500;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.swiper-slider .swiper-container {
   position: relative;
@@ -4860,7 +4861,7 @@ blockquote i:before {
   overflow: hidden;
 }
 .rs-team.swiper-slider .swiper-container .swiper-pagination span {
-  background: #fbc02d;
+  background: #d2202e;
   border-radius: 3px;
 }
 .rs-team.swiper-slider .swiper-container .slider-nav .nav {
@@ -4881,8 +4882,8 @@ blockquote i:before {
   line-height: 40px;
   font-size: 20px;
   border-radius: 100%;
-  border: 1px solid #fbc02d;
-  background: #fbc02d;
+  border: 1px solid #d2202e;
+  background: #d2202e;
   display: inline-block;
   text-align: center;
   transition: all 0.3s ease 0s;
@@ -4920,7 +4921,7 @@ blockquote i:before {
   display: block;
   width: 75px;
   height: 3px;
-  background: #fbc02d;
+  background: #d2202e;
   z-index: 9;
   margin-left: 0;
   left: 0;
@@ -4952,7 +4953,7 @@ blockquote i:before {
   font-size: 55px;
   line-height: 60px;
   font-weight: 500;
-  color: #fbc02d;
+  color: #d2202e;
   float: left;
   padding-right: 15px;
   z-index: 1;
@@ -4969,7 +4970,7 @@ blockquote i:before {
   color: #fff;
 }
 .rs-team.style7 .team-item-inner .normal-text a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-team.style7 .team-item-inner .normal-text .player-position {
   display: block;
@@ -5006,7 +5007,7 @@ blockquote i:before {
   background: #ffffff;
   padding: 31px 31px 35px 120px;
   position: relative;
-  border-top: 5px solid #fbc02d;
+  border-top: 5px solid #d2202e;
 }
 .rs-single-team .player-image .name-box .player-name {
   font-size: 22px;
@@ -5031,7 +5032,7 @@ blockquote i:before {
   margin-right: 8px;
 }
 .rs-single-team .player-image .name-box .social-icon li a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-single-team .player-image .name-box .social-icon li:last-child {
   margin-right: 0;
@@ -5042,11 +5043,11 @@ blockquote i:before {
   left: 19px;
   font-size: 80px;
   font-weight: 700;
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-single-team .player-detail {
   background: #ffffff;
-  border-top: 5px solid #fbc02d;
+  border-top: 5px solid #d2202e;
   padding: 32px;
 }
 .rs-single-team .player-detail .title {
@@ -5071,7 +5072,7 @@ blockquote i:before {
   position: relative;
 }
 .rs-breaking-news .sl-wrap .breaking-title {
-  background-image: linear-gradient(to right, #fbc02d 0%, #ea950b 51%, #fbc02d 100%);
+  background-image: linear-gradient(to right, #d2202e 0%, #ea950b 51%, #d2202e 100%);
   background-size: 200% auto;
   display: inline-block;
   color: #111111;
@@ -5087,7 +5088,7 @@ blockquote i:before {
   color: #555555;
 }
 .rs-breaking-news .sl-wrap .item a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-breaking-news .sl-wrap .owl-stage-outer {
   width: 70%;
@@ -5106,7 +5107,7 @@ blockquote i:before {
 }
 .rs-breaking-news .sl-wrap .owl-controls .owl-nav .owl-prev i,
 .rs-breaking-news .sl-wrap .owl-controls .owl-nav .owl-next i {
-  color: #fbc02d;
+  color: #d2202e;
   transition: all 0.3s ease 0s;
   font-size: 15px;
 }
@@ -5226,7 +5227,7 @@ blockquote i:before {
   margin-top: 15px;
   text-align: center;
   padding: 5px 15px;
-  color: #fbc02d;
+  color: #d2202e;
   display: inline-block;
   border-radius: 3px;
   font-weight: 900;
@@ -5282,11 +5283,11 @@ blockquote i:before {
   color: #111111;
 }
 .rs-products .products .product-title a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-products .products .product-price {
   font-size: 18px;
-  color: #fbc02d;
+  color: #d2202e;
   font-weight: 500;
 }
 .rs-products .products .cart-button {
@@ -5365,7 +5366,7 @@ blockquote i:before {
   font-weight: 700;
 }
 .rs-cart .cart-wrap table.cart-table .product-name a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-cart .cart-wrap table.cart-table .product-price {
   font-weight: 700;
@@ -5488,7 +5489,7 @@ blockquote i:before {
 }
 .rs-checkout .coupon-toggle .accordion .card {
   border: unset;
-  border-top: 3px solid #fbc02d;
+  border-top: 3px solid #d2202e;
   border-radius: 0;
 }
 .rs-checkout .coupon-toggle .accordion .card .card-header {
@@ -5511,7 +5512,7 @@ blockquote i:before {
   cursor: pointer;
 }
 .rs-checkout .coupon-toggle .accordion .card .card-header .card-title button:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-checkout .coupon-toggle .accordion .card .card-body {
   border: 1px solid #d3ced2;
@@ -5768,7 +5769,7 @@ blockquote i:before {
   transition: all 0.3s ease 0s;
 }
 .rs-our-poll form label:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-our-poll form label input {
   margin-right: 15px;
@@ -5783,7 +5784,7 @@ blockquote i:before {
   border: none;
   padding: 0 16px;
   height: 34px;
-  background: #fbc02d;
+  background: #d2202e;
   color: #111111;
   outline: none;
   cursor: pointer;
@@ -5814,7 +5815,7 @@ blockquote i:before {
   text-transform: uppercase;
 }
 .rs-match-fixture .match-list table tr td.big-font {
-  color: #fbc02d;
+  color: #d2202e;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -5825,7 +5826,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-match-fixture.style2 .match-list table tr td:nth-child(2n) {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-match-fixture.style2 .match-list table tr:nth-child(2n) td {
   background: rgba(0, 0, 0, 0.1);
@@ -5869,7 +5870,7 @@ blockquote i:before {
   position: absolute;
   right: 0;
   padding: 0 30px;
-  background-image: linear-gradient(to right, #fbc02d 0%, #ea950b 51%, #fbc02d 100%);
+  background-image: linear-gradient(to right, #d2202e 0%, #ea950b 51%, #d2202e 100%);
   background-size: 200% auto;
   color: #111111;
   border-radius: 0 5px 5px 0;
@@ -5877,7 +5878,7 @@ blockquote i:before {
   cursor: pointer;
 }
 .rs-subscribe .subscribe-form .subscribe-form-fields input.news-submit.solid {
-  background: #fbc02d;
+  background: #d2202e;
 }
 .rs-subscribe .subscribe-form .subscribe-form-fields input.news-submit.solid:hover {
   background: #f0ad05;
@@ -5953,7 +5954,7 @@ blockquote i:before {
   width: 120px;
   height: 120px;
   margin: 0 0 15px;
-  border-top: 4px solid #fbc02d;
+  border-top: 4px solid #d2202e;
   border-bottom: 4px solid #ddd;
   line-height: 120px;
   text-align: center;
@@ -6008,7 +6009,7 @@ blockquote i:before {
   font-size: 14px;
 }
 .rs-footer .footer-bootom .copyright p a {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-footer .footer-bootom .copyright p a:hover {
   color: #ffffff;
@@ -6030,7 +6031,7 @@ blockquote i:before {
   background-color: #ffffff;
 }
 .rs-footer .footer-bootom .footer-share ul li a:hover {
-  background: #fbc02d;
+  background: #d2202e;
 }
 .rs-footer .footer-bootom .footer-share ul li:last-child {
   margin: 0;
@@ -6052,7 +6053,7 @@ blockquote i:before {
   background: #ffffff;
 }
 .rs-footer.dark-mode .footer-bootom .footer-share ul li a:hover {
-  color: #fbc02d;
+  color: #d2202e;
 }
 .rs-footer.home5-footer {
   background: unset;
@@ -6134,7 +6135,7 @@ blockquote i:before {
   position: fixed;
   right: 40px;
   z-index: 999;
-  background: #fbc02d;
+  background: #d2202e;
   color: #111111;
   border-radius: 50%;
   width: 40px;

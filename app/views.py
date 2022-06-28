@@ -1,8 +1,10 @@
 from turtle import position
+from unicodedata import category
 from django.shortcuts import render
 
-from app.models import Award, Banner, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
+from app.models import Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
 from datetime import date, datetime
+from django.db.models import Q
  # Create your views here.
 
 
@@ -11,15 +13,14 @@ def index(request):
     banner2=Banner.objects.all().last()
     print(datetime.now())
     upComingMatch = Matche.objects.filter(match_date__gte=datetime.now(),completed =False).order_by('match_date').first()
-    print(upComingMatch)
     completedMatches= Matche.objects.filter(completed = True)
     video =LastMatchHighlight.objects.all().last()
     players = TeamPlayer.objects.all()
-    gallery = Gallery.objects.all().order_by('-date')[:6]
+    gallery = Gallery.objects.all()[:6]
     awards = Award.objects.all()
     sponsors = SponsorLogo.objects.all()
-    latestNews= LatestNews.objects.last()     
-    news = LatestNews.objects.all().order_by('-date')[1:7]
+    latestNews= LatestNews.objects.all().order_by('-date').first()     
+    news = LatestNews.objects.all().order_by('-date')[1:6]
     products = Product.objects.all()
     players_count = TeamPlayer.objects.all().count()
     award_count = Award.objects.all().count()
@@ -56,7 +57,9 @@ def history(request):
 
 def board_management(request):
     sponsors = SponsorLogo.objects.all()
+    boardManagement = BoardManagement.objects.all() 
     context = {
+        'boardManagement':boardManagement,
         'sponsors':sponsors,
         'is_board_management':True
     }
@@ -110,12 +113,12 @@ def club(request):
     return render(request, 'single-club.html', context)
 
 
-def team(request):
+def reserve_senior(request):
     sponsors = SponsorLogo.objects.all()
-    goalKeepers = TeamPlayer.objects.filter(position = 'GOAL KEEPER')
-    defenders = TeamPlayer.objects.filter(position = 'DEFENDER')
-    midfielder = TeamPlayer.objects.filter(position = 'MIDFIELDER')
-    forwarder = TeamPlayer.objects.filter(position = 'FORWARDER')
+    goalKeepers = TeamPlayer.objects.filter(category= 'reserve senior',position = 'GOAL KEEPER')
+    defenders = TeamPlayer.objects.filter(Q(category = 'reserve senior') , Q(position = 'LEFT BACK') | Q(position='RIGHT BACK'))
+    midfielder = TeamPlayer.objects.filter(Q(category = 'reserve senior') , Q(position = 'DEFENSIVE MIDFIELDER') | Q(position='ATTACKING MIDFIELDER') | Q(position='CENTER MIDFIELDER'))
+    forwarder = TeamPlayer.objects.filter(Q(category = 'reserve senior') , Q(position = 'LEFT WING FORWARD') | Q(position='RIGHT WING FORWARD') | Q(position='CENTER FORWARD'))
     context = {
         'sponsors':sponsors,
         'forwarder':forwarder,
@@ -124,12 +127,89 @@ def team(request):
         'goalKeepers':goalKeepers,
         'is_club':True
     }
+
+    return render(request, 'first-team.html', context)
+
+
+
+def under_18(request):
+    sponsors = SponsorLogo.objects.all()
+    goalKeepers = TeamPlayer.objects.filter(category= 'under 18',position = 'GOAL KEEPER')
+    defenders = TeamPlayer.objects.filter(Q(category = 'under 18') , Q(position = 'LEFT BACK') | Q(position='RIGHT BACK'))
+    midfielder = TeamPlayer.objects.filter(Q(category = 'under 18') , Q(position = 'DEFENSIVE MIDFIELDER') | Q(position='ATTACKING MIDFIELDER') | Q(position='CENTER MIDFIELDER'))
+    forwarder = TeamPlayer.objects.filter(Q(category = 'under 18') , Q(position = 'LEFT WING FORWARD') | Q(position='RIGHT WING FORWARD') | Q(position='CENTER FORWARD'))
+    context = {
+        'sponsors':sponsors,
+        'forwarder':forwarder,
+        'midfielder':midfielder,
+        'defenders':defenders,
+        'goalKeepers':goalKeepers,
+        'is_club':True
+    }
+
+    return render(request, 'first-team.html', context)
+
+
+
+def under_15(request):
+    sponsors = SponsorLogo.objects.all()
+    goalKeepers = TeamPlayer.objects.filter(category= 'under 15',position = 'GOAL KEEPER')
+    defenders = TeamPlayer.objects.filter(Q(category = 'under 15') , Q(position = 'LEFT BACK') | Q(position='RIGHT BACK'))
+    midfielder = TeamPlayer.objects.filter(Q(category = 'under 15') , Q(position = 'DEFENSIVE MIDFIELDER') | Q(position='ATTACKING MIDFIELDER') | Q(position='CENTER MIDFIELDER'))
+    forwarder = TeamPlayer.objects.filter(Q(category = 'under 15') , Q(position = 'LEFT WING FORWARD') | Q(position='RIGHT WING FORWARD') | Q(position='CENTER FORWARD'))
+    context = {
+        'sponsors':sponsors,
+        'forwarder':forwarder,
+        'midfielder':midfielder,
+        'defenders':defenders,
+        'goalKeepers':goalKeepers,
+        'is_club':True
+    }
+
+    return render(request, 'first-team.html', context)
+
+
+
+def under_13(request):
+    sponsors = SponsorLogo.objects.all()
+    goalKeepers = TeamPlayer.objects.filter(category= 'under 13',position = 'GOAL KEEPER')
+    defenders = TeamPlayer.objects.filter(Q(category = 'under 13') , Q(position = 'LEFT BACK') | Q(position='RIGHT BACK'))
+    midfielder = TeamPlayer.objects.filter(Q(category = 'under 13') , Q(position = 'DEFENSIVE MIDFIELDER') | Q(position='ATTACKING MIDFIELDER') | Q(position='CENTER MIDFIELDER'))
+    forwarder = TeamPlayer.objects.filter(Q(category = 'under 13') , Q(position = 'LEFT WING FORWARD') | Q(position='RIGHT WING FORWARD') | Q(position='CENTER FORWARD'))
+    context = {
+        'sponsors':sponsors,
+        'forwarder':forwarder,
+        'midfielder':midfielder,
+        'defenders':defenders,
+        'goalKeepers':goalKeepers,
+        'is_club':True
+    }
+
+    return render(request, 'first-team.html', context)
+
+
+
+def under_12(request):
+    sponsors = SponsorLogo.objects.all()
+    goalKeepers = TeamPlayer.objects.filter(category= 'under 12',position = 'GOAL KEEPER')
+    defenders = TeamPlayer.objects.filter(Q(category = 'under 12') , Q(position = 'LEFT BACK') | Q(position='RIGHT BACK'))
+    midfielder = TeamPlayer.objects.filter(Q(category = 'under 12') , Q(position = 'DEFENSIVE MIDFIELDER') | Q(position='ATTACKING MIDFIELDER') | Q(position='CENTER MIDFIELDER'))
+    forwarder = TeamPlayer.objects.filter(Q(category = 'under 12') , Q(position = 'LEFT WING FORWARD') | Q(position='RIGHT WING FORWARD') | Q(position='CENTER FORWARD'))
+    context = {
+        'sponsors':sponsors,
+        'forwarder':forwarder,
+        'midfielder':midfielder,
+        'defenders':defenders,
+        'goalKeepers':goalKeepers,
+        'is_club':True
+    }
+
     return render(request, 'first-team.html', context)
 
 
 def gallery(request):
     sponsors = SponsorLogo.objects.all()
-    gallery = Gallery.objects.all().order_by('-date')
+    gallery = Gallery.objects.all()
     context = {
         'sponsors':sponsors,
         'gallery':gallery,
@@ -161,6 +241,7 @@ def player_profile(request, player_id):
     sponsors = SponsorLogo.objects.all()
     player = TeamPlayer.objects.get(id=player_id)
     context = {
+        'is_club':True,
         'sponsors':sponsors,
         'player':player
     }
@@ -172,6 +253,7 @@ def single_news(request, news_id):
     sponsors = SponsorLogo.objects.all()
     latest_newses = LatestNews.objects.all().order_by('-date')[:6]
     context = {
+        'is_news':True,
         'latest_newses':latest_newses,
         'sponsors':sponsors,
         'news':news

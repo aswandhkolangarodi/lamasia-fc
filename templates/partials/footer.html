@@ -1,7 +1,11 @@
 
 
 {% load static %}
-
+<!-- Scrool to Top Start -->
+<div id="scrollUp">
+    <i class="fa fa-angle-up"></i>
+</div>
+<!-- Scrool to Top End -->
 <!-- Footer Start -->
 <footer id="rs-footer" class="rs-footer pt-5 md-pt-70 sm-pt-65">
     <!-- Sponsor Logo Section Start -->
@@ -11,9 +15,9 @@
                 <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
                     <div class="row">
                         {% for sponsors in sponsors %}
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-6 text-center">
                             <div class="logos">
-                                <a href="#"><img class="pb-5 pb-lg-0" src="{{sponsors.sponsors_logo.crop.165x83}}" alt=""></a>
+                                <img class="pb-5 pb-lg-0" src="{{sponsors.sponsors_logo.crop.165x83}}" alt="">
                             </div>
                         </div>
                         {% endfor %}
@@ -30,18 +34,17 @@
     <div class="footer-bootom">
         <div class="container">
             <div class="row rs-vertical-middle">
-                <!-- <div class="col-md-7">
+                <div class="col-md-7">
                     <div class="copyright">
-                        <p>© 2019 Khelo. All Rights Reserved. Designed by <a href="http://rstheme.com/" target="_blank">RSTheme</a></p>
+                        <p>© 2022 La Masia FC. All Rights Reserved. Designed by <a href="https://gedexo.com/" target="_blank">Gedexo Technologies LLP</a></p>
                     </div>
-                </div> -->
-                <div class="col-md-12">
+                </div>
+                <div class="col-md-5">
                     <div class="footer-share text-lg-right text-md-center">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100082672176807"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/LAAMASIAFCKERA3?t=TS8wzoizd7kTe360NIdmhA&s=09"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/laa.masia_fc_kerala_/"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>

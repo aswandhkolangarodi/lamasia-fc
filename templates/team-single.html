@@ -31,7 +31,7 @@
                         <div class="player-image">
                             <img src="{{player.photo.url}}" alt="">
                             <div class="name-box">
-                                <h3 class="player-name">{{player.name}}</h3>
+                                <h3 class="player-name text-capitalize">{{player.name}}</h3>
                                 <span class="player-position">{{player.position}}</span>
                                 <div class="squad-no"> {{player.kit_number}}</div>
                             </div>
@@ -42,6 +42,10 @@
                             <h3 class="title">Player Profile</h3>
                             <table>
                                 <tbody>
+                                    <tr>
+                                        <td>Category</td>
+                                        <td class="text-capitalize">{{player.category}}</td>
+                                    </tr>
                                     <tr>
                                         <td>Date of Birth</td>
                                         <td>{{player.date_of_birth}}</td>
@@ -65,7 +69,26 @@
                                 </tbody>
                             </table>
                         </div>
-
+                        <div class="player-detail">
+                            <h3 class="title">Career Information</h3>
+                            <table>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>Club Debut</td>
+                                        <td>{{player.club_debut}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Previous Club</td>
+                                        <td>{{player.previous_club}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Present Club</td>
+                                        <td>{{player.present_club}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                       
                     </div>
                 </div>
