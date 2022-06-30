@@ -1,5 +1,3 @@
-from turtle import position
-from unicodedata import category
 from django.shortcuts import render
 
 from app.models import Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer

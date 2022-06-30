@@ -6277,3 +6277,13 @@ blockquote i:before {
     width: 100%;
   }
 }
+
+
+
+/* 
+@media only screen and (max-width: 1500x){
+  .full-width-header .rs-header .menu-area.menu-sticky.sticky .logo-area img {
+    max-width: 74px;
+ 
+  }
+} */
