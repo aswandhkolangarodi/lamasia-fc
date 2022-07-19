@@ -20,7 +20,7 @@
                 <div class="row rs-vertical-middle">
                     <div class="col-lg-2">
                         <div class="logo-area">
-                            <a href="/"><img src="{% static 'images/fc.png' %}"  alt="logo"></a>
+                            <a href="/"><img src="{% static 'images/fc.png' %}" class="my-2" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-10 mobile-menu-area">
@@ -76,6 +76,8 @@
                                         </li>
 
                                         <!-- About End -->
+                                        <li class="{% if is_match %} current-menu-item {% endif %}"> <a
+                                            href="/match-fixtures">Match Fixtures</a>
 
                                         <li class="{% if is_gallery %} current-menu-item {% endif %}"> <a
                                                 href="/gallery">Gallery</a>

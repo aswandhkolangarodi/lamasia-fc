@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from app.models import Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
+from app.models import AccademyFee, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
 from datetime import date, datetime
 from django.db.models import Q
  # Create your views here.
@@ -22,6 +22,7 @@ def index(request):
     products = Product.objects.all()
     players_count = TeamPlayer.objects.all().count()
     award_count = Award.objects.all().count()
+    fee = AccademyFee.objects.all()
     context = {
         'award_count':award_count,
         'players_count':players_count,
@@ -37,6 +38,7 @@ def index(request):
         'upComingMatch':upComingMatch,
         'banner':banner1,
         'banner2':banner2,
+        'fee':fee,
         'is_index':True
     }
     return render(request, "index.html", context)
@@ -258,3 +260,12 @@ def single_news(request, news_id):
     }
 
     return render(request, 'single-news.html', context)
+
+
+def matchFixtures(request):
+    match = Matche.objects.filter(match_date__gte=datetime.now(),completed =False).order_by('match_date')
+    context = {
+        'match':match,
+        'is_match':True,
+    }
+    return render(request, 'match-fixtures.html',context)

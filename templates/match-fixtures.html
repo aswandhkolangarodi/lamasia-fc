@@ -1,0 +1,62 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Breadcrumbs Section Start -->
+        <div class="rs-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img src="{% static 'images/breadcrumbs/inner8.jpg' %}" alt="Breadcrumbs Image">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title mb-17">Match-& Fixtures</h1>
+                            <div class="categories">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active">Match-& Fixtures</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <!-- Breadcrumbs Section End -->
+
+        <!-- Match Fixture Section Start -->
+        <div class="rs-match-fixture style2 pt-100 md-pt-80">
+            <div class="container">
+                <div class="match-list bg14 pt-57 pb-57 md-pt-27 md-pb-27 mb-100 md-mb-80">
+                    <table>
+                        <thead>
+                            <tr class="text-white">
+                                <th colspan="3">Matches</th>
+                                <th>Tournament</th>
+                                <th>Date</th>
+                                <th>Stadium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for match in match %}
+                            <tr>
+                                <td class="medium-font">{{match.team1}}</td>
+                                <td class="short-width">VS</td>
+                                <td class="medium-font">{{match.team2}}</td>
+                                <td class="text-uppercase">{{match.tournament_name.tournament_name}}</td>
+                                <td>{{match.match_date}}</td>
+                                <td>{{match.stadium}}</td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Subscribe Section Start -->
+                {% include 'partials/subscription.html' %}
+                <!-- Subscribe Section End -->
+            </div>
+        </div>
+        <!-- Match Fixture Section End -->
+
+        {% endblock %}

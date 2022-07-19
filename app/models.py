@@ -15,14 +15,20 @@ class Banner(models.Model):
 
     def __str__(self):
         return self.sub_heading
-    
+
+class Tournament(models.Model):
+    tournament_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.tournament_name
 
 class Matche(models.Model):
+    tournament_name = models.ForeignKey(Tournament, on_delete=models.CASCADE, null=True)
     team1 =models.CharField(max_length=100)
     team2 =models.CharField(max_length=100)
     team1_logo = models.ImageField(upload_to="team_logos/")
     team2_logo = models.ImageField(upload_to="team_logos/")
-    match_date = models.DateTimeField(null=True, default=datetime.today())
+    match_date = models.DateTimeField(null=True)
     stadium  = models.CharField(max_length=200)
     team1_goals = models.CharField(max_length=100, null=True, default="0")
     team2_goals = models.CharField(max_length=100, null=True, default="0")
@@ -77,7 +83,7 @@ class TeamPlayer(models.Model):
     citizenship = models.CharField(max_length=100)
     kit_number = models.IntegerField()
     position = models.CharField(choices=choices, max_length=100)
-    club_debut = models.DateField(default=date.today(), null=True)
+    club_debut = models.DateField(null=True)
     previous_club = models.CharField(default="", max_length=100)
     present_club = models.CharField(max_length=100 , default='Lamasia FC Kerala')
 
@@ -109,7 +115,7 @@ class LatestNews(models.Model):
     heading = models.CharField(max_length=500)
     image = VersatileImageField("news_image",upload_to='news/', null=True, ppoi_field='ppoi')
     ppoi = PPOIField('news_image PPOI')
-    date = models.DateTimeField(default=datetime.now())
+    date = models.DateTimeField(auto_now_add=True)
     news_description =models.CharField(max_length=1000, null=True, default="")
 
     class Meta:
@@ -156,3 +162,16 @@ class BoardManagement(models.Model):
     date_of_birth = models.DateField(null=True)
 
 
+class AccademyFee(models.Model):
+    category_choice = [
+        ('under 12','under 12'),
+        ('under 13','under 13'),
+        ('under 15','under 15'),
+        ('under 18','under 18'),
+        ('reserve senior','reserve senior')
+    ]
+    category = models.CharField(max_length=100, choices=category_choice ,null=True)
+    fee = models.IntegerField()
+
+    def __str__(self):
+        return self.category

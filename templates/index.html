@@ -70,7 +70,7 @@
                             <div class="col-md-4 col-sm-4 col-4">
                                 <div class="team-logo">
                                     <img class="size-80" src="{{upComingMatch.team2_logo.url}}" alt="Valencia">
-                                    <div class="name white-color">{{upComingMatch.team1}}</div>
+                                    <div class="name white-color text-uppercase">{{upComingMatch.team1}}</div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-4">
@@ -79,17 +79,19 @@
                             <div class="col-md-4 col-sm-4 col-4">
                                 <div class="team-logo">
                                     <img class="size-80" src="{{upComingMatch.team1_logo.url}}" alt="Real Sociedad">
-                                    <div class="name white-color">{{upComingMatch.team2}}</div>
+                                    <div class="name white-color text-uppercase">{{upComingMatch.team2}}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="match-info mt-28">
                         <ul>
+                            <li>{{upComingMatch.tournament_name.tournament_name}}</li>
                             <li>{{upComingMatch.stadium}}</li>
-
+                            
                         </ul>
-                        <div class="time pt-15 white-color">{{ upComingMatch.match_date }}</div>
+                        <div class="time pt-15 white-color text-capitalize">{{ upComingMatch.match_date }}</div>
+                        <div class=" pt-15 white-color"><a href="/match-fixtures" class="btn btn-outline-light">Match Fixtures</a></div>
                     </div>
                     {% else %}
                     <h6 class="text-white my-5">No Match Is Scheduled</h6>
@@ -132,12 +134,12 @@
                     </div>
                     <div class="teams">
                         <div class="logo">
-                            <img class="size-80" src="{{matches.team1_logo.url}}" alt="Manchester City">
+                            <img class="size-80" src="{{matches.team1_logo.url}}" alt="{{matches.team1}}">
                             <div class="name ">{{matches.team1}}</div>
                         </div>
                         <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
                         <div class="logo">
-                            <img class="size-80" src="{{matches.team2_logo.url}}" alt="Barcelona">
+                            <img class="size-80" src="{{matches.team2_logo.url}}" alt="{{matches.team2}}">
                             <div class="name ">{{matches.team2}}</div>
                         </div>
                     </div>
@@ -180,7 +182,7 @@
                                         <div class="logo">
                                             <img class="size-140" src="{{matches.team1_logo.url}}"
                                                 alt="{{matches.team1}}">
-                                            <div class="name ">{{matches.team1}}</div>
+                                            <div class="name text-capitalize">{{matches.team1}}</div>
                                         </div>
                                     </div>
                                     <div class="today-final-score common">
@@ -192,7 +194,7 @@
                                         <div class="logo">
                                             <img class="size-140" src="{{matches.team2_logo.url}}"
                                                 alt="{{matches.team2}}">
-                                            <div class="name ">{{matches.team2}}</div>
+                                            <div class="name text-capitalize">{{matches.team2}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -205,7 +207,7 @@
                                         <div class="logo">
                                             <img class="size-140" src="{{matches.team1_logo.url}}"
                                                 alt="{{matches.team1}}">
-                                            <div class="name ">{{matches.team1}}</div>
+                                            <div class="name text-capitalize">{{matches.team1}}</div>
                                         </div>
                                     </div>
                                     <div class="today-final-score common">
@@ -217,7 +219,7 @@
                                         <div class="logo">
                                             <img class="size-140" src="{{matches.team2_logo.url}}"
                                                 alt="{{matches.team2}}">
-                                            <div class="name ">{{matches.team2}}</div>
+                                            <div class="name text-capitalize">{{matches.team2}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -268,6 +270,7 @@
 <!-- Match Result Section End -->
 
 <!-- Latest News Section Start -->
+{% if latestNews %}
 <div class="rs-lates-news sec-bg pt-91 pb-100 md-pt-70 md-pb-80">
     <div class="container">
         <div class="row">
@@ -328,6 +331,7 @@
         </div>
     </div>
 </div>
+{% endif %}
 <!-- Latest News Section End -->
 
 <!-- About Us Section Start -->
@@ -341,8 +345,8 @@
                         <span class="line-bg left-line y-w pt-10"></span>
                     </div>
                     <div class="description dark-gray-color">
-                        <p class="mb-3">La Masia Football Club was formed on 22th August 2021. We have been practising
-                            Tikitaka style of football that will be an asset to the future generations. La Macia FC
+                        <p class="mb-3">Laa Masia Football Club was formed on 22th August 2021. We have been practising
+                            Tikitaka style of football that will be an asset to the future generations. Laa Macia FC
                             currently pooseses teams under 12, 13, 15, 18, reserve and senior.</p>
                         <p class="margin-0"> Our aim is to help the
                             nation by molding next world class players. The financially struggling members of the club
@@ -399,6 +403,31 @@
 </div>
 <!-- Team Pyaler Section End -->
 
+
+
+<!-- accademy fee start  -->
+<div class="col-lg-4 mx-auto">
+    <div class="title-style text-center mb-50 md-mb-30">
+        <h2 class="margin-0 uppercase">Accademy Fee</h2>
+        <span class="line-bg y-b pt-10"></span>
+    </div>
+    <div class="rs-pointtable gaps no-overflow bg12 bdru-4 mb-48 md-mb-72">
+        <table>
+            <tbody>
+               {% for fee in fee %}
+                <tr>
+                    <td class="text-capitalize">{{fee.category}}</td>
+                    <td>{{fee.fee}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+   
+</div>
+<!-- accademy fee end  -->
+
 <!-- Counter Section Start -->
 <div class="rs-counter bg5 style1 pt-103 pb-92 md-pt-80 md-pb-70 sm-pt-73">
     <div class="container">
@@ -438,6 +467,7 @@
 <!-- Counter Section End -->
 
 <!-- Match Gallery Start -->
+{% if gallery %}
 <div class="rs-gallery style1 pt-92 pb-100 md-pt-72 md-pb-80">
     <div class="container">
         <div class="title-style text-center mb-50 md-mb-30">
@@ -461,9 +491,11 @@
                 onclick="location.href='/gallery'">More</button></div>
     </div>
 </div>
+{% endif %}
 <!-- Match Gallery End -->
 
 <!-- Champion Awards Start -->
+{% if awards %}
 <div class="rs-awards bg6 pt-92 pb-100 md-pt-72 md-pb-80">
     <div class="container">
         <div class="title-style text-center mb-50 md-mb-30">
@@ -495,6 +527,7 @@
         </div>
     </div>
 </div>
+{% endif %}
 <!-- Champion Awards End -->
 
 <!-- Top Products Start -->

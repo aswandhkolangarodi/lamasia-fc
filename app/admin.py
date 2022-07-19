@@ -1,9 +1,12 @@
 from django.contrib import admin
-from app.models import Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer
+from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament
 # Register your models here.
 
 
 admin.site.register(Banner)
+
+admin.site.register(Tournament)
+
 class Matches(admin.ModelAdmin):
     model = Matche
     list_display = ['team1','team2']
@@ -55,3 +58,6 @@ class BoardManagementAdmin(admin.ModelAdmin):
     list_display = ['name','position','citizenship','date_of_birth',]
     search_fields=('name','position')
 admin.site.register(BoardManagement,BoardManagementAdmin)
+
+
+admin.site.register(AccademyFee)
