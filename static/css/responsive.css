@@ -896,11 +896,11 @@
 	    line-height: 50px;
 	}
 	.rs-team.style1 .player-item .person-details .player-title a {
-		font-size: 12px;
+		font-size: 9px;
 		padding-bottom: 0;
 	}
 	.rs-team.style1 .player-item .person-details .player-title .player-position {
-		font-size: 10px;
+		font-size: 5px;
 	}
 	.rs-team.style1 .player-item .person-details {
 		min-height: 69px;
