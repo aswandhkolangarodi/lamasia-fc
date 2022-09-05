@@ -1,0 +1,197 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Breadcrumbs Section Start -->
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/breadcrumbs/inner16.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text inner-team">
+                    <h1 class="breadcrumbs-title mb-17">Join Us</h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Join Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Section End -->
+
+<!-- Team Section Start -->
+<div class="rs-team style7 first-team pt-100 md-pt-70">
+    <div class="container custom">
+        <div class="team-inner pb-85 md-pb-70">
+            <div class="heading-title pb-50">
+                <h2 class="title ">About Laamasia FC</h2>
+                <span class="lines-bg"></span>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-wrap">
+                        <h5 class="title-color title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                            esse expedita maxime quidem quas eum molestias maiores rem nihil non quae qui nobis amet,
+                            reiciendis placeat alias error quos sed?</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-inner pb-85 md-pb-70">
+            <div class="heading-title ">
+                <h2 class="title">Team Categories</h2>
+                <span class="lines-bg"></span>
+            </div>
+
+            <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
+                <div class="container">
+                    <div class="title-style text-center mb-50 md-mb-30">
+                        <h2 class="margin-0 uppercase">Under 18</h2>
+                        <span class="line-bg y-b pt-10"></span>
+                    </div>
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                        data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false"
+                        data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false"
+                        data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false"
+                        data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false"
+                        data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
+                        data-md-device-dots="false">
+                        {% for under18 in under18 %}
+                        <div class="player-item">
+                            <div class="player-img">
+                                <img src="{{under18.photo.crop.383x479}}" alt="">
+                            </div>
+                            <div class="detail-wrap">
+                                <div class="person-details">
+                                    <h3 class="player-title"><span class="squad-numbers">{{under18.kit_number}}</span>
+                                        <a href="player_profile/{{under18.id}}">{{under18.name}}</a>
+                                        <span class="player-position">{{under18.position}}</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
+                <div class="container">
+                    <div class="title-style text-center mb-50 md-mb-30">
+                        <h2 class="margin-0 uppercase">Under 15</h2>
+                        <span class="line-bg y-b pt-10"></span>
+                    </div>
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                        data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false"
+                        data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false"
+                        data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false"
+                        data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false"
+                        data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
+                        data-md-device-dots="false">
+                        {% for under15 in under15 %}
+                        <div class="player-item">
+                            <div class="player-img">
+                                <img src="{{under15.photo.crop.383x479}}" alt="">
+                            </div>
+                            <div class="detail-wrap">
+                                <div class="person-details">
+                                    <h3 class="player-title"><span class="squad-numbers">{{under15.kit_number}}</span>
+                                        <a href="player_profile/{{under15.id}}">{{under15.name}}</a>
+                                        <span class="player-position">{{under15.position}}</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
+                <div class="container">
+                    <div class="title-style text-center mb-50 md-mb-30">
+                        <h2 class="margin-0 uppercase">Under 13</h2>
+                        <span class="line-bg y-b pt-10"></span>
+                    </div>
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                        data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false"
+                        data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false"
+                        data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false"
+                        data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false"
+                        data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
+                        data-md-device-dots="false">
+                        {% for under13 in under13 %}
+                        <div class="player-item">
+                            <div class="player-img">
+                                <img src="{{under13.photo.crop.383x479}}" alt="">
+                            </div>
+                            <div class="detail-wrap">
+                                <div class="person-details">
+                                    <h3 class="player-title"><span class="squad-numbers">{{under13.kit_number}}</span>
+                                        <a href="player_profile/{{under13.id}}">{{under13.name}}</a>
+                                        <span class="player-position">{{under13.position}}</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
+                <div class="container">
+                    <div class="title-style text-center mb-50 md-mb-30">
+                        <h2 class="margin-0 uppercase">Under 12</h2>
+                        <span class="line-bg y-b pt-10"></span>
+                    </div>
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                        data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false"
+                        data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false"
+                        data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false"
+                        data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false"
+                        data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
+                        data-md-device-dots="false">
+                        {% for under12 in under12 %}
+                        <div class="player-item">
+                            <div class="player-img">
+                                <img src="{{under12.photo.crop.383x479}}" alt="">
+                            </div>
+                            <div class="detail-wrap">
+                                <div class="person-details">
+                                    <h3 class="player-title"><span class="squad-numbers">{{under12.kit_number}}</span>
+                                        <a href="player_profile/{{under12.id}}">{{under12.name}}</a>
+                                        <span class="player-position">{{under12.position}}</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="terms-and-conditions">
+            <div class="title-style text-center mb-50 md-mb-30">
+                <h2 class="margin-0 uppercase">Joining Terms And Conditions</h2>
+                <span class="line-bg y-b pt-10"></span>
+            </div>
+            <div class="about-wrap">
+                <p class="title-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime voluptas labore dolores accusantium explicabo provident sunt rem harum nam ipsum error, nobis alias aliquam quod perspiciatis, hic tenetur debitis?</p>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rs-gallery style1 pt-92 md-pt-72">
+    <div class="container">
+        {% include 'partials/subscription.html' %}
+    </div>
+</div>
+{% endblock %}

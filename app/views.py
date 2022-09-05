@@ -269,3 +269,18 @@ def matchFixtures(request):
         'is_match':True,
     }
     return render(request, 'match-fixtures.html',context)
+
+
+def join(request):
+    under18 = TeamPlayer.objects.filter(category='under 18')
+    under15 = TeamPlayer.objects.filter(category='under 15')
+    under13 = TeamPlayer.objects.filter(category='under 13')
+    under12 = TeamPlayer.objects.filter(category='under 12')
+    context = {
+        'under18':under18,
+        'under15':under15,
+        'under13':under13,
+        'under12':under12
+        
+    }
+    return render(request, 'join.html',context)

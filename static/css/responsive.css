@@ -354,6 +354,15 @@
 	.hidden-md {
 		display: none !important;
 	}
+	.rs-team.style1 .player-item .person-details .player-title a {
+		font-size: 15px;
+	}
+	.rs-team.style1 .player-item .person-details .player-title .squad-numbers {
+		font-size: 40px;
+	}
+	.rs-team.style1 .player-item .person-details {
+		padding: 10px 25px;
+	}
 	.md-pt-0 {
 		padding-top: 0 !important;
 	}
@@ -779,6 +788,7 @@
 	.hidden-sm {
 		display: none;
 	}
+	
 	.sm-text-left {
 		text-align: left !important;
 	}
@@ -882,14 +892,22 @@
 		margin-bottom: 0;
 	}
 	.rs-team.style1 .player-item .person-details .player-title .squad-numbers {
-	    font-size: 25px;
+	    font-size: 20px;
 	    line-height: 50px;
 	}
 	.rs-team.style1 .player-item .person-details .player-title a {
-		font-size: 18px;
+		font-size: 12px;
 		padding-bottom: 0;
 	}
-
+	.rs-team.style1 .player-item .person-details .player-title .player-position {
+		font-size: 10px;
+	}
+	.rs-team.style1 .player-item .person-details {
+		min-height: 69px;
+	}
+	.rs-awards .item .award-wrap .champion-logo img {
+		max-height: 90px;
+	}
 	.rs-counter.style1 .rs-counter-list .counter-number {
 	    font-size: 30px;
 	    margin: 0;

@@ -13,6 +13,9 @@
                     <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{banner.top_heading}}</h2>
                     <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{banner.sub_heading}}</h1>
                     <div class="desc wow fadeInLeft" data-wow-delay="1s">{{banner.dscription}}</div>
+                    <div class="slider-btn">
+                        <a class="readon" href="{% url 'join-now' %}">Join Now</a>
+                    </div>
                 </div>
                 <div class="fly-layer">
                     <div class="layer-image">
@@ -38,6 +41,9 @@
                     <h2 class="sub-title text-capitalize ">{{banner2.top_heading}}</h2>
                     <h1 class="title"><span class="">{{banner2.sub_heading}}</h1>
                     <div class="desc">{{banner2.dscription}}</div>
+                    <div class="slider-btn">
+                        <a class="readon" href="{% url 'join-now' %}">Join Now</a>
+                    </div>  
 
                 </div>
             </div>
@@ -376,10 +382,11 @@
             <h2 class="margin-0 uppercase">Team Player</h2>
             <span class="line-bg y-b pt-10"></span>
         </div>
+        
         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true"
             data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true"
-            data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
-            data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
+            data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false"
+            data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true"
             data-md-device-dots="false">
             {% for players in players %}
@@ -406,7 +413,7 @@
 
 
 <!-- accademy fee start  -->
-<div class="col-lg-4 mx-auto">
+<!-- <div class="col-lg-4 mx-auto">
     <div class="title-style text-center mb-50 md-mb-30">
         <h2 class="margin-0 uppercase">Accademy Fee</h2>
         <span class="line-bg y-b pt-10"></span>
@@ -425,7 +432,7 @@
         </table>
     </div>
    
-</div>
+</div> -->
 <!-- accademy fee end  -->
 
 <!-- Counter Section Start -->
@@ -449,15 +456,15 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 mx-auto ">
                     <div class="rs-counter-list text-center">
-                        <h2 class="counter-number primary-color">{{players_count}}</h2>
-                        <h3 class="counter-text uppercase white-color">Total players</h3>
+                        <h2 class="counter-number primary-color">3</h2>
+                        <h3 class="counter-text uppercase white-color">Total Category</h3>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 mx-auto">
                     <div class="rs-counter-list text-center">
-                        <h2 class="counter-number primary-color">{{award_count}}</h2>
-                        <h3 class="counter-text uppercase white-color">Total awards</h3>
+                        <h2 class="counter-number primary-color">40</h2>
+                        <h3 class="counter-text uppercase white-color">Total Players</h3>
                     </div>
                 </div>
             </div>
@@ -504,7 +511,7 @@
         </div>
         <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true"
             data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="false"
-            data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
+            data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false"
             data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="false"
             data-md-device-dots="false">
