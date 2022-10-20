@@ -22,6 +22,9 @@ urlpatterns = [
     path('player_profile/<str:player_id>',views.player_profile,name='player_profile'),
     path('news/<str:news_id>', views.single_news, name='single_news'),
     path('match-fixtures', views.matchFixtures, name='match-fixtures'),
-    path('join-now', views.join, name='join-now')
+    path('join-now', views.join, name='join-now'),
+    path('joinacademy', views.joinacademy, name='joinacademy'),
+    path('registration', views.registration, name='registration'),
+    
 
 ]

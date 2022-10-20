@@ -1,14 +1,53 @@
 {% load static %}
 <!--Preloader area start here-->
- <div id="loading" class="loading">
+{% comment %} <div id="loading" class="loading">
     <div class="rs-loader">
         <div class="rs-shadow"></div>
         <div class="rs-gravity">
             <div class="rs-ball"></div>
         </div>
     </div>
-</div> 
+</div> {% endcomment %}
 <!--Preloader area End here-->
+<style>
+
+
+    .button-62 {
+      background: linear-gradient(to bottom right, hsl(0, 64%, 40%), #c06007);
+      border: 0;
+      border-radius: 12px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2.5;
+      outline: transparent;
+      padding: 0 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: box-shadow .2s ease-in-out;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+    }
+    
+    .button-62:not([disabled]):focus {
+      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    }
+    
+    .button-62:not([disabled]):hover {
+      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    }
+    </style>
+
+
+
+
+
+
 
 <!--Full width header Start-->
 <div class="full-width-header">
@@ -38,30 +77,31 @@
                                         <!-- End Home -->
 
                                         <!-- club -->
-                                        <li class="menu-item-has-children {% if is_club %} current-menu-item {% endif %}"> <a
-                                               >club</a>
-                                                <ul class="sub-menu">
+                                        <li
+                                            class="menu-item-has-children {% if is_club %} current-menu-item {% endif %}">
+                                            <a>club</a>
+                                            <ul class="sub-menu">
 
-                                                    <li class="{% if is_board_management %} current-menu-item {% endif %}">
-                                                        <a href="/team/reserve-senior">Reserve Senior</a>
-                                                    </li>
-                                                    <li class="{% if is_sponsors %} current-menu-item {% endif %}"><a
-                                                            href="/team/under-18">Under 18</a></li>
-                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
-                                                            href="/team/under-15">Under 15</a></li>
-                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
-                                                            href="/team/under-13">Under 13</a></li>
-                                                    <li class="{% if is_history %} current-menu-item {% endif %}"><a
-                                                            href="/team/under-12">Under 12</a></li>
-    
-                                                </ul>    
+                                                <li class="{% if is_board_management %} current-menu-item {% endif %}">
+                                                    <a href="/team/reserve-senior">Reserve Senior</a>
+                                                </li>
+                                                <li class="{% if is_sponsors %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-18">Under 18</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-15">Under 15</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-13">Under 13</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-12">Under 12</a></li>
+
+                                            </ul>
                                         </li>
                                         <!-- end club -->
 
                                         <!-- About Start -->
                                         <li
                                             class="menu-item-has-children {% if is_board_management %} current-menu-item {% endif %} {% if is_sponsors %} current-menu-item {% endif %} {% if is_history %} current-menu-item {% endif %}">
-                                            <a >About</a>
+                                            <a>About</a>
                                             <ul class="sub-menu">
 
                                                 <li class="{% if is_board_management %} current-menu-item {% endif %}">
@@ -75,14 +115,21 @@
                                             </ul>
                                         </li>
 
-                                        <!-- About End -->
-                                        <li class="{% if is_match %} current-menu-item {% endif %}"> <a
-                                            href="/match-fixtures">Match Fixtures</a>
 
+
+
+
+                                        <!-- About End -->
+                                       <!-- <li class="{% if is_match %} current-menu-item {% endif %}"> <a
+                                                href="/match-fixtures">Match Fixtures</a> </li> 
+                                        <li class="{% if is_join %} current-menu-item {% endif %}"> 
+                                               <a href="/joinacademy">Join Academy</a>
+                                           
+                                        </li> -->
                                         <li class="{% if is_gallery %} current-menu-item {% endif %}"> <a
                                                 href="/gallery">Gallery</a>
 
-
+                                        </li>
 
                                             <!--News Start-->
                                         <li class="{% if is_news %} current-menu-item {% endif %}"> <a
@@ -96,11 +143,19 @@
                                         <li class="{% if is_contact %} current-menu-item {% endif %}"><a
                                                 href="/contact">Contact</a></li>
                                         <!--Contact Menu End-->
+                                        <li>
+                                            <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
+                                        </li>
+
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
                             </div> <!-- //.main-menu -->
                         </div>
                     </div>
+
+                    <!-- HTML !-->
+
+
                 </div>
             </div>
         </div>

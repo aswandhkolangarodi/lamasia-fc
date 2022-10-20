@@ -1,3 +1,4 @@
+from email.policy import default
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.db import models
 from datetime import  date, datetime
@@ -175,3 +176,27 @@ class AccademyFee(models.Model):
 
     def __str__(self):
         return self.category
+
+class Registration(models.Model):  
+    choices = (
+        ("Not Seen", "Not Seen"),
+        ("Seen", "Seen"),
+        ("Called", "Called"),
+        ("Completed", "Completed"),
+    ) 
+    name = models.CharField(max_length=100, null=True,blank=True)
+    email = models.EmailField(max_length=100,  null=True,blank=True)
+    contactnum = models.CharField(null=True,blank=True,max_length=15)   
+    guardiannum = models.CharField(null=True,blank=True,max_length=15)   
+    photo = VersatileImageField("board",upload_to='board registration/',blank=True, null=True, ppoi_field='ppoi')
+    ppoi = PPOIField('board PPOI')
+    age = models.CharField(null=True,blank=True,max_length=15)
+    dob = models.DateField()
+    place = models.CharField(null=True,blank=True,max_length=155)
+    height = models.CharField(null=True,blank=True,max_length=15)
+    weight = models.CharField(null=True,blank=True,max_length=155)
+    exclub = models.CharField(null=True,blank=True,max_length=155)
+    education = models.CharField(null=True,blank=True,max_length=15)
+    status= models.CharField(max_length=15,  choices=choices)
+    def __str__(self):
+        return self.name

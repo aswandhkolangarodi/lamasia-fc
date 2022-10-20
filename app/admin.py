@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament
+from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration
 # Register your models here.
 
 
@@ -61,3 +61,11 @@ admin.site.register(BoardManagement,BoardManagementAdmin)
 
 
 admin.site.register(AccademyFee)
+
+
+
+class Registrations(admin.ModelAdmin):
+    model = Registration
+    list_display = ['name','contactnum','guardiannum']
+    search_fields=('name','contactnum','guardiannum')
+admin.site.register(Registration,Registrations)

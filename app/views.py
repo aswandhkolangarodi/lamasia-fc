@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-from app.models import AccademyFee, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer
+from app.models import AccademyFee, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
 from datetime import date, datetime
 from django.db.models import Q
+from django.http import JsonResponse
  # Create your views here.
 
 
@@ -284,3 +285,34 @@ def join(request):
         
     }
     return render(request, 'join.html',context)
+
+    
+
+
+def joinacademy(request):
+    context = {
+        'is_join':True,
+    }
+    return render(request, 'joinacademy.html', context)
+
+
+def registration(request):
+    name=request.POST['name']
+    # photo=request.FILES['photo']
+    photo=request.FILES.get("photo", "Photo Not Uploded")
+    age=request.POST['age']
+    dob=request.POST['dob']
+    contactnum=request.POST['contactnum']
+    guardiannum=request.POST['guardiannum']
+    email=request.POST['email']
+    place=request.POST['place']
+    height=request.POST['height']
+    weight=request.POST['weight']
+    exclub=request.POST['exclub']
+    education=request.POST['education']
+    print(photo,'***********'*10)
+    registrationss= Registration(name=name, email=email, contactnum=contactnum, guardiannum=guardiannum ,age=age ,dob=dob, place=place , height=height,weight=weight,  exclub=exclub, education=education,photo=photo, status="Not Seen")
+    registrationss.save()
+    
+    return JsonResponse({'data':"eryset"})
+
