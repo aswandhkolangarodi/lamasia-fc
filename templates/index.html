@@ -1,53 +1,97 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block content %}
-
+<style>
+    .theredsea{
+        font-size: 60px;
+        font-weight: 900;
+    }
+    @media only screen and (max-width: 400px){
+        .theredsea{
+    font-weight: 400;
+    font-size: 33px;
+        }
+        .divcenter{
+            margin-right: 10px;
+        }
+        .playername{
+            font-size: 10px;
+        }
+    }
+</style>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-<!-- Slider Section Start -->
-<div id="rs-slider" class="rs-slider home-slider slider-navigation">
+
+
+<!-- =-------------------large---------------------------- -->
+<div id="rs-slider" class="rs-slider home-slider slider-navigation d-none d-sm-block">
     <div class="slider-carousel owl-carousel">
-        <div class="single-slider">
+        {% for i in banner %}
+        <div class="single-slider ">
             <div class="container">
-                <div class="text-part">
-                    <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{banner.top_heading}}</h2>
-                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{banner.sub_heading}}</h1>
-                    <div class="desc wow fadeInLeft" data-wow-delay="1s">{{banner.dscription}}</div>
-                    <div class="slider-btn">
+                <div class="text-part d-none d-lg-block d-md-block">
+                    <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
+                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{i.sub_heading}}</h1>
+                    <div class="desc wow fadeInLeft" data-wow-delay="1s">{{i.dscription}}</div>
+                    <!-- <div class="slider-btn">
                         <a class="readon" href="{% url 'join-now' %}">Join Now</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="fly-layer">
                     <div class="layer-image">
-                        <div class="parallax-ball">
-                            <img class="animate3" src="{% static 'images/slider/ball1.png' %}" alt="img">
-                        </div>
-                        <div class="animate4">
-                            <img src="{% static 'images/slider/h1-layer1.png' %}" alt="Slider Layer Image">
-                        </div>
+                        <img  src="{{i.banner_image.url}}" height="100px" width="200px" alt="img">
+                        
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="single-slider slide2">
-            <div class="container">
-                <div class="image-part common">
-                    <div class="image-wrap">
-                        <img class="player animate5" src="{% static 'images/slider/h1-layer2.png' %}" alt="">
-                        <img class="ball animate6" src="{% static 'images/slider/ball2.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="text-part common">
-                    <h2 class="sub-title text-capitalize ">{{banner2.top_heading}}</h2>
-                    <h1 class="title"><span class="">{{banner2.sub_heading}}</h1>
-                    <div class="desc">{{banner2.dscription}}</div>
-                    <div class="slider-btn">
+                <div class="text-part d-block d-lg-none d-md-none ">
+                    <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
+                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{i.sub_heading}}</h1>
+                    <div class="desc wow fadeInLeft" data-wow-delay="1s">{{i.dscription}}</div>
+                    <!-- <div class="slider-btn">
                         <a class="readon" href="{% url 'join-now' %}">Join Now</a>
-                    </div>  
+                    </div> -->
+                </div>
+             
+            </div>
+        </div>
+        {% endfor %}
+        
+    
+        
+    </div>
+</div>
 
+<!-- -------------------------- -->
+
+
+
+
+
+<!--small -->
+<div id="rs-slider" class="rs-slider home-slider slider-navigation d-sm-none d-block" >
+    <div class="slider-carousel owl-carousel">
+        {% for i in banner %}
+        <div class="single-slider  " style="height: 400px; width: 600px ;">
+            <div class="container ">
+                
+                <div class="text-center">
+                        <img  src="{{i.banner_image.url}}" style="height: 170px; width: 300px;" alt="img">
+                </div>
+                
+                <div class="text-part" style="margin-left: 100px;" >
+                    <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
+                    <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{i.sub_heading}}</h1>
+                    <div class="desc wow fadeInLeft" data-wow-delay="1s">{{i.dscription}}</div>
+                    <!-- <div class="slider-btn">
+                        <a class="readon" href="{% url 'join-now' %}">Join Now</a>
+                    </div> -->
                 </div>
             </div>
         </div>
+        {% endfor %}
+        
+    
+        
     </div>
 </div>
 <!-- Slider Section End -->
@@ -123,7 +167,7 @@
 <!-- Upcomming Match & Video Section End -->
 {% comment %}
 <!-- Match Result Section Start -->
-<div class="rs-match-result style1 nav-style pb-100 md-pb-80">
+<div class="rs-match-result style2 nav-style pb-100 md-pb-80">
     <div class="container">
         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true"
             data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true"
@@ -159,7 +203,7 @@
 {% endcomment %}
 <!-- Match Result Section Start -->
 {% if completedMatches %}
-<div class="rs-match-result style2 bg8 pt-93 pb-165 md-pt-73 md-pb-72">
+<div class="rs-match-result style1 bg8 pt-93 pb-165 md-pt-73 md-pb-72">
     <div class="container">
         <div class="title-style text-center mb-60 md-mb-30">
             <h2 class="margin-0 white-color uppercase">Recent Match Results</h2>
@@ -170,7 +214,7 @@
             </div>
             <div class="col-lg-8 pr-70 pl-70 col-padding-sm">
                 <div class="content-wrap">
-                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30"
+                    <div  class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30"
                         data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false"
                         data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false"
                         data-mobile-device-dots="false" data-ipad-device="1" data-ipad-device-nav="false"
@@ -180,8 +224,33 @@
 
                         {% if completedMatches|length == 1 %}
                         {% for matches in completedMatches %}
-
                         <div class="items">
+                            <a href="#">
+                                <div class="vanues" style="display: none;">
+                                    <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
+                                    <div class="info"><i class="fa fa-calendar"></i>{{matches.match_date}}</div>
+                                    <div class="info"><i class="fa fa-map"></i>{{matches.stadium}}</div>
+                                </div>
+                                <div class="teams">
+                                    <div class="logo">
+                                        <img class="size-140" src="{{matches.team1_logo.url}}"
+                                                alt="{{matches.team1}}">
+                                                <div class="name text-capitalize">{{matches.team1}}</div>
+                                    </div>
+                                    <div class="today-final-score common">
+                                        <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
+                                        <div class="info"><i class="fa fa-calendar"></i>{{matches.match_date}}</div>
+                                        <div class="info"><i class="fa fa-map"></i>{{matches.stadium}}</div>
+                                    </div>
+                                    <div class="logo">
+                                        <img class="size-140" src="{{matches.team2_logo.url}}"
+                                        alt="{{matches.team2}}">
+                                    <div class="name text-capitalize">{{matches.team2}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="items">
                             <a href="#">
                                 <div class="result-item">
                                     <div class="today-match-team common">
@@ -230,12 +299,37 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                         {% endfor %}
                         {% endif %}
                         {% for matches in completedMatches %}
-
-                        <div class="items">
+                            <div class="items">
+                            <a href="#">
+                                <div class="vanues" style="display: none;">
+                                    <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
+                                    <div class="info"><i class="fa fa-calendar"></i>{{matches.match_date}}</div>
+                                    <div class="info"><i class="fa fa-map"></i>{{matches.stadium}}</div>
+                                </div>
+                                <div class="teams">
+                                    <div class="logo">
+                                        <img class="size-140" src="{{matches.team1_logo.url}}"
+                                                alt="{{matches.team1}}">
+                                                <div class="name text-capitalize">{{matches.team1}}</div>
+                                    </div>
+                                    <div class="today-final-score common">
+                                        <div class="score">{{matches.team1_goals}}-{{matches.team2_goals}}</div>
+                                        <div class="info"><i class="fa fa-calendar"></i>{{matches.match_date}}</div>
+                                        <div class="info"><i class="fa fa-map"></i>{{matches.stadium}}</div>
+                                    </div>
+                                    <div class="logo">
+                                        <img class="size-140" src="{{matches.team2_logo.url}}"
+                                        alt="{{matches.team2}}">
+                                    <div class="name text-capitalize">{{matches.team2}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="items">
                             <a href="#">
                                 <div class="result-item">
                                     <div class="today-match-team common">
@@ -259,7 +353,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div>   -->
                         {% endfor %}
 
 
@@ -273,7 +367,7 @@
     </div>
 </div>
 {% endif %}
-<!-- Match Result Section End -->
+
 
 <!-- Latest News Section Start -->
 {% if latestNews %}
@@ -282,7 +376,7 @@
         <div class="row">
             <div class="col-lg-8 md-mb-72 mx-auto">
                 <div class="title-style mb-50 md-mb-30">
-                    <h2 class="margin-0 uppercase">Latest News</h2>
+                    <h2 class="margin-0 uppercase"> News & Updates</h2>
                     <span class="line-bg left-line y-b pt-10"></span>
                 </div>
                 <div class="row">
@@ -347,7 +441,7 @@
             <div class="col-lg-5 md-mb-30">
                 <div class="contant-part">
                     <div class="title-style mb-50 md-mb-30">
-                        <h2 class="margin-0 uppercase white-color">Who We Are</h2>
+                        <h2 class="margin-0 uppercase white-color">About Laamasia</h2>
                         <span class="line-bg left-line y-w pt-10"></span>
                     </div>
                     <div class="description dark-gray-color">
@@ -379,7 +473,7 @@
 <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
     <div class="container">
         <div class="title-style text-center mb-50 md-mb-30">
-            <h2 class="margin-0 uppercase">Team Player</h2>
+            <h2 class="margin-0 uppercase">Club Players</h2>
             <span class="line-bg y-b pt-10"></span>
         </div>
         
@@ -397,7 +491,7 @@
                 <div class="detail-wrap">
                     <div class="person-details">
                         <h3 class="player-title"><span class="squad-numbers">{{players.kit_number}}</span>
-                            <a href="player_profile/{{players.id}}">{{players.name}}</a>
+                            <a class="playername" href="player_profile/{{players.id}}">{{players.name}}</a>
                             <span class="player-position">{{players.position}}</span>
                         </h3>
                     </div>
@@ -436,14 +530,15 @@
 <!-- accademy fee end  -->
 
 <!-- Counter Section Start -->
-<div class="rs-counter bg5 style1 pt-103 pb-92 md-pt-80 md-pb-70 sm-pt-73">
+<div class="rs-counter bg5 style1 pt-103 pb-92 md-pt-80 md-pb-70 sm-pt-73" style=" margin-top: -110px;" >
     <div class="container">
         <div class="rs-count">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-12 md-mb-30">
                     <div class="rs-counter-list text-center">
-                        <h3 style="font-family:Poppins ; font-weight: 900; font-size: 60px;" class="counter-text  white-color"># theredsea</h3>
+                        <h3  style="font-family:Poppins;" class=" white-color theredsea"># theredsea</h3>
                     </div>
+                  
                 </div> 
 
                 <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-6 md-mb-30 mx-auto">
@@ -541,7 +636,7 @@
 <div class="rs-products nav-style pt-92 md-pt-72">
     <div class="container">
         <div class="title-style text-center mb-50 md-mb-30">
-            <h2 class="margin-0 uppercase">Top Products</h2>
+            <h2 class="margin-0 uppercase">LKFC Products</h2>
             <span class="line-bg y-b pt-10"></span>
         </div>
         <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30"

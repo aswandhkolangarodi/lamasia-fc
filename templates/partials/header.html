@@ -41,6 +41,29 @@
     .button-62:not([disabled]):hover {
       box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
     }
+    .fclogo{
+        height: 50px;
+        width: 50px;
+    }
+    @media only screen and (max-width: 400px){
+        .fclogo{
+        height: 38px;
+        width: 50px;
+    }
+    /* .Joinbuttonclass{
+        margin-right: 100px;
+    } */
+    }
+    @media only screen and (max-width: 800px){
+        .Joinbuttonclass{
+        margin-left: 400px;
+    }
+    }
+    @media only screen and (max-width: 500px){
+        .Joinbuttonclass{
+        margin-left: 100px;
+    }
+    }
     </style>
 
 
@@ -57,18 +80,24 @@
         <div class="menu-area menu-sticky">
             <div class="container-fluid">
                 <div class="row rs-vertical-middle">
-                    <div class="col-lg-2">
+                    <div class="col-lg-1 col-1">
                         <div class="logo-area">
-                            <a href="/"><img src="{% static 'images/fc.png' %}" class="my-2" alt="logo"></a>
+                            <a href="/"><img src="{% static 'images/fc.svg' %}"  class="my-2 fclogo" alt="logo"></a>
                         </div>
                     </div>
-                    <div class="col-lg-10 mobile-menu-area">
+                    <div class="col-lg-10 mobile-menu-area col-10">
                         <div class="rs-menu-area display-flex-center">
+                            <!-- <button>jhjk</button> -->
                             <div class="main-menu">
+                                <!-- <button>ertqwerfw</button> -->
                                 <a class="rs-menu-toggle">
                                     <i class="fa fa-bars"></i>
+
                                 </a>
+                                
+
                                 <nav class="rs-menu">
+                                   
                                     <ul class="nav-menu text-right">
                                         <!-- Home -->
                                         <li class="{% if is_index %} current-menu-item {% endif %}  "> <a href="/"
@@ -143,16 +172,18 @@
                                         <li class="{% if is_contact %} current-menu-item {% endif %}"><a
                                                 href="/contact">Contact</a></li>
                                         <!--Contact Menu End-->
-                                        <li>
+                                        <!-- <li>
                                             <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
-                                        </li>
+                                        </li> -->
 
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
                             </div> <!-- //.main-menu -->
                         </div>
                     </div>
-
+                    <div class="col-lg-1 col-1 Joinbuttonclass">
+                        <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
+                    </div>
                     <!-- HTML !-->
 
 

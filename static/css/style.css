@@ -2715,7 +2715,7 @@ blockquote i:before {
 -------------------------------------*/
 .rs-match-result.style1 .items {
   border-radius: 3px;
-  background: url(../images/background/result-bg.jpg);
+  /* background: url(../images/background/result-bg.jpg); */
   background-size: cover;
   text-align: center;
 }
@@ -2733,6 +2733,7 @@ blockquote i:before {
 }
 .rs-match-result.style1 .items a .teams div {
   width: 100%;
+  font-size: 13px;
 }
 .rs-match-result.style1 .items a .teams div.score {
   font-size: 24px;
@@ -4397,15 +4398,15 @@ blockquote i:before {
 }
 .rs-team.style1 .player-item .person-details .player-title .squad-numbers {
   font-size: 55px;
-  line-height: 60px;
+  line-height: 53px;
   color: #d2202e;
   float: left;
-  padding-right: 16px;
+  padding-right: 13px;
 }
 .rs-team.style1 .player-item .person-details .player-title a {
   padding-top: 4px;
   display: inline-block;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
   padding-bottom: 5px;
   color: #111111;

@@ -8,8 +8,8 @@ from django.http import JsonResponse
 
 
 def index(request):
-    banner1=Banner.objects.all().first()
-    banner2=Banner.objects.all().last()
+    banner1=Banner.objects.all()
+    # banner2=Banner.objects.all().last()
     print(datetime.now())
     upComingMatch = Matche.objects.filter(match_date__gte=datetime.now(),completed =False).order_by('match_date').first()
     completedMatches= Matche.objects.filter(completed = True)
@@ -38,7 +38,6 @@ def index(request):
         'completedMatches':completedMatches,
         'upComingMatch':upComingMatch,
         'banner':banner1,
-        'banner2':banner2,
         'fee':fee,
         'is_index':True
     }
@@ -126,7 +125,8 @@ def reserve_senior(request):
         'midfielder':midfielder,
         'defenders':defenders,
         'goalKeepers':goalKeepers,
-        'is_club':True
+        'is_club':True,
+        'status':"Senior"
     }
 
     return render(request, 'first-team.html', context)
@@ -145,7 +145,8 @@ def under_18(request):
         'midfielder':midfielder,
         'defenders':defenders,
         'goalKeepers':goalKeepers,
-        'is_club':True
+        'is_club':True,
+        'status':"Under-18"
     }
 
     return render(request, 'first-team.html', context)
@@ -164,7 +165,8 @@ def under_15(request):
         'midfielder':midfielder,
         'defenders':defenders,
         'goalKeepers':goalKeepers,
-        'is_club':True
+        'is_club':True,
+        'status':"Under-15"
     }
 
     return render(request, 'first-team.html', context)
@@ -183,7 +185,8 @@ def under_13(request):
         'midfielder':midfielder,
         'defenders':defenders,
         'goalKeepers':goalKeepers,
-        'is_club':True
+        'is_club':True,
+        'status':"Under-13"
     }
 
     return render(request, 'first-team.html', context)
@@ -202,7 +205,8 @@ def under_12(request):
         'midfielder':midfielder,
         'defenders':defenders,
         'goalKeepers':goalKeepers,
-        'is_club':True
+        'is_club':True,
+        'status':"Under-12"
     }
 
     return render(request, 'first-team.html', context)

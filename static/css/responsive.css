@@ -18,7 +18,9 @@
 
 @media only screen and (min-width:992px) and (max-width:1540px) {
 
-
+	/* .owl-nav .owl-prev{
+		display: hidden;
+	} */
 }
 
 @media only screen and (max-width: 1440px){
@@ -319,6 +321,7 @@
 		right: 15px;
 		bottom: 15px;
 	}
+	
 }
 
 @media only screen and (min-width: 992px){
@@ -551,6 +554,7 @@
 
 	.rs-slider.home-slider .single-slider .fly-layer .layer-image .animate4 img {
 	    max-width: 350px;
+		margin-left: 149px !important;
 	}
 
 	.rs-slider.home-slider .single-slider .fly-layer .layer-image .players img {
@@ -812,10 +816,7 @@
 	.rs-slider.home-slider .single-slider .text-part {
 	    max-width: 100%;
 	}
-	.rs-slider.home-slider .single-slider.slide2 .image-part,
-	.rs-slider.home-slider .single-slider .fly-layer {
-		display: none;
-	}
+	
 	.rs-slider.home-slider .single-slider.slide2 .container {
 		position: relative;
 	}
@@ -892,11 +893,11 @@
 		margin-bottom: 0;
 	}
 	.rs-team.style1 .player-item .person-details .player-title .squad-numbers {
-	    font-size: 20px;
-	    line-height: 50px;
+		font-size: 11px;
+    	line-height: 14px;
 	}
 	.rs-team.style1 .player-item .person-details .player-title a {
-		font-size: 9px;
+		font-size: 6px;
 		padding-bottom: 0;
 	}
 	.rs-team.style1 .player-item .person-details .player-title .player-position {
@@ -1249,7 +1250,7 @@
 }
 
 @media only screen and (max-width: 480px){
-
+	
 	.bg14 {		
 		background-size: unset;
 	}

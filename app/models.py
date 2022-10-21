@@ -12,7 +12,7 @@ class Banner(models.Model):
     top_heading = models.CharField(max_length=100, null=True)
     sub_heading = models.CharField(max_length=100, null=True)
     dscription = models.CharField(max_length=500, null=True)
-    # banner_image = models.FileField(upload_to ='banner/', null=True)
+    banner_image = models.FileField(upload_to ='banner/', null=True)
 
     def __str__(self):
         return self.sub_heading
