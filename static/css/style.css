@@ -247,77 +247,77 @@ ul {
 }
 /* Background Images */
 .bg1 {
-  background-image: url(../images/background/upcoming-match-bg.jpg);
+  background-image: url(../images/Shahil/upcoming-match-bg.jpg);
   background-size: cover;
 }
 .bg2 {
-  background-image: url(../images/background/video1-bg.jpg);
+  background-image: url(../images/Shahil/video1-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg3 {
-  background-image: url(../images/background/point-table-bg.jpg);
+  background-image: url(../images/Shahil/point-table-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg4 {
-  background-image: url(../images/background/about-home-bg.jpg);
+  background-image: url(../images/Shahil/about-home-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg5 {
-  background-image: url(../images/background/counter-bg1.jpg);
+  background-image: url(../images/Shahil/counter-bg1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg6 {
-  background-image: url(../images/background/award-bg.jpg);
+  background-image: url(../images/Shahil/award-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg7 {
-  background-image: url(../images/background/subscribe-bg.jpg);
+  background-image: url(../images/Shahil/subscribe-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg8 {
-  background-image: url(../images/background/result-bg2.jpg);
+  background-image: url(../images/Shahil/result-bg2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg9 {
-  background-image: url(../images/background/video2-bg.jpg);
+  background-image: url(../images/Shahil/video2-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg10 {
-  background-image: url(../images/background/home3-about.jpg);
+  background-image: url(../images/Shahil/home3-about.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg11 {
-  background-image: url(../images/background/match-fixture-bg.jpg);
+  background-image: url(../images/Shahil/match-fixture-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg12 {
-  background-image: url(../images/background/result-bg3.jpg);
+  background-image: url(../images/Shahil/result-bg3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg13 {
-  background-image: url(../images/background/team-bg-dark.jpg);
+  background-image: url(../images/Shahil/team-bg-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1469,7 +1469,7 @@ blockquote i:before {
     04. Slider Section CSS
   -----------------------------------*/
 .rs-slider.home-slider .single-slider {
-  background: url(../images/Football-01.jpg);
+  background: url(../images/New1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2715,7 +2715,7 @@ blockquote i:before {
 -------------------------------------*/
 .rs-match-result.style1 .items {
   border-radius: 3px;
-  /* background: url(../images/background/result-bg.jpg); */
+  /* background: url(../images/Shahil/result-bg.jpg); */
   background-size: cover;
   text-align: center;
 }
@@ -2974,11 +2974,11 @@ blockquote i:before {
   left: 0;
   bottom: 0;
   display: block;
-  background-image: linear-gradient(to top, rgba(33, 71, 144, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
-  background-image: -webkit-linear-gradient(to top, rgba(33, 71, 144, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
-  background-image: -moz-linear-gradient(to top, rgba(33, 71, 144, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
-  background-image: -ms-linear-gradient(to top, rgba(33, 71, 144, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
-  background-image: -o-linear-gradient(to top, rgba(33, 71, 144, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: linear-gradient(to top, rgba(182, 79, 65, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: -webkit-linear-gradient(to top, rgba(182, 79, 65, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: -moz-linear-gradient(to top, rgba(182, 79, 65, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: -ms-linear-gradient(to top, rgba(182, 79, 65, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: -o-linear-gradient(to top, rgba(182, 79, 65, 0.85) 30%, rgba(255, 255, 255, 0) 70%);
   border-radius: 0 0 4px 4px;
   z-index: -1;
 }
@@ -3947,7 +3947,7 @@ blockquote i:before {
     16. Contact Section CSS
 -------------------------------------*/
 .rs-contact .single-icon {
-  background: url(../images/background/contact-info-bg.jpg);
+  background: url(../images/Shahil/contact-info-bg.jpg);
   background-size: cover;
   position: relative;
   color: #ffffff;
@@ -5746,7 +5746,7 @@ blockquote i:before {
     30. Our Poll Section CSS
 -------------------------------------*/
 .rs-our-poll {
-  background: url(../images/background/our-poll-bg.jpg);
+  background: url(../images/Shahil/our-poll-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5995,14 +5995,14 @@ blockquote i:before {
     36. Footer Section CSS
 -------------------------------------*/
 .rs-footer {
-  background: url(../images/background/footer-bg.jpg);
+  background: url(../images/Shahil/footer-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .rs-footer .footer-bootom {
   padding: 15px 0;
-  background: #214790;
+  background: #A00000;
 }
 .rs-footer .footer-bootom .copyright p {
   margin: 0;
@@ -6010,7 +6010,7 @@ blockquote i:before {
   font-size: 14px;
 }
 .rs-footer .footer-bootom .copyright p a {
-  color: #d2202e;
+  color:blue;
 }
 .rs-footer .footer-bootom .copyright p a:hover {
   color: #ffffff;
@@ -6038,7 +6038,7 @@ blockquote i:before {
   margin: 0;
 }
 .rs-footer.dark-mode {
-  background: url(../images/background/footer-dark-bg.jpg);
+  background: url(../images/Shahil/footer-dark-bg.jpg);
   position: relative;
 }
 .rs-footer.dark-mode .footer-bootom {

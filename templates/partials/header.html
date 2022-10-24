@@ -13,9 +13,9 @@
 
 
     .button-62 {
-      background: linear-gradient(to bottom right, hsl(0, 64%, 40%), #c06007);
+        background-image: linear-gradient(to right, #d2202e 0%,  #ea950b 100%);
       border: 0;
-      border-radius: 12px;
+      border-radius: 4px;
       color: #FFFFFF;
       cursor: pointer;
       display: inline-block;
@@ -66,11 +66,16 @@
         
     }
     .button-62{
-        font-size: 11px;
+        display: none;
+        /* font-size: 11px;
         line-height: 1.5;
-        width: 100px;
+        width: 100px; */
         /* margin-left: 43px; */
     }
+    /* .togglewith .fa{
+        height: 100px;
+        width: 100px;
+    } */
     }
     </style>
 
@@ -85,7 +90,9 @@
     <!--Header Start-->
     <header id="rs-header" class="rs-header homestyle">
         <!-- Menu Start -->
-        <div class="menu-area menu-sticky">
+
+        <!-- large -->
+        <div class="menu-area menu-sticky d-none d-sm-block">
             <div class="container-fluid">
                 <div class="row rs-vertical-middle">
                     <div class="col-lg-1 col-1">
@@ -98,7 +105,7 @@
                             <!-- <button>jhjk</button> -->
                             <div class="main-menu">
                                 <!-- <button>ertqwerfw</button> -->
-                                <a class="rs-menu-toggle">
+                                <a class="rs-menu-toggle togglewith">
                                     <i class="fa fa-bars"></i>
 
                                 </a>
@@ -199,6 +206,127 @@
             </div>
         </div>
         <!-- Menu End -->
+
+
+
+        <!--small  -->
+
+        <div class="menu-area menu-sticky d-sm-none d-block">
+            <div class="container-fluid">
+                <div class="row rs-vertical-middle">
+                    <div class="col-lg-1 col-1" >
+                        <div class="logo-area">
+                            <a href="/"><img src="{% static 'images/fc.svg' %}"  class="my-2 fclogo" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 mobile-menu-area col-10">
+                        <div class="rs-menu-area display-flex-center">
+                            <!-- <button>jhjk</button> -->
+                            <div class="main-menu" >
+                                <!-- <button>ertqwerfw</button> -->
+                                
+                                <a class="rs-menu-toggle " >
+                                    <i class="fa fa-bars" ></i>
+
+                                </a>
+                                
+
+                                <nav class="rs-menu">
+                                   
+                                    <ul class="nav-menu text-right">
+                                        <!-- Home -->
+                                        <li class="{% if is_index %} current-menu-item {% endif %}  "> <a href="/"
+                                                class="home">Home</a></li>
+
+                                        <!-- End Home -->
+
+                                        <!-- club -->
+                                        <li
+                                            class="menu-item-has-children {% if is_club %} current-menu-item {% endif %}">
+                                            <a>club</a>
+                                            <ul class="sub-menu">
+
+                                                <li class="{% if is_board_management %} current-menu-item {% endif %}">
+                                                    <a href="/team/reserve-senior">Reserve Senior</a>
+                                                </li>
+                                                <li class="{% if is_sponsors %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-18">Under 18</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-15">Under 15</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-13">Under 13</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/team/under-12">Under 12</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <!-- end club -->
+
+                                        <!-- About Start -->
+                                        <li
+                                            class="menu-item-has-children {% if is_board_management %} current-menu-item {% endif %} {% if is_sponsors %} current-menu-item {% endif %} {% if is_history %} current-menu-item {% endif %}">
+                                            <a>About</a>
+                                            <ul class="sub-menu">
+
+                                                <li class="{% if is_board_management %} current-menu-item {% endif %}">
+                                                    <a href="/board-management">Board Management</a>
+                                                </li>
+                                                <li class="{% if is_sponsors %} current-menu-item {% endif %}"><a
+                                                        href="/sponsors">Sponsors</a></li>
+                                                <li class="{% if is_history %} current-menu-item {% endif %}"><a
+                                                        href="/history">History</a></li>
+
+                                            </ul>
+                                        </li>
+
+
+
+
+
+                                        <!-- About End -->
+                                       <!-- <li class="{% if is_match %} current-menu-item {% endif %}"> <a
+                                                href="/match-fixtures">Match Fixtures</a> </li> 
+                                        <li class="{% if is_join %} current-menu-item {% endif %}"> 
+                                               <a href="/joinacademy">Join Academy</a>
+                                           
+                                        </li> -->
+                                        <li class="{% if is_gallery %} current-menu-item {% endif %}"> <a
+                                                href="/gallery">Gallery</a>
+
+                                        </li>
+
+                                            <!--News Start-->
+                                        <li class="{% if is_news %} current-menu-item {% endif %}"> <a
+                                                href="/news">News</a>
+
+                                        </li>
+                                        <!--Point Table End-->
+
+
+                                        <!--Contact Menu Start-->
+                                        <li class="{% if is_contact %} current-menu-item {% endif %}"><a
+                                                href="/contact">Contact</a></li>
+                                        <!--Contact Menu End-->
+                                        <!-- <li>
+                                            <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
+                                        </li> -->
+
+                                    </ul> <!-- //.nav-menu -->
+                                </nav>
+                            </div> <!-- //.main-menu -->
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-1 Joinbuttonclass">
+                        <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
+                    </div>
+                    <!-- HTML !-->
+
+
+                </div>
+            </div>
+        </div>
+
+        <!--end small  -->
 
 
     </header>

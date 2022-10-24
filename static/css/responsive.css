@@ -806,15 +806,15 @@
 	}
 	.readon,
 	.readon.big-btn {
-		padding: 12px 30px 10px;
-		font-size: 15px;
+		padding: 11px 12px 8px;
+    font-size: 13px;
 	}
 
 	.rs-slider.home-slider .single-slider {
 	    /* padding: 100px 0 50px;
 	    max-height: 400px; */
 		padding: 87px 0 19px;
-		max-height: 605px;
+		max-height: 700px;
 	
 	}
 	.rs-slider.home-slider .single-slider .text-part {
