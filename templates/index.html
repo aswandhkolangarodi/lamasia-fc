@@ -17,18 +17,42 @@
         .playername{
             font-size: 10px;
         }
+        .single-slider{
+            height: 300px;
+            width: 100px;
+        }
+        .squad-numbers1{
+            font-size: 6px;
+            font-weight: 600;
+            color: red;
+            padding-bottom: 0;
+        }
+        .deatils .item123 a {
+            font-size: 6px !important;
+            font-weight: 600;
+            color: red;
+        }
+        .size-140 {
+            max-height: 46px;
+     width: auto !important;
+     margin: 0 auto;
+        max-width: 100%;
+}
+/* .bannerheight{
+    height: 1000px;
+} */
     }
 </style>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
 
 
-<!-- =-------------------large---------------------------- -->
+<!-- =-large -->
 <div id="rs-slider" class="rs-slider home-slider slider-navigation d-none d-sm-block">
     <div class="slider-carousel owl-carousel">
         {% for i in banner %}
         <div class="single-slider ">
-            <div class="container">
+            <div class="container" style="height: 100px;">
                 <div class="text-part d-none d-lg-block d-md-block">
                     <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
                     <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{i.sub_heading}}</h1>
@@ -39,7 +63,7 @@
                 </div>
                 <div class="fly-layer">
                     <div class="layer-image">
-                        <img  src="{{i.banner_image.url}}" height="100px" width="200px" alt="img">
+                        <img  src="{{i.banner_image.url}}" height="500px" width="200px" alt="img">
                         
                     </div>
                 </div>
@@ -61,25 +85,25 @@
     </div>
 </div>
 
-<!-- -------------------------- -->
+<!-- - -->
 
 
 
 
 
 <!--small -->
-<div id="rs-slider" class="rs-slider home-slider slider-navigation d-sm-none d-block" >
+<div id="rs-slider" class="rs-slider home-slider slider-navigation d-sm-none d-block bannerheight" >
     <div class="slider-carousel owl-carousel">
         {% for i in banner %}
-        <div class="single-slider  " style="height: 400px; width: 600px ;">
+        <div class="single-slider  " style="height: 1000px; width: 600px ;">
             <div class="container ">
                 
                 <div class="text-center">
-                        <img  src="{{i.banner_image.url}}" style="height: 170px; width: 300px;" alt="img">
+                        <img  src="{{i.banner_image.url}}" style="height: 401px; width: 400px; margin-left: -26px;" alt="img">
                 </div>
                 
                 <div class="text-part" style="margin-left: 100px;" >
-                    <h2 class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
+                    <h2  class="sub-title wow fadeInLeft text-capitalize" data-wow-delay="1s">{{i.top_heading}}</h2>
                     <h1 class="title wow fadeInRight" data-wow-delay="1s"><span class="">{{i.sub_heading}}</h1>
                     <div class="desc wow fadeInLeft" data-wow-delay="1s">{{i.dscription}}</div>
                     <!-- <div class="slider-btn">
@@ -489,9 +513,9 @@
                     <img src="{{players.photo.crop.383x479}}" alt="">
                 </div>
                 <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">{{players.kit_number}}</span>
-                            <a class="playername" href="player_profile/{{players.id}}">{{players.name}}</a>
+                    <div class="person-details deatils">
+                        <h3 class="player-title item123"><span class="squad-numbers1 ">{{players.kit_number}}</span>
+                            <a class="playername1" href="player_profile/{{players.id}}">{{players.name}}</a>
                             <span class="player-position">{{players.position}}</span>
                         </h3>
                     </div>
@@ -633,48 +657,40 @@
 
 <!-- Top Products Start -->
 {% if products %}
-<div class="rs-products nav-style pt-92 md-pt-72">
+
+<div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80">
     <div class="container">
         <div class="title-style text-center mb-50 md-mb-30">
             <h2 class="margin-0 uppercase">LKFC Products</h2>
             <span class="line-bg y-b pt-10"></span>
         </div>
+        
         <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30"
-            data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true"
-            data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
-            data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
-            data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
-            data-md-device-dots="false">
-            {% if products|length == 1 %}
-            {% for products in products %}
-            <!-- <div class="products">
-                    <div class="product-img">
-                        <a href="#"><img src="{{products.product_image.crop.220x211}}" alt=""></a>
-                    </div>
-                    <h4 class="product-title"><a href="#">{{products.category.category_name}}</a></h4>
-                    <span class="product-price">
-                        <span class="symbol">₹</span>{{products.price}}
-                    </span>
-                </div> -->
-
-            {% endfor %}
-            {% endif %}
-            {% for products in products %}
-            <div class="products">
-                <div class="product-img">
-                    <a href="#"><img src="{{products.product_image.crop.220x211}}" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">{{products.category.category_name}}</a></h4>
-                <span class="product-price">
-                    <span class="symbol">₹</span>{{products.price}}
-                </span>
+        data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true"
+        data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false"
+        data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
+        data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
+        data-md-device-dots="false">
+        {% for products in products %}
+        <div class="products">
+            <div class="product-img">
+                <a href="#"><img src="{{products.product_image.crop.220x211}}" alt=""></a>
             </div>
-            {% endfor %}
+            <h4 class="product-title"><a href="#">{{products.category.category_name}}</a></h4>
+            <span class="product-price">
+                <span class="symbol">₹</span>{{products.price}}
+            </span>
         </div>
+            {% endfor %}
 
-        {% include 'partials/subscription.html' %}
+        </div>
     </div>
 </div>
+
+
+
+
+
 {% endif %}
 <!-- Top Products End -->
 

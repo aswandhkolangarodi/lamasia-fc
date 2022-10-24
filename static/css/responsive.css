@@ -72,8 +72,9 @@
 		margin-bottom: 16px;
 	}
 	.rs-slider.home-slider .single-slider .text-part .desc {
-		font-size: 14px;
-		line-height: 24px;
+		font-size: 16px;
+		line-height: 19px;
+		margin-left: 14px;
 	}
 	.rs-slider.home-slider .single-slider .text-part .slider-btn {
 	    margin-top: 35px;
@@ -326,7 +327,7 @@
 
 @media only screen and (min-width: 992px){
 	.full-width-header .rs-header .menu-area.menu-sticky.sticky {
-		background: #214790;
+		background: #A00000;
 		transition: all 0.3s ease 0s;
 		position: fixed;
 		z-index: 999;
@@ -810,8 +811,11 @@
 	}
 
 	.rs-slider.home-slider .single-slider {
-	    padding: 100px 0 50px;
-	    max-height: 400px;
+	    /* padding: 100px 0 50px;
+	    max-height: 400px; */
+		padding: 87px 0 19px;
+		max-height: 605px;
+	
 	}
 	.rs-slider.home-slider .single-slider .text-part {
 	    max-width: 100%;
@@ -1315,9 +1319,11 @@
 	}
 	.rs-slider.home-slider .single-slider .text-part .sub-title {
 	    font-size: 20px;
+		margin-left: 14px;
 	}
 	.rs-slider.home-slider .single-slider .text-part .title {
 	    font-size: 30px;
+		margin-left: 14px;
 	}
 	.rs-banner.home4banner .banner-content {
 		max-width: 95%;

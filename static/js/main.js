@@ -188,7 +188,7 @@
             smartSpeed: (smartSpeed ? smartSpeed : 250),
             dots: (dots ? true : false),
             nav: (nav ? true : false),
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            navText: ["<i class='fa fa-angle-left' style='display: none;'></i>", "<i class='fa fa-angle-right ' style='display: none;></i>"],
             navSpeed: (navSpeed ? true : false),
             responsiveClass: true,
             responsive: {

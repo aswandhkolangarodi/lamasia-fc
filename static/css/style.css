@@ -602,7 +602,7 @@ ul.offcanvas-icon:hover li span:nth-child(2) {
   max-width: 100%;
 }
 .size-140 {
-  max-height: 140px;
+  max-height: 100px;
   width: auto !important;
   margin: 0 auto;
   max-width: 100%;
@@ -1130,7 +1130,7 @@ blockquote i:before {
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li a:hover,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.active a,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item > a {
-  color: #d2202e !important;
+  color: #214790 !important;
 }
 .full-width-header .rs-header .menu-area.menu-sticky {
   box-shadow: none;
@@ -1469,7 +1469,7 @@ blockquote i:before {
     04. Slider Section CSS
   -----------------------------------*/
 .rs-slider.home-slider .single-slider {
-  background: url(../images/slider/h1s1.jpg);
+  background: url(../images/Football-01.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1762,7 +1762,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li.active {
-  color: #d2202e;
+  color: #214790 ;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li:last-child:after {
   content: unset;
