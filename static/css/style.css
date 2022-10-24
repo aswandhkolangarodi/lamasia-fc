@@ -370,7 +370,7 @@ ul {
   border-radius: 0 10px 0 0;
 }
 .title-style .line-bg.y-w:after {
-  background: #d2202e;
+  background: #024268;
 }
 .title-style .line-bg.y-w:before {
   background: #ffffff;
@@ -1130,7 +1130,7 @@ blockquote i:before {
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li a:hover,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.active a,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item > a {
-  color: #214790 !important;
+  color: #004266 !important;
 }
 .full-width-header .rs-header .menu-area.menu-sticky {
   box-shadow: none;
@@ -1743,6 +1743,7 @@ blockquote i:before {
   color: #ffffff;
   float: left;
   line-height: 50px;
+  /* margin-bottom: 246px; */
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li {
   display: inline;
@@ -2550,13 +2551,13 @@ blockquote i:before {
   height: 80px;
   line-height: 90px;
   border-radius: 50%;
-  background: #d2202e;
+  background: #024268;
   margin: 0 auto;
   display: block;
   position: relative;
 }
 .rs-video .video-contents .play-btn i {
-  color: #111111;
+  color: white;
   z-index: 1;
   position: relative;
   font-size: 30px;
@@ -4385,7 +4386,6 @@ blockquote i:before {
   min-height: 80px;
 }
 .rs-team.style1 .player-item .person-details .player-title {
-  font-size: 15px;
   text-align: left;
   overflow: hidden;
   text-transform: uppercase;
@@ -4416,9 +4416,9 @@ blockquote i:before {
 }
 .rs-team.style1 .player-item .person-details .player-title .player-position {
   display: block;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 16px;
   color: #555555;
   text-transform: capitalize;
 }

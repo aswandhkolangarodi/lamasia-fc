@@ -15,7 +15,7 @@
 <!-- Breadcrumbs Section Start -->
 <div class="rs-breadcrumbs">
     <div class="breadcrumbs-wrap">
-        <img src="{% static 'images/New2.jpg' %}" alt="Breadcrumbs Image">
+        <img src="{% static 'images/New3.jpg' %}" class="img-fluid" alt="Breadcrumbs Image">
         <div class="breadcrumbs-inner">
             <div class="container">
                 <div class="breadcrumbs-text inner-team">
@@ -32,6 +32,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 <div class="rs-about pt-100 pb-100 md-pt-80 md-pb-73">
@@ -75,20 +78,22 @@
         data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
         data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
         data-md-device-dots="false">
-        {% for goalKeepers in goalKeepers %}
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="{{goalKeepers.photo.crop.383x479}}" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">{{goalKeepers.kit_number}}</span>
-                            <a class="playername" href="player_profile/{{goalKeepers.id}}">{{goalKeepers.name}}</a>
-                            <span class="player-position">{{goalKeepers.position}}</span>
-                        </h3>
-                    </div>
+        {% for players in goalKeepers %}
+        <div class="player-item">
+            <div class="player-img">
+                <img src="{{players.photo.crop.383x479}}" alt="">
+            </div>
+            <div class="detail-wrap">
+                <div class="person-details deatils">
+                    <h4 class="player-title item123">
+                        <a class="playername1" href="player_profile/{{players.id}}">{{players.name}}</a>
+                        <span class="player-position">{{players.position}} <span class="squad-numbers1 "
+                                style="color: red;">{{players.kit_number}}</span></span>
+                    </h4>
                 </div>
             </div>
+        </div>
+           
             {% endfor %}
 
         </div>
@@ -108,20 +113,21 @@
         data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
         data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
         data-md-device-dots="false">
-        {% for defenders in defenders %}
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="{{defenders.photo.crop.383x479}}" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">{{defenders.kit_number}}</span>
-                            <a class="playername" href="player_profile/{{defenders.id}}">{{defenders.name}}</a>
-                            <span class="player-position">{{defenders.position}}</span>
-                        </h3>
-                    </div>
+        {% for players in defenders %}
+        <div class="player-item">
+            <div class="player-img">
+                <img src="{{players.photo.crop.383x479}}" alt="">
+            </div>
+            <div class="detail-wrap">
+                <div class="person-details deatils">
+                    <h4 class="player-title item123">
+                        <a class="playername1" href="player_profile/{{players.id}}">{{players.name}}</a>
+                        <span class="player-position">{{players.position}} <span class="squad-numbers1 "
+                                style="color: red;">{{players.kit_number}}</span></span>
+                    </h4>
                 </div>
             </div>
+        </div>
             {% endfor %}
 
         </div>
@@ -141,20 +147,21 @@
         data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
         data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
         data-md-device-dots="false">
-        {% for midfielder in midfielder%}
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="{{midfielder.photo.crop.383x479}}" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">{{midfielder.kit_number}}</span>
-                            <a class="playername" href="player_profile/{{midfielder.id}}">{{midfielder.name}}</a>
-                            <span class="player-position">{{midfielder.position}}</span>
-                        </h3>
-                    </div>
+        {% for players in midfielder%}
+        <div class="player-item">
+            <div class="player-img">
+                <img src="{{players.photo.crop.383x479}}" alt="">
+            </div>
+            <div class="detail-wrap">
+                <div class="person-details deatils">
+                    <h4 class="player-title item123">
+                        <a class="playername1" href="player_profile/{{players.id}}">{{players.name}}</a>
+                        <span class="player-position">{{players.position}} <span class="squad-numbers1 "
+                                style="color: red;">{{players.kit_number}}</span></span>
+                    </h4>
                 </div>
             </div>
+        </div>
             {% endfor %}
 
         </div>
@@ -174,20 +181,21 @@
         data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
         data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="true"
         data-md-device-dots="false">
-        {% for forwarder in forwarder %}
-            <div class="player-item">
-                <div class="player-img">
-                    <img src="{{forwarder.photo.crop.383x479}}" alt="">
-                </div>
-                <div class="detail-wrap">
-                    <div class="person-details">
-                        <h3 class="player-title"><span class="squad-numbers">{{forwarder.kit_number}}</span>
-                            <a class="playername" href="player_profile/{{forwarder.id}}">{{forwarder.name}}</a>
-                            <span class="player-position">{{forwarder.position}}</span>
-                        </h3>
-                    </div>
+        {% for players in forwarder %}
+        <div class="player-item">
+            <div class="player-img">
+                <img src="{{players.photo.crop.383x479}}" alt="">
+            </div>
+            <div class="detail-wrap">
+                <div class="person-details deatils">
+                    <h4 class="player-title item123">
+                        <a class="playername1" href="player_profile/{{players.id}}">{{players.name}}</a>
+                        <span class="player-position">{{players.position}} <span class="squad-numbers1 "
+                                style="color: red;">{{players.kit_number}}</span></span>
+                    </h4>
                 </div>
             </div>
+        </div>
             {% endfor %}
 
         </div>
@@ -239,85 +247,3 @@
 
 
 
-
-        {% comment %} <div class="rs-team style7 first-team pt-100 md-pt-70">
-            <div class="container custom">
-                <div class="team-inner pb-85 md-pb-70">
-                    <div class="heading-title pb-50">
-                        <h2 class="title">Goalkeepers</h2>
-                        <span class="lines-bg"></span>
-                    </div>
-                    
-                </div>
-                <div class="team-inner pb-85 md-pb-70">
-                    <div class="heading-title pb-50">
-                        <h2 class="title">Defenders</h2>
-                        <span class="lines-bg"></span>
-                    </div>
-                    <div class="row">
-                        {% for defenders in defenders %}
-                        <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
-                            <div class="team-item-inner">
-                                <a href="/player_profile/{{defenders.id}}">
-                                    <img src="{{defenders.photo.crop.307x388}}" alt="Team">
-                                </a>
-                                <div class="normal-text">
-                                    <span class="squad-numbers">{{defenders.kit_number}}</span>
-                                    <a href="/player_profile/{{defenders.id}}" class="text-capitalize" >{{defenders.name}}</a>
-                                    <span class="player-position text-uppercase">{{defenders.position}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-        
-                    </div>
-                </div>
-                <div class="team-inner pb-85 md-pb-70">
-                    <div class="heading-title pb-50">
-                        <h2 class="title">Midfielders</h2>
-                        <span class="lines-bg"></span>
-                    </div>
-                    <div class="row">
-                        {% for midfielder in midfielder%}
-                        <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
-                            <div class="team-item-inner">
-                                <a href="/player_profile/{{midfielder.id}}">
-                                    <img src="{{midfielder.photo.crop.307x388}}" alt="Team">
-                                </a>
-                                <div class="normal-text">
-                                    <span class="squad-numbers">{{midfielder.kit_number}}</span>
-                                    <a href="/player_profile/{{midfielder.id}}" class="text-capitalize">{{midfielder.name}}</a>
-                                    <span class="player-position">{{midfielder.position}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-        
-                    </div>
-                </div>
-                <div class="team-inner pb-100 md-pb-70">
-                    <div class="heading-title pb-50">
-                        <h2 class="title">Forwards</h2>
-                        <span class="lines-bg"></span>
-                    </div>
-                    <div class="row">
-                        {% for forwarder in forwarder %}
-                        <div class="col-lg-3 col-md-6 col-sm-6 mb-30 ">
-                            <div class="team-item-inner">
-                                <a href="/player_profile/{{forwarder.id}}">
-                                    <img src="{{forwarder.photo.crop.307x388}}" alt="Team">
-                                </a>
-                                <div class="normal-text">
-                                    <span class="squad-numbers">{{forwarder.kit_number}}</span>
-                                    <a href="/player_profile/{{forwarder.id}}" class="text-capitalize">{{forwarder.name}}</a>
-                                    <span class="player-position">{{forwarder.position}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-        
-                    </div>
-                </div>
-                
-            </div>
-        </div> {% endcomment %}

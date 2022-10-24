@@ -74,7 +74,7 @@
 	.rs-slider.home-slider .single-slider .text-part .desc {
 		font-size: 16px;
 		line-height: 19px;
-		margin-left: 14px;
+		/* margin-left: 14px; */
 	}
 	.rs-slider.home-slider .single-slider .text-part .slider-btn {
 	    margin-top: 35px;
@@ -465,7 +465,7 @@
 		text-align: right;
 	}
 	#rs-header .menu-area .rs-menu ul {
-	    background: #214790;
+		background-color:#004168 ;
 	}
 	#rs-header .menu-area .rs-menu ul li{
 		display: block;
@@ -499,10 +499,10 @@
 	    padding: 13px 20px;
 	    cursor: pointer;
 	    line-height: 13px;
-	    background: #fbc02d;
+	    background: white;
 	}
 	.nav-menu span.rs-menu-parent i {
-		color: #fff;
+		color: black;
 	}
 	.nav-menu span.rs-menu-parent:hover i {
 		color: #281488;
@@ -622,7 +622,7 @@
 	.rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
 		font-size: 30px;
 		line-height: 40px;
-		margin-bottom: 10px;
+		/* margin-bottom: 172px; */
 	}
 
 	.title-style h2 {
@@ -905,7 +905,7 @@
 		padding-bottom: 0;
 	}
 	.rs-team.style1 .player-item .person-details .player-title .player-position {
-		font-size: 5px;
+		font-size: 8px;
 	}
 	.rs-team.style1 .player-item .person-details {
 		min-height: 69px;
@@ -1319,11 +1319,11 @@
 	}
 	.rs-slider.home-slider .single-slider .text-part .sub-title {
 	    font-size: 20px;
-		margin-left: 14px;
+		/* margin-left: 14px; */
 	}
 	.rs-slider.home-slider .single-slider .text-part .title {
 	    font-size: 30px;
-		margin-left: 14px;
+		/* margin-left: 14px; */
 	}
 	.rs-banner.home4banner .banner-content {
 		max-width: 95%;
