@@ -140,6 +140,7 @@ class Product(models.Model):
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, null=True)
     product_image = VersatileImageField(upload_to='products/', null=True)
     price = models.IntegerField()
+    description = models.CharField(max_length=500 ,null=True, blank=True)
 
     
 
@@ -200,3 +201,24 @@ class Registration(models.Model):
     status= models.CharField(max_length=15,  choices=choices)
     def __str__(self):
         return self.name
+
+
+
+class OrderList(models.Model): 
+    choices = (
+        ("Not Seen", "Not Seen"),
+        ("Seen", "Seen"),
+        ("Called", "Called"),
+        ("Completed", "Completed"),
+    )
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+    name = models.CharField(max_length=100, null=True,blank=True)
+    contactnum = models.CharField(null=True,blank=True,max_length=15)
+    place = models.CharField(null=True,blank=True,max_length=155)
+    pin = models.CharField(null=True,blank=True,max_length=155)
+    Address = models.CharField(null=True,blank=True,max_length=155)
+    size = models.CharField(null=True,blank=True,max_length=155)
+    quantity = models.IntegerField()
+    totalprice = models.IntegerField()
+    status= models.CharField(max_length=15,  choices=choices)
+

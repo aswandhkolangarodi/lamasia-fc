@@ -1,0 +1,344 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .modal .modal-content.form-wrapper {
+        /* width: 100%;
+        height: 470px; */
+        position: relative;
+        background: #f2f3f5;
+    }
+
+    .modal .modal-content.form-wrapper .icon-box {
+        height: 50px;
+        width: 50px;
+        background: #007bff;
+        color: #f2f3f5;
+        margin: 0 auto;
+        position: absolute;
+        top: -4%;
+        left: -2%;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal .modal-content.form-wrapper .close-box {
+        height: 50px;
+        width: 50px;
+        background: #f00;
+        color: #f2f3f5;
+        margin: 0 auto;
+        position: absolute;
+        top: -4%;
+        right: -2%;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .modal .modal-content.form-wrapper .btn-info {
+        transition: all 500ms;
+        background: #007bff;
+        color: #fff;
+    }
+
+    .modal .modal-content.form-wrapper .btn-info:hover {
+        background: transparent;
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a {
+        transition: all 500ms;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin: 0 auto;
+        background: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        margin: 0 auto;
+        padding-top: 7px;
+        border: 1px solid transparent;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.google {
+        background: #db4437;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.google:hover {
+        border-color: #db4437;
+        color: #db4437;
+        background: transparent;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.facebook {
+        background: #4267b2;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.facebook:hover {
+        border-color: #4267b2;
+        color: #4267b2;
+        background: transparent;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.twitter {
+        background: #1da1f2;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.twitter:hover {
+        border-color: #1da1f2;
+        color: #1da1f2;
+        background: transparent;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.github {
+        background: #24292e;
+    }
+
+    .modal .modal-content.form-wrapper .social-login a.github:hover {
+        border-color: #24292e;
+        color: #24292e;
+        background: transparent;
+    }
+</style>
+
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/New3.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text inner-team">
+                    <h1 class="breadcrumbs-title mb-17">Product Single</h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Product Single</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Section End -->
+<div class="rs-about pt-100 pb-100 md-pt-80 md-pb-73">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 md-mb-30">
+                <div class="about-img">
+                    <img src="{{product.product_image.crop.340x123}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-7 pl-40 col-padding-md">
+                <div class="title-style mb-50 md-mb-30">
+                    <h2 class="margin-0 uppercase">{{product.category.category_name}}</h2>
+                    <span class="line-bg y-b left-line pt-10"></span>
+                </div>
+                <div class="about-wrap">
+                    <p class="title-color">{{product.description}} .</p>
+
+                </div>
+                <div class="about-wrap">
+                    <span style="font-size: 20px; font-weight: 700; ">Price</span>
+                    <p style="color: red;" class="title-color"> Rs {{product.price}}</p>
+
+                </div>
+                <div class="slider-btn text-end">
+                    <a data-target="#register" data-toggle="modal" class="readon" style="color: white;">Join Now</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<div class="modal fade" id="register">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+        <div class="modal-content form-wrapper">
+            <div class="close-box" data-dismiss="modal">
+                <i class="fa fa-times fa-2x"></i>
+            </div>
+            <div class="container-fluid mt-5">
+                <form  id="ProductBuy"  >
+                    {% csrf_token %}
+                    <div class="form-group text-center pb-2">
+                        <h4>Registration Form</h4>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="name">Name</label><span style="color: red;">*</span>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-group col">
+                            <label>Place</label><span style="color: red;">*</span>
+                            <input type="text" name="place" class="form-control" placeholder="Enter Your Place" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row mb-1">
+                        <div class="form-group col">
+                            <label>Contact Number</label><span style="color: red;">*</span>
+                            <input type="number" name="contactnum" required class="form-control" placeholder="Enter Your Number">
+
+                        </div>
+                        <div class="form-group col">
+                            <label>Pin Code</label><span style="color: red;">*</span>
+                            <input type="text" name="pin" class="form-control" placeholder="Enter Your Pincode" required>
+                            <input type="hidden" name="id" value={{product.id}} class="form-control">
+
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="form-row mb-1">
+                        <div class="form-group col">
+                            <label>Address</label><span style="color: red;">*</span>
+                            <textarea name="Address" required id="" class="form-control"cols="20" rows="4"></textarea>
+
+                        </div>
+                        
+                    </div>
+                    <div class="form-row mb-1">
+                        <div class="form-group col">
+                            <label>Size</label><span style="color: red;">*</span>
+                            <input type="text" required name="size" class="form-control" placeholder="Enter Your size">
+
+                        </div>
+                        <div class="form-group col">
+                            <label>Quantity</label><span style="color: red;">*</span>
+                            <input type="text" onchange="changeqty()" name="quantity" id="qty"  class="form-control" placeholder="Enter Your Quantity" required>
+                        </div>
+                    </div>
+                    <div class="form-row mb-1">
+                        <div class="form-group col">
+                            <label>Price</label>
+                            <input type="number" readonly  name="price" id="unitprice" value="{{product.price}}" class="form-control" >
+
+                        </div>
+                        <div class="form-group col">
+                            <label>Total Price</label>
+                            <input type="text" readonly name="totalprice" id="Grandtotal" class="form-control"  >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info form-control">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    function changeqty(){
+        var qty = $("#qty").val()
+        var unitprice = $("#unitprice").val()
+        sum= qty*unitprice
+        $("#Grandtotal").val(sum)
+        // Grandtotal
+        // alert(sum)
+    }
+
+
+
+    $(document).ready(function () {
+        $("#ProductBuy").submit(function (e) {
+            // var data = $("#categorysave").serializeArray();
+            var formData = new FormData(e.target);
+            console.log(formData)
+            e.preventDefault();
+            console.log(formData)
+            $.ajax({
+                url: "/registration",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                cache: false,
+                success: function (responce) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your Registration Has Been Completed',
+                        showConfirmButton: false,
+                        timer: 3000
+                      })
+                      setInterval('location.reload()', 3000);   
+                 
+                }
+                
+            });
+
+        });
+        return false;
+
+    });
+       
+</script>
+
+
+{% endblock %}
+
+
+
+{% block js %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    function changeqty(){
+        var qty = $("#qty").val()
+        var unitprice = $("#unitprice").val()
+        sum= qty*unitprice
+        $("#Grandtotal").val(sum)
+        // Grandtotal
+        // alert(sum)
+    }
+
+
+
+    $(document).ready(function () {
+        $("#ProductBuy").submit(function (e) {
+            // var data = $("#categorysave").serializeArray();
+            var formData = new FormData(e.target);
+            console.log(formData)
+            e.preventDefault();
+            console.log(formData)
+            $.ajax({
+                url: "/productsell",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                cache: false,
+                success: function (responce) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your Registration Has Been Completed Our Team Will Contact To You Within Few Days',
+                        showConfirmButton: false,
+                        timer: 3000
+                      })
+                      setInterval('window.location.href="/"', 3000);   
+                 
+                }
+                
+            });
+
+        });
+        return false;
+
+    });
+       
+</script>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Breadcrumbs Section Start -->
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/New3.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title mb-17">League & Cups</h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">League & Cups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Section End -->
+
+<div class="rs-awards bg6 pt-92 pb-100 md-pt-72 md-pb-80" style="margin-top: 100px;">
+    <div class="container">
+        <div class="title-style text-center mb-50 md-mb-30">
+            <h2 class="margin-0 uppercase white-color">Champion Awards</h2>
+            <span class="line-bg y-w pt-10"></span>
+        </div>
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true"
+            data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="false"
+            data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
+            data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
+            data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="false"
+            data-md-device-dots="false">
+            <div class="item">
+                <div class="award-wrap">
+                    <div class="champion-logo">
+                        <img src="{% static 'images/award/1.png' %}" alt="">
+                    </div>
+                    <div class="champion-details">
+                        <div class="year-details">
+                            <h3>UEFA Champions League</h3>
+                        </div>
+                        <div class="champion-no">05</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="award-wrap">
+                    <div class="champion-logo">
+                        <img src="{% static 'images/award/2.png' %}" alt="">
+                    </div>
+                    <div class="champion-details">
+                        <div class="year-details">
+                            <h3>UEFA Europa League</h3>
+                        </div>
+                        <div class="champion-no" style>07</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="award-wrap">
+                    <div class="champion-logo">
+                        <img src="{% static 'images/award/3.png' %}" alt="">
+                    </div>
+                    <div class="champion-details">
+                        <div class="year-details">
+                            <h3>UEFA Super Cup</h3>
+                        </div>
+                        <div class="champion-no" style>06</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="award-wrap">
+                    <div class="champion-logo">
+                        <img src="{% static 'images/award/4.png' %}" alt="">
+                    </div>
+                    <div class="champion-details">
+                        <div class="year-details">
+                            <h3>FIFA Club World Cup</h3>
+                        </div>
+                        <div class="champion-no" style>03</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rs-gallery style1 pt-92 md-pt-72">
+    <div class="container">
+        {% include 'partials/subscription.html' %}
+    </div>
+</div>
+{% endblock %}

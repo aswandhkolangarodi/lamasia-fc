@@ -25,6 +25,9 @@ urlpatterns = [
     path('join-now', views.join, name='join-now'),
     path('joinacademy', views.joinacademy, name='joinacademy'),
     path('registration', views.registration, name='registration'),
+    path('league', views.league, name='league'),
+    path('productsingle/<int:id>', views.productsingle, name='productsingle'),
+    path('productsell', views.productsell, name='productsell'),
     
 
 ]

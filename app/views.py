@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from app.models import AccademyFee, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
+from app.models import AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
 from datetime import date, datetime
 from django.db.models import Q
 from django.http import JsonResponse
@@ -294,8 +294,11 @@ def join(request):
 
 
 def joinacademy(request):
+    sponsors = SponsorLogo.objects.all()
+
     context = {
         'is_join':True,
+        "sponsors":sponsors
     }
     return render(request, 'joinacademy.html', context)
 
@@ -319,4 +322,49 @@ def registration(request):
     registrationss.save()
     
     return JsonResponse({'data':"eryset"})
+
+
+def league(request):
+    sponsors = SponsorLogo.objects.all()
+    context = {
+        'is_league':True,
+        "sponsors":sponsors
+    }
+    return render(request, 'league.html', context)
+
+
+
+def productsingle(request,id):
+    sponsors = SponsorLogo.objects.all()
+    product= Product.objects.get(id=id)
+    context = {
+        'is_productsingle':True,
+        "sponsors":sponsors,
+        "product":product
+    }
+    return render(request, 'productsingle.html', context)
+
+
+
+
+
+def productsell(request):
+    name=request.POST['name']
+    place=request.POST['place']
+    contactnum=request.POST['contactnum']
+    pin=request.POST['pin']
+    Address=request.POST['Address']
+    size=request.POST['size']
+    quantity=request.POST['quantity']
+    totalprice=request.POST['totalprice']
+    id=request.POST['id']
+    proid= Product.objects.get(id=id)
+    order= OrderList(product=proid, name=name, contactnum=contactnum,  place=place, pin=pin, Address=Address,size=size, quantity=quantity, totalprice=totalprice ,status="Not Seen" )
+    order.save()
+    
+    
+    
+    
+    return JsonResponse({'data':"eryset"})
+
 

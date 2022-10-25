@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration
+from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration,OrderList
 # Register your models here.
 
 
@@ -43,7 +43,7 @@ admin.site.register(ProductCategory)
 
 class Products(admin.ModelAdmin):
     model = Product
-    list_display = ['product_image']
+    list_display = ['category']
 admin.site.register(Product,Products)
 
 class ContactAdmin(admin.ModelAdmin):
@@ -69,3 +69,12 @@ class Registrations(admin.ModelAdmin):
     list_display = ['name','contactnum','guardiannum']
     search_fields=('name','contactnum','guardiannum')
 admin.site.register(Registration,Registrations)
+
+
+class OrderLists(admin.ModelAdmin):
+    model = OrderList
+    list_display = ['name','contactnum','place']
+    search_fields=('name','contactnum','place')
+admin.site.register(OrderList,OrderLists)
+
+
