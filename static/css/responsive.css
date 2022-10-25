@@ -196,7 +196,7 @@
 	}
 
 	.rs-breadcrumbs .breadcrumbs-wrap img {
-		min-height: 300px;
+		min-height: 200px;
 	}
 	.rs-about .title-style h2 {
 		font-size: 25px;
@@ -617,7 +617,7 @@
 	}
 
 	.rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner {
-		bottom: 75px;
+		bottom: 44px;
 	}
 	.rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
 		font-size: 30px;

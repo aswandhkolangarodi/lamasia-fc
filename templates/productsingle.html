@@ -133,7 +133,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5 md-mb-30">
                 <div class="about-img">
-                    <img src="{{product.product_image.crop.340x123}}" alt="">
+                    <img src="{{product.product_image.url}}" alt="">
                 </div>
             </div>
             <div class="col-lg-7 pl-40 col-padding-md">
@@ -208,8 +208,8 @@
                     </div>
                     <div class="form-row mb-1">
                         <div class="form-group col">
-                            <label>Size</label><span style="color: red;">*</span>
-                            <input type="text" required name="size" class="form-control" placeholder="Enter Your size">
+                            <label>Size</label>
+                            <input type="text"  name="size" class="form-control" placeholder="Enter Your size">
 
                         </div>
                         <div class="form-group col">

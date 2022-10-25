@@ -269,7 +269,7 @@ ul {
   background-size: cover;
 }
 .bg5 {
-  background-image: url(../images/Shahil/counter-bg1.jpg);
+  background-image: url(../images/Shahil/counter-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1872,7 +1872,7 @@ blockquote i:before {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: #d2202e;
+  background: white;
 }
 .rs-upcoming-match .match-info ul li:last-child {
   padding: 0;
