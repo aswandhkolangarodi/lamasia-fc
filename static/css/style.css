@@ -5224,7 +5224,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-awards .item .award-wrap .champion-details .champion-no {
-  font-size: 40px;
+  font-size: 16px;
   margin-top: 15px;
   text-align: center;
   padding: 5px 15px;
@@ -5241,7 +5241,7 @@ blockquote i:before {
   width: 100%;
   height: 220%;
   left: 0;
-  bottom: 0;
+  bottom: 27px;
   display: block;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
   background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
