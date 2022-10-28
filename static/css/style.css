@@ -305,7 +305,7 @@ ul {
   background-size: cover;
 }
 .bg11 {
-  background-image: url(../images/Shahil/match-fixture-bg.jpg);
+  background-image: url(../images/Shahil/award-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4132,7 +4132,7 @@ blockquote i:before {
 }
 .rs-pointtable.inner-style table tr th {
   padding: 20px 15px;
-  background: #214790;
+  background: #ad0009;
 }
 .rs-pointtable.inner-style table tr td {
   padding: 20px 15px;
@@ -4234,7 +4234,7 @@ blockquote i:before {
 }
 .rs-pointtable.full-ranking .ranking-wrap tbody tr th {
   padding: 20px;
-  color: #555555;
+  color: white;
   font-weight: 700;
 }
 .rs-pointtable.full-ranking .ranking-wrap tbody tr th.team {
@@ -5243,12 +5243,12 @@ blockquote i:before {
   left: 0;
   bottom: 27px;
   display: block;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
+  /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
   background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
   background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
   background-image: -ms-linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
   background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(255, 255, 255, 0) 80%);
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px; */
 }
 /* ------------------------------------
     25. Top Products Section CSS
@@ -5827,7 +5827,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-match-fixture.style2 .match-list table tr td:nth-child(2n) {
-  color: #d2202e;
+  color: black;
 }
 .rs-match-fixture.style2 .match-list table tr:nth-child(2n) td {
   background: rgba(0, 0, 0, 0.1);

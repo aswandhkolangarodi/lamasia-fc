@@ -28,6 +28,7 @@ urlpatterns = [
     path('league', views.league, name='league'),
     path('productsingle/<int:id>', views.productsingle, name='productsingle'),
     path('productsell', views.productsell, name='productsell'),
+    path('singleleaguedetails', views.singleleaguedetails, name='singleleaguedetails'),
     
 
 ]

@@ -368,3 +368,13 @@ def productsell(request):
     return JsonResponse({'data':"eryset"})
 
 
+
+def singleleaguedetails(request):
+    sponsors = SponsorLogo.objects.all()
+    context = {
+        "sponsors":sponsors,
+        
+    }
+    return render(request, 'singleleaguedetails.html', context)
+
+

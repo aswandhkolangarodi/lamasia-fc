@@ -493,7 +493,7 @@
             </div>
             <div class="col-lg-7 margin-0 pl-40 col-padding-md">
                 <div class="image-part">
-                    <img src="{% static 'images/about/about-home.png' %}" alt="">
+                    <img src="{% static  'images/about/about-home.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -656,7 +656,7 @@
 <!-- Champion Awards End -->
 
 <!-- Top Products Start -->
-{% if products %}
+<!-- {% if products %}
 
 <div class="rs-team style1 nav-style pt-92 pb-100 md-pt-72 md-pb-80" style=" margin-top: -70px;">
     <div class="container">
@@ -698,7 +698,88 @@
 
 
 
-{% endif %}
+{% endif %} -->
+
+
+<!-- Top Products Start -->
+<div class="rs-products nav-style pt-92 md-pt-72">
+    <div class="container">
+        <div class="title-style text-center mb-50 md-mb-30">
+            <h2 class="margin-0 uppercase">Top Products</h2>
+            <span class="line-bg y-b pt-10"></span>
+        </div>
+        <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
+          
+            <div class="products">
+                <div class="product-img">
+                    <a href="/productsingle/2"><img src="{% static 'images/products/2.png' %}" alt=""></a>
+                </div>
+                <h4 class="product-title"><a href="#">T-shirt Pet Yellow</a></h4>
+                <span class="product-price">
+                    <span class="symbol">£</span>65.00
+                </span>
+                <div class="cart-button">
+                    <a href="/cart"><i class="flaticon-basket"></i></a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product-img">
+                    <a href="/productsingle/2"><img src="{% static 'images/products/3.png' %}" alt=""></a>
+                </div>
+                <h4 class="product-title"><a href="#">T-shirt Dark Green</a></h4>
+                <span class="product-price">
+                    <span class="symbol">£</span>65.00
+                </span>
+                <div class="cart-button">
+                    <a href="/cart"><i class="flaticon-basket"></i></a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product-img">
+                    <a href="/productsingle/2"><img src="{% static 'images/products/4.png' %}" alt=""></a>
+                </div>
+                <h4 class="product-title"><a href="#">T-shirt Creem Pink</a></h4>
+                <span class="product-price">
+                    <span class="symbol">£</span>65.00
+                </span>
+                <div class="cart-button">
+                    <a href="/cart"><i class="flaticon-basket"></i></a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product-img">
+                    <a href="/productsingle/2"><img src="{% static 'images/products/5.png' %}" alt=""></a>
+                </div>
+                <h4 class="product-title"><a href="#">T-shirt Drak Blue</a></h4>
+                <span class="product-price">
+                    <span class="symbol">£</span>65.00
+                </span>
+                <div class="cart-button">
+                    <a href="/cart"><i class="flaticon-basket"></i></a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product-img">
+                    <a href="/productsingle/2"><img src="{% static 'images/products/6.png' %}" alt=""></a>
+                </div>
+                <h4 class="product-title"><a href="#">Sports Back Cap</a></h4>
+                <span class="product-price">
+                    <span class="symbol">£</span>65.00
+                </span>
+                <div class="cart-button">
+                    <a href="/cart"><i class="flaticon-basket"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="read-btn text-center" style="margin-top: -57px; margin-bottom: 10px;">
+            <a class="readon"
+                style="background-image: linear-gradient(to right, #ea950b 0%, #d2202e 51% , #ea950b 100% ); color: white;"
+                href="/shop">View more</a>
+        </div>
+       
+    </div>
+</div>
 <!-- Top Products End -->
 
 
