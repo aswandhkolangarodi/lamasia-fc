@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import AccademyFee, Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration,OrderList
+from app.models import AccademyFee, Customer,Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration,OrderList
 # Register your models here.
 
 
@@ -76,5 +76,13 @@ class OrderLists(admin.ModelAdmin):
     list_display = ['name','contactnum','place']
     search_fields=('name','contactnum','place')
 admin.site.register(OrderList,OrderLists)
+
+class Customers(admin.ModelAdmin):
+    model = Customer
+    list_display = ['name','phone','place']
+    search_fields=('name','phone','place')
+admin.site.register(Customer,Customers)
+
+
 
 

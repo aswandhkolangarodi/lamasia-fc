@@ -2,11 +2,28 @@ from email.policy import default
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.db import models
 from datetime import  date, datetime
-
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    BaseUserManager,
+    PermissionsMixin,
+)
 
 # Create your models here.
+class UserManager(BaseUserManager):
+    def create_user(self, username, password=None, **extra_fields):
 
-
+        user = self.model(username=username, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        if user:
+            return user   
+    def create_superuser(self, username, password=None, **extra_fields):
+        user = self.model(username=username, **extra_fields)
+        user.set_password(password)
+        user.is_superuser = True
+        user.is_staff = True
+        user.save(using=self._db)
+        return user
 
 class Banner(models.Model):
     top_heading = models.CharField(max_length=100, null=True)
@@ -222,3 +239,34 @@ class OrderList(models.Model):
     totalprice = models.IntegerField()
     status= models.CharField(max_length=15,  choices=choices)
 
+
+class Customer(models.Model):
+    choices = (
+        ("Not Seen", "Not Seen"),
+        ("Seen", "Seen"),
+        ("Called", "Called"),
+        ("Completed", "Completed"),
+    )
+    name = models.CharField(max_length=200)
+    username = models.CharField(max_length=25)
+    phone = models.CharField(default=0, null=True, max_length=15)
+    email = models.EmailField()
+    password = models.CharField( null=True, max_length=55)
+    place = models.CharField( null=True, max_length=15)
+    city = models.CharField( null=True, max_length=15)
+    address = models.CharField( null=True, max_length=15)
+    pin = models.CharField( null=True, max_length=15)
+    status= models.CharField(max_length=15,  choices=choices)
+
+
+class User(AbstractBaseUser, PermissionsMixin):
+    username = models.CharField(max_length=50, unique=True)
+    phone_number = models.CharField(default=0, null=True, max_length=15)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, null=True)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    objects = UserManager()
+    USERNAME_FIELD = "username"
+
+
+   

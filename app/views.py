@@ -377,4 +377,24 @@ def singleleaguedetails(request):
     }
     return render(request, 'singleleaguedetails.html', context)
 
+def userregistration(request):
+    if request.method == "POST":
+        name=request.POST['name']
+        email=request.POST['email']
+        place=request.POST['place']
+        username=request.POST['username']
+        password=request.POST['password']
+        pin=request.POST['pin']
+        city=request.POST['city']
+        address=request.POST['address']
+
+
+
+    else:
+        sponsors = SponsorLogo.objects.all()
+        context = {
+            "sponsors":sponsors,
+            
+        }
+        return render(request, 'userregistration.html', context)
 

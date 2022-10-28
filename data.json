@@ -1,0 +1,2708 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2022-10-20T06:35:03.645Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Est quae eius dignissimos eos dolore beatae dolores",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2022-10-20T06:35:15.933Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "Gallery object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2022-10-20T06:35:46.653Z",
+            "user": 1,
+            "content_type": 18,
+            "object_id": "1",
+            "object_repr": "sss",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2022-10-20T06:36:03.814Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "1",
+            "object_repr": "Matche object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2022-10-20T06:43:04.281Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "4",
+            "object_repr": "Lani Leon",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Place\", \"Exclub\", \"Education\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2022-10-20T06:43:21.592Z",
+            "user": 1,
+            "content_type": 21,
+            "object_id": "4",
+            "object_repr": "Lani Leon",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2022-10-21T03:53:19.159Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "1",
+            "object_repr": "Matche object (1)",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2022-10-21T03:55:02.405Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "Matche object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2022-10-21T03:58:04.851Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "Matche object (2)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Match date\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2022-10-21T03:58:34.739Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "2",
+            "object_repr": "Matche object (2)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Team1 goals\", \"Team2 goals\", \"Completed\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2022-10-21T04:41:22.840Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "3",
+            "object_repr": "Matche object (3)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2022-10-21T05:35:06.131Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Sub 1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2022-10-21T05:35:20.237Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "aa",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Top heading\", \"Sub heading\", \"Dscription\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2022-10-21T06:41:13.158Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "aa",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Banner image\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2022-10-21T06:41:34.381Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Sub 1",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Banner image\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2022-10-21T06:46:15.203Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "FC",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2022-10-21T06:50:56.135Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "FC",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Banner image\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2022-10-21T09:35:05.763Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "1",
+            "object_repr": "Shahil khan",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2022-10-21T09:35:53.044Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "2",
+            "object_repr": "Eagan Curtis",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2022-10-21T09:36:41.807Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "3",
+            "object_repr": "muhammad shahil khan",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2022-10-21T09:44:54.604Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "3",
+            "object_repr": "muhammad shahil khan",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Kit number\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2022-10-21T09:53:42.384Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "2",
+            "object_repr": "Eagan Curtis",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2022-10-21T09:53:50.349Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "1",
+            "object_repr": "Shahil khan",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2022-10-21T10:10:10.007Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "4",
+            "object_repr": "Heather Witt",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2022-10-21T10:10:27.814Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "5",
+            "object_repr": "Hakeem Berg",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2022-10-21T10:23:05.817Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "4",
+            "object_repr": "Heather Witt",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Kit number\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2022-10-21T10:29:26.696Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "4",
+            "object_repr": "Heather Witt",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Players\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2022-10-22T04:05:03.701Z",
+            "user": 1,
+            "content_type": 15,
+            "object_id": "1",
+            "object_repr": "Shoe",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2022-10-22T04:05:11.625Z",
+            "user": 1,
+            "content_type": 19,
+            "object_id": "1",
+            "object_repr": "Product object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2022-10-22T04:05:29.649Z",
+            "user": 1,
+            "content_type": 19,
+            "object_id": "2",
+            "object_repr": "Product object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2022-10-24T07:33:38.147Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "1",
+            "object_repr": "1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2022-10-24T10:53:58.568Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "3",
+            "object_repr": "muhammad shahil",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2022-10-25T03:50:44.454Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "Matche object (4)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2022-10-25T03:54:46.167Z",
+            "user": 1,
+            "content_type": 20,
+            "object_id": "4",
+            "object_repr": "Matche object (4)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Match date\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2022-10-25T03:55:36.738Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "1",
+            "object_repr": "SponsorLogo object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2022-10-25T03:55:47.066Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "2",
+            "object_repr": "SponsorLogo object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2022-10-25T04:02:36.657Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "3",
+            "object_repr": "SponsorLogo object (3)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2022-10-25T04:44:38.219Z",
+            "user": 1,
+            "content_type": 19,
+            "object_id": "2",
+            "object_repr": "Product object (2)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2022-10-25T05:59:49.498Z",
+            "user": 1,
+            "content_type": 22,
+            "object_id": "4",
+            "object_repr": "OrderList object (4)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2022-10-25T06:18:10.710Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "3",
+            "object_repr": "SponsorLogo object (3)",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2022-10-25T06:18:10.713Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "2",
+            "object_repr": "SponsorLogo object (2)",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2022-10-25T06:18:10.716Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "1",
+            "object_repr": "SponsorLogo object (1)",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2022-10-25T06:18:41.879Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "4",
+            "object_repr": "SponsorLogo object (4)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2022-10-25T06:23:01.923Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "5",
+            "object_repr": "SponsorLogo object (5)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2022-10-25T06:23:08.339Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "6",
+            "object_repr": "SponsorLogo object (6)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 46,
+        "fields": {
+            "action_time": "2022-10-25T06:23:14.788Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "7",
+            "object_repr": "SponsorLogo object (7)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 47,
+        "fields": {
+            "action_time": "2022-10-25T06:23:19.571Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "8",
+            "object_repr": "SponsorLogo object (8)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 48,
+        "fields": {
+            "action_time": "2022-10-25T06:29:34.987Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "7",
+            "object_repr": "SponsorLogo object (7)",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 49,
+        "fields": {
+            "action_time": "2022-10-25T06:29:41.601Z",
+            "user": 1,
+            "content_type": 16,
+            "object_id": "9",
+            "object_repr": "SponsorLogo object (9)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 50,
+        "fields": {
+            "action_time": "2022-10-25T08:37:06.991Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "Gallery object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 51,
+        "fields": {
+            "action_time": "2022-10-25T08:37:13.293Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "3",
+            "object_repr": "Gallery object (3)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 52,
+        "fields": {
+            "action_time": "2022-10-25T08:37:18.938Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "4",
+            "object_repr": "Gallery object (4)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add accademy fee",
+            "content_type": 7,
+            "codename": "add_accademyfee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change accademy fee",
+            "content_type": 7,
+            "codename": "change_accademyfee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete accademy fee",
+            "content_type": 7,
+            "codename": "delete_accademyfee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view accademy fee",
+            "content_type": 7,
+            "codename": "view_accademyfee"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add award",
+            "content_type": 8,
+            "codename": "add_award"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change award",
+            "content_type": 8,
+            "codename": "change_award"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete award",
+            "content_type": 8,
+            "codename": "delete_award"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view award",
+            "content_type": 8,
+            "codename": "view_award"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add banner",
+            "content_type": 9,
+            "codename": "add_banner"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change banner",
+            "content_type": 9,
+            "codename": "change_banner"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete banner",
+            "content_type": 9,
+            "codename": "delete_banner"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view banner",
+            "content_type": 9,
+            "codename": "view_banner"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add board management",
+            "content_type": 10,
+            "codename": "add_boardmanagement"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change board management",
+            "content_type": 10,
+            "codename": "change_boardmanagement"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete board management",
+            "content_type": 10,
+            "codename": "delete_boardmanagement"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view board management",
+            "content_type": 10,
+            "codename": "view_boardmanagement"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add contact",
+            "content_type": 11,
+            "codename": "add_contact"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change contact",
+            "content_type": 11,
+            "codename": "change_contact"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete contact",
+            "content_type": 11,
+            "codename": "delete_contact"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view contact",
+            "content_type": 11,
+            "codename": "view_contact"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add gallery",
+            "content_type": 12,
+            "codename": "add_gallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change gallery",
+            "content_type": 12,
+            "codename": "change_gallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete gallery",
+            "content_type": 12,
+            "codename": "delete_gallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view gallery",
+            "content_type": 12,
+            "codename": "view_gallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add last match highlight",
+            "content_type": 13,
+            "codename": "add_lastmatchhighlight"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change last match highlight",
+            "content_type": 13,
+            "codename": "change_lastmatchhighlight"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete last match highlight",
+            "content_type": 13,
+            "codename": "delete_lastmatchhighlight"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view last match highlight",
+            "content_type": 13,
+            "codename": "view_lastmatchhighlight"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add latest news",
+            "content_type": 14,
+            "codename": "add_latestnews"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change latest news",
+            "content_type": 14,
+            "codename": "change_latestnews"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete latest news",
+            "content_type": 14,
+            "codename": "delete_latestnews"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view latest news",
+            "content_type": 14,
+            "codename": "view_latestnews"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add product category",
+            "content_type": 15,
+            "codename": "add_productcategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change product category",
+            "content_type": 15,
+            "codename": "change_productcategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete product category",
+            "content_type": 15,
+            "codename": "delete_productcategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view product category",
+            "content_type": 15,
+            "codename": "view_productcategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add sponsor logo",
+            "content_type": 16,
+            "codename": "add_sponsorlogo"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change sponsor logo",
+            "content_type": 16,
+            "codename": "change_sponsorlogo"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete sponsor logo",
+            "content_type": 16,
+            "codename": "delete_sponsorlogo"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view sponsor logo",
+            "content_type": 16,
+            "codename": "view_sponsorlogo"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add team player",
+            "content_type": 17,
+            "codename": "add_teamplayer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change team player",
+            "content_type": 17,
+            "codename": "change_teamplayer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete team player",
+            "content_type": 17,
+            "codename": "delete_teamplayer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view team player",
+            "content_type": 17,
+            "codename": "view_teamplayer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can add tournament",
+            "content_type": 18,
+            "codename": "add_tournament"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can change tournament",
+            "content_type": 18,
+            "codename": "change_tournament"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can delete tournament",
+            "content_type": 18,
+            "codename": "delete_tournament"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can view tournament",
+            "content_type": 18,
+            "codename": "view_tournament"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 73,
+        "fields": {
+            "name": "Can add product",
+            "content_type": 19,
+            "codename": "add_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 74,
+        "fields": {
+            "name": "Can change product",
+            "content_type": 19,
+            "codename": "change_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 75,
+        "fields": {
+            "name": "Can delete product",
+            "content_type": 19,
+            "codename": "delete_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 76,
+        "fields": {
+            "name": "Can view product",
+            "content_type": 19,
+            "codename": "view_product"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 77,
+        "fields": {
+            "name": "Can add matche",
+            "content_type": 20,
+            "codename": "add_matche"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 78,
+        "fields": {
+            "name": "Can change matche",
+            "content_type": 20,
+            "codename": "change_matche"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 79,
+        "fields": {
+            "name": "Can delete matche",
+            "content_type": 20,
+            "codename": "delete_matche"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 80,
+        "fields": {
+            "name": "Can view matche",
+            "content_type": 20,
+            "codename": "view_matche"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 81,
+        "fields": {
+            "name": "Can add registration",
+            "content_type": 21,
+            "codename": "add_registration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 82,
+        "fields": {
+            "name": "Can change registration",
+            "content_type": 21,
+            "codename": "change_registration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 83,
+        "fields": {
+            "name": "Can delete registration",
+            "content_type": 21,
+            "codename": "delete_registration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 84,
+        "fields": {
+            "name": "Can view registration",
+            "content_type": 21,
+            "codename": "view_registration"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 85,
+        "fields": {
+            "name": "Can add order list",
+            "content_type": 22,
+            "codename": "add_orderlist"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 86,
+        "fields": {
+            "name": "Can change order list",
+            "content_type": 22,
+            "codename": "change_orderlist"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 87,
+        "fields": {
+            "name": "Can delete order list",
+            "content_type": 22,
+            "codename": "delete_orderlist"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 88,
+        "fields": {
+            "name": "Can view order list",
+            "content_type": 22,
+            "codename": "view_orderlist"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 89,
+        "fields": {
+            "name": "Can add customer",
+            "content_type": 23,
+            "codename": "add_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 90,
+        "fields": {
+            "name": "Can change customer",
+            "content_type": 23,
+            "codename": "change_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 91,
+        "fields": {
+            "name": "Can delete customer",
+            "content_type": 23,
+            "codename": "delete_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 92,
+        "fields": {
+            "name": "Can view customer",
+            "content_type": 23,
+            "codename": "view_customer"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "app",
+            "model": "accademyfee"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "app",
+            "model": "award"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "app",
+            "model": "banner"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "app",
+            "model": "boardmanagement"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "app",
+            "model": "contact"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "app",
+            "model": "gallery"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "app",
+            "model": "lastmatchhighlight"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "app",
+            "model": "latestnews"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "app",
+            "model": "productcategory"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 16,
+        "fields": {
+            "app_label": "app",
+            "model": "sponsorlogo"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 17,
+        "fields": {
+            "app_label": "app",
+            "model": "teamplayer"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 18,
+        "fields": {
+            "app_label": "app",
+            "model": "tournament"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 19,
+        "fields": {
+            "app_label": "app",
+            "model": "product"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 20,
+        "fields": {
+            "app_label": "app",
+            "model": "matche"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 21,
+        "fields": {
+            "app_label": "app",
+            "model": "registration"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 22,
+        "fields": {
+            "app_label": "app",
+            "model": "orderlist"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 23,
+        "fields": {
+            "app_label": "app",
+            "model": "customer"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "992l1factlrlkz1t7v6vs2v1gwdbcun7",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAUBf-FtSF9CBdcuu83kMMFpGogKe3K-O_apAvdnpk5L-GwrdltLS5uDuIienH63Tz4EcsOwh3lViXXsi6zl7siD9rkVEN8Xg_37yCj5W-NOCaYBKVM6MlgBFtiOlMCY2CCjhQtNCdrvRmDVxiIEuukuaPOi_cHGVU5OQ:1olP7X:wV3gQ29_tQaXjxQcupcfvCs4u-p1VDj1-WmMEHoOSv0",
+            "expire_date": "2022-11-03T06:33:35.110Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "xg5hf3g0smrpwn224cr532sgho286hol",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAUBf-FtSF9CBdcuu83kMMFpGogKe3K-O_apAvdnpk5L-GwrdltLS5uDuIienH63Tz4EcsOwh3lViXXsi6zl7siD9rkVEN8Xg_37yCj5W-NOCaYBKVM6MlgBFtiOlMCY2CCjhQtNCdrvRmDVxiIEuukuaPOi_cHGVU5OQ:1ooKz3:TWif05ODmLAC29hK-8Vvc3cAzWta3oT_hHAammnaIac",
+            "expire_date": "2022-11-11T08:44:57.094Z"
+        }
+    },
+    {
+        "model": "app.banner",
+        "pk": 1,
+        "fields": {
+            "top_heading": "Sub 2",
+            "sub_heading": "aa",
+            "dscription": "shahil",
+            "banner_image": "banner/logo.png"
+        }
+    },
+    {
+        "model": "app.banner",
+        "pk": 2,
+        "fields": {
+            "top_heading": "test",
+            "sub_heading": "Sub 1",
+            "dscription": "aaaaaaa",
+            "banner_image": "banner/download_.png"
+        }
+    },
+    {
+        "model": "app.banner",
+        "pk": 3,
+        "fields": {
+            "top_heading": "The Red Sea",
+            "sub_heading": "FC",
+            "dscription": "Lamacia",
+            "banner_image": "banner/add.jpg"
+        }
+    },
+    {
+        "model": "app.tournament",
+        "pk": 1,
+        "fields": {
+            "tournament_name": "sss"
+        }
+    },
+    {
+        "model": "app.matche",
+        "pk": 2,
+        "fields": {
+            "tournament_name": 1,
+            "team1": "team 1",
+            "team2": "team 2",
+            "team1_logo": "team_logos/1.jpg",
+            "team2_logo": "team_logos/Breaking_Glass_Stock_QNyr4Sn.jpg",
+            "match_date": "2022-10-21T04:54:49Z",
+            "stadium": "Abc",
+            "team1_goals": "1",
+            "team2_goals": "2",
+            "completed": true
+        }
+    },
+    {
+        "model": "app.matche",
+        "pk": 3,
+        "fields": {
+            "tournament_name": 1,
+            "team1": "team 13",
+            "team2": "team 23",
+            "team1_logo": "team_logos/g.png",
+            "team2_logo": "team_logos/logo_3.png",
+            "match_date": "2022-10-28T06:41:00Z",
+            "stadium": "Tirur Stadium",
+            "team1_goals": "2",
+            "team2_goals": "0",
+            "completed": true
+        }
+    },
+    {
+        "model": "app.matche",
+        "pk": 4,
+        "fields": {
+            "tournament_name": 1,
+            "team1": "aaa",
+            "team2": "bbb",
+            "team1_logo": "team_logos/box-01.png",
+            "team2_logo": "team_logos/fc1.png",
+            "match_date": "2022-10-26T04:50:03Z",
+            "stadium": "Abc",
+            "team1_goals": "0",
+            "team2_goals": "0",
+            "completed": false
+        }
+    },
+    {
+        "model": "app.teamplayer",
+        "pk": 1,
+        "fields": {
+            "name": "Shahil khan",
+            "category": "under 18",
+            "photo": "players/add-1.jpg",
+            "ppoi": "0.5x0.5",
+            "date_of_birth": "2022-10-02",
+            "place_of_birth": "mala",
+            "height": 23,
+            "weight": 32,
+            "citizenship": "asdf",
+            "kit_number": 21,
+            "position": "GOAL KEEPER",
+            "club_debut": "2022-10-02",
+            "previous_club": "ds",
+            "present_club": "Lamasia FC Kerala"
+        }
+    },
+    {
+        "model": "app.teamplayer",
+        "pk": 2,
+        "fields": {
+            "name": "Eagan Curtis",
+            "category": "under 18",
+            "photo": "players/download_.png",
+            "ppoi": "0.5x0.5",
+            "date_of_birth": "2022-10-21",
+            "place_of_birth": "Amet sit eiusmod consequatur maxime omnis qui animi minus ut est omnis ex voluptatem alias tene",
+            "height": 26,
+            "weight": 35,
+            "citizenship": "Blanditiis labore eveniet est non fuga Aspernatur cupidatat quo libero corrupti cupidatat qui nis",
+            "kit_number": 267,
+            "position": "GOAL KEEPER",
+            "club_debut": "2022-10-02",
+            "previous_club": "Exercitation vero sapiente saepe totam iusto rerum sed id",
+            "present_club": "Voluptatum similique enim quisquam quo"
+        }
+    },
+    {
+        "model": "app.teamplayer",
+        "pk": 3,
+        "fields": {
+            "name": "muhammad shahil",
+            "category": "under 18",
+            "photo": "players/shahil.jpeg",
+            "ppoi": "0.5x0.5",
+            "date_of_birth": "2022-10-02",
+            "place_of_birth": "Et et sed dicta voluptas laudantium nostrum excepteur totam ullam similique minim quis maiores temp",
+            "height": 23,
+            "weight": 69,
+            "citizenship": "Neque vel et dolorum sint dolor",
+            "kit_number": 11,
+            "position": "CENTER FORWARD",
+            "club_debut": "2022-10-02",
+            "previous_club": "In eum lorem est rerum enim praesentium possimus sed repellendus",
+            "present_club": "Dolore id aspernatur similique deleniti minim nisi aliquam temporibus"
+        }
+    },
+    {
+        "model": "app.teamplayer",
+        "pk": 4,
+        "fields": {
+            "name": "Heather Witt",
+            "category": "under 18",
+            "photo": "players/box-01.png",
+            "ppoi": "0.5x0.5",
+            "date_of_birth": "2022-10-02",
+            "place_of_birth": "Magna voluptas labore ut voluptas id voluptatibus nesciunt enim magni irure omnis quod qui do volu",
+            "height": 66,
+            "weight": 14,
+            "citizenship": "Assumenda consequuntur hic consequatur Impedit tempore facilis sit quis consequatur non nobis",
+            "kit_number": 81,
+            "position": "DEFENSIVE MIDFIELDER",
+            "club_debut": "2022-10-02",
+            "previous_club": "Sit sapiente pariatur Iure dolore aut",
+            "present_club": "Excepturi sed adipisicing in cupidatat non blanditiis dolore sed eligendi quia"
+        }
+    },
+    {
+        "model": "app.teamplayer",
+        "pk": 5,
+        "fields": {
+            "name": "Hakeem Berg",
+            "category": "under 18",
+            "photo": "players/counter-bg_copy_1.jpg",
+            "ppoi": "0.5x0.5",
+            "date_of_birth": "2022-10-21",
+            "place_of_birth": "Ullamco laudantium mollitia molestias minima omnis elit ut voluptates",
+            "height": 44,
+            "weight": 75,
+            "citizenship": "Adipisci porro assumenda sunt consectetur enim qui sunt est et qui aut est consequatur sit quis d",
+            "kit_number": 828,
+            "position": "DEFENSIVE MIDFIELDER",
+            "club_debut": "2022-10-21",
+            "previous_club": "Deserunt fugiat corporis repellendus Atque delectus ea iste quas laborum Nisi illum et cupidatat",
+            "present_club": "Temporibus amet beatae ea ut est vero incidunt perspiciatis enim quia cumque sed facere nesciunt"
+        }
+    },
+    {
+        "model": "app.gallery",
+        "pk": 1,
+        "fields": {
+            "images": "gallery/12312-01-01.jpg"
+        }
+    },
+    {
+        "model": "app.gallery",
+        "pk": 2,
+        "fields": {
+            "images": "gallery/bg.jpg"
+        }
+    },
+    {
+        "model": "app.gallery",
+        "pk": 3,
+        "fields": {
+            "images": "gallery/Breaking_Glass_Stock.jpg"
+        }
+    },
+    {
+        "model": "app.gallery",
+        "pk": 4,
+        "fields": {
+            "images": "gallery/download_5.png"
+        }
+    },
+    {
+        "model": "app.sponsorlogo",
+        "pk": 4,
+        "fields": {
+            "sponsors_logo": "sponsors log/aaa.png"
+        }
+    },
+    {
+        "model": "app.sponsorlogo",
+        "pk": 5,
+        "fields": {
+            "sponsors_logo": "sponsors log/2.png"
+        }
+    },
+    {
+        "model": "app.sponsorlogo",
+        "pk": 6,
+        "fields": {
+            "sponsors_logo": "sponsors log/3.png"
+        }
+    },
+    {
+        "model": "app.sponsorlogo",
+        "pk": 8,
+        "fields": {
+            "sponsors_logo": "sponsors log/5.png"
+        }
+    },
+    {
+        "model": "app.sponsorlogo",
+        "pk": 9,
+        "fields": {
+            "sponsors_logo": "sponsors log/4_1.png"
+        }
+    },
+    {
+        "model": "app.latestnews",
+        "pk": 1,
+        "fields": {
+            "heading": "1",
+            "image": "news/Breaking_Glass_Stock.jpg",
+            "ppoi": "0.5x0.5",
+            "date": "2022-10-24T07:33:38.145Z",
+            "news_description": "ee2"
+        }
+    },
+    {
+        "model": "app.productcategory",
+        "pk": 1,
+        "fields": {
+            "category_name": "Shoe"
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "product_image": "products/box-01.png",
+            "price": 111,
+            "description": null
+        }
+    },
+    {
+        "model": "app.product",
+        "pk": 2,
+        "fields": {
+            "category": 1,
+            "product_image": "products/deafult-01_1.jpg",
+            "price": 2322,
+            "description": "Enim placeat cumque eum vel et fugiat laborum Laudantium deserunt rerum illum voluptatem laborum"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 1,
+        "fields": {
+            "name": "Kareem Matthews",
+            "email": "voxawiw@mailinator.com",
+            "contactnum": "7",
+            "guardiannum": "58",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "11",
+            "dob": "2005-11-26",
+            "place": "Adipisci dolorem nul",
+            "height": "74",
+            "weight": "70",
+            "exclub": "Enim ut rerum facili",
+            "education": "Nihil ullam dolorem ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 2,
+        "fields": {
+            "name": "Brennan Lee",
+            "email": "xinaka@mailinator.com",
+            "contactnum": "41",
+            "guardiannum": "95",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "67",
+            "dob": "2014-10-23",
+            "place": "Aut delectus in ut ",
+            "height": "50",
+            "weight": "61",
+            "exclub": "Aut eos numquam sunt",
+            "education": "Proident accusamus ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 3,
+        "fields": {
+            "name": "Stacy Raymond",
+            "email": "huluben@mailinator.com",
+            "contactnum": "5",
+            "guardiannum": "18",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "83",
+            "dob": "2022-01-02",
+            "place": "Voluptatum quidem na",
+            "height": "5",
+            "weight": "36",
+            "exclub": "Obcaecati quae qui n",
+            "education": "Id qui perspiciatis",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 4,
+        "fields": {
+            "name": "Lani Leon",
+            "email": "nacix@mailinator.com",
+            "contactnum": "29",
+            "guardiannum": "88",
+            "photo": "registration/64686014-78cab1a0-1eae-11ed-8089-2fc0c0799751.pdf",
+            "ppoi": "0.5x0.5",
+            "age": "94",
+            "dob": "2011-12-07",
+            "place": "Conse",
+            "height": "95",
+            "weight": "41",
+            "exclub": "Voluptatu",
+            "education": "Aperias",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 5,
+        "fields": {
+            "name": "Megan Eaton",
+            "email": "peqanysene@mailinator.com",
+            "contactnum": "59",
+            "guardiannum": "73",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "64",
+            "dob": "1983-05-04",
+            "place": "Cum consectetur cum ",
+            "height": "94",
+            "weight": "13",
+            "exclub": "Tempore recusandae",
+            "education": "Dolor dolorem offici",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 6,
+        "fields": {
+            "name": "Ann Pennington",
+            "email": "pomidizogi@mailinator.com",
+            "contactnum": "95",
+            "guardiannum": "46",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "47",
+            "dob": "1988-09-19",
+            "place": "Nesciunt omnis mole",
+            "height": "46",
+            "weight": "7",
+            "exclub": "Amet maiores omnis ",
+            "education": "Ab aut aliquip disti",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 7,
+        "fields": {
+            "name": "Damian Pierce",
+            "email": "reryzi@mailinator.com",
+            "contactnum": "59",
+            "guardiannum": "50",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "10",
+            "dob": "2019-04-17",
+            "place": "Magna cumque rerum o",
+            "height": "49",
+            "weight": "95",
+            "exclub": "Voluptas soluta duis",
+            "education": "Enim nisi laboriosam",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 8,
+        "fields": {
+            "name": "Brendan Norman",
+            "email": "fupiso@mailinator.com",
+            "contactnum": "98",
+            "guardiannum": "14",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "59",
+            "dob": "2007-06-19",
+            "place": "Sed cupidatat rem si",
+            "height": "74",
+            "weight": "69",
+            "exclub": "Et et mollitia dolor",
+            "education": "Enim vitae et enim r",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 9,
+        "fields": {
+            "name": "Aidan Guerra",
+            "email": "cupe@mailinator.com",
+            "contactnum": "66",
+            "guardiannum": "2",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "86",
+            "dob": "2019-10-23",
+            "place": "Amet quod incididun",
+            "height": "87",
+            "weight": "86",
+            "exclub": "Ut optio eiusmod co",
+            "education": "Voluptas tenetur qua",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 10,
+        "fields": {
+            "name": "Cassandra Murray",
+            "email": "jenatulul@mailinator.com",
+            "contactnum": "19",
+            "guardiannum": "77",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "25",
+            "dob": "2002-03-25",
+            "place": "Et et lorem qui fugi",
+            "height": "81",
+            "weight": "13",
+            "exclub": "Culpa anim maiores ",
+            "education": "Sit culpa saepe aut",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 11,
+        "fields": {
+            "name": "Portia Burch",
+            "email": "darosigis@mailinator.com",
+            "contactnum": "9",
+            "guardiannum": "18",
+            "photo": "",
+            "ppoi": "0.5x0.5",
+            "age": "86",
+            "dob": "1977-08-07",
+            "place": "Proident et velit c",
+            "height": "59",
+            "weight": "27",
+            "exclub": "Possimus anim adipi",
+            "education": "Saepe provident inc",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 12,
+        "fields": {
+            "name": "Alice Sweeney",
+            "email": "qirigy@mailinator.com",
+            "contactnum": "51",
+            "guardiannum": "23",
+            "photo": "board registration/1.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "25",
+            "dob": "2007-07-23",
+            "place": "Rerum voluptas est v",
+            "height": "37",
+            "weight": "31",
+            "exclub": "Amet temporibus in ",
+            "education": "Repellendus Adipisi",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 13,
+        "fields": {
+            "name": "Maisie Dunn",
+            "email": "kafenypede@mailinator.com",
+            "contactnum": "20",
+            "guardiannum": "99",
+            "photo": "board registration/1-_Introduction.mp4",
+            "ppoi": "0.5x0.5",
+            "age": "88",
+            "dob": "2015-07-17",
+            "place": "Sed distinctio Nisi",
+            "height": "92",
+            "weight": "48",
+            "exclub": "Aperiam illum sint ",
+            "education": "Non est aspernatur ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 14,
+        "fields": {
+            "name": "Shelby Crosby",
+            "email": "zawi@mailinator.com",
+            "contactnum": "74",
+            "guardiannum": "24",
+            "photo": "board registration/1-_Introduction_g7Pgl8Y.mp4",
+            "ppoi": "0.5x0.5",
+            "age": "46",
+            "dob": "2013-03-16",
+            "place": "Nihil anim veniam d",
+            "height": "61",
+            "weight": "73",
+            "exclub": "Est duis aut aliqui",
+            "education": "Molestias quia dolor",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 15,
+        "fields": {
+            "name": "Mari Keith",
+            "email": "nepoxih@mailinator.com",
+            "contactnum": "45",
+            "guardiannum": "75",
+            "photo": "board registration/1_UYdodH1.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "49",
+            "dob": "1977-11-04",
+            "place": "Odio nostrud et volu",
+            "height": "65",
+            "weight": "10",
+            "exclub": "In sunt sint asper",
+            "education": "Quibusdam commodi ma",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 16,
+        "fields": {
+            "name": "Winter Weiss",
+            "email": "qoqyjacur@mailinator.com",
+            "contactnum": "8",
+            "guardiannum": "35",
+            "photo": "board registration/1_OYKOSDb.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "29",
+            "dob": "1986-08-09",
+            "place": "Exercitation quia vo",
+            "height": "59",
+            "weight": "71",
+            "exclub": "Minima in nihil accu",
+            "education": "Quia doloremque fuga",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 17,
+        "fields": {
+            "name": "Mechelle Pacheco",
+            "email": "cajysubu@mailinator.com",
+            "contactnum": "36",
+            "guardiannum": "97",
+            "photo": "board registration/cv.174d8bc4469f8aa7c5fa.webp",
+            "ppoi": "0.5x0.5",
+            "age": "3",
+            "dob": "2011-07-23",
+            "place": "Natus exercitation d",
+            "height": "6",
+            "weight": "12",
+            "exclub": "Fugiat cum iure eni",
+            "education": "Et quia nisi et moll",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 18,
+        "fields": {
+            "name": "Hammett Contreras",
+            "email": "zyxo@mailinator.com",
+            "contactnum": "15",
+            "guardiannum": "59",
+            "photo": "board registration/1-_Introduction_7muiEsL.mp4",
+            "ppoi": "0.5x0.5",
+            "age": "25",
+            "dob": "1998-07-26",
+            "place": "A est recusandae Fa",
+            "height": "65",
+            "weight": "12",
+            "exclub": "Porro error consecte",
+            "education": "Odio esse veritatis ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 19,
+        "fields": {
+            "name": "Abel Lott",
+            "email": "tabozageta@mailinator.com",
+            "contactnum": "57",
+            "guardiannum": "84",
+            "photo": "board registration/1-_Introduction_KgAWVUh.mp4",
+            "ppoi": "0.5x0.5",
+            "age": "54",
+            "dob": "1975-08-08",
+            "place": "Dolor culpa molesti",
+            "height": "100",
+            "weight": "78",
+            "exclub": "Culpa quia quibusdam",
+            "education": "Reprehenderit conseq",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 20,
+        "fields": {
+            "name": "Aladdin Horton",
+            "email": "norusuma@mailinator.com",
+            "contactnum": "7",
+            "guardiannum": "70",
+            "photo": "board registration/Breaking_Glass_Stock.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "41",
+            "dob": "1989-02-06",
+            "place": "Culpa eum occaecat ",
+            "height": "72",
+            "weight": "62",
+            "exclub": "Fuga Sit illo exce",
+            "education": "Non earum eiusmod of",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 21,
+        "fields": {
+            "name": "Aurelia Mccray",
+            "email": "komuh@mailinator.com",
+            "contactnum": "37",
+            "guardiannum": "51",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "50",
+            "dob": "2022-04-14",
+            "place": "Ipsa sed excepturi ",
+            "height": "56",
+            "weight": "72",
+            "exclub": "Veniam rerum fugiat",
+            "education": "Doloribus ab in at a",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 22,
+        "fields": {
+            "name": "ssssss",
+            "email": "biwubep@mailinator.com",
+            "contactnum": "9",
+            "guardiannum": "93",
+            "photo": "board registration/1_LRIAdrN.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "81",
+            "dob": "1979-06-10",
+            "place": "Voluptatem corrupti",
+            "height": "41",
+            "weight": "20",
+            "exclub": "Est officia rerum ut",
+            "education": "Optio laborum Volu",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 23,
+        "fields": {
+            "name": "Cassidy Wilcox",
+            "email": "rilugam@mailinator.com",
+            "contactnum": "25",
+            "guardiannum": "31",
+            "photo": "board registration/12312-01-01.jpg",
+            "ppoi": "0.5x0.5",
+            "age": "36",
+            "dob": "1986-02-01",
+            "place": "Aute adipisicing cup",
+            "height": "7",
+            "weight": "82",
+            "exclub": "Reprehenderit mollit",
+            "education": "Velit id veniam ni",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 24,
+        "fields": {
+            "name": "Uriel Weiss",
+            "email": "",
+            "contactnum": "",
+            "guardiannum": "40",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "87",
+            "dob": "1983-08-23",
+            "place": "tytytty",
+            "height": "3",
+            "weight": "68",
+            "exclub": "",
+            "education": "Perferendis id ullam",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 25,
+        "fields": {
+            "name": "www",
+            "email": "koziwivite@mailinator.com",
+            "contactnum": "71",
+            "guardiannum": "45",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "32",
+            "dob": "1988-11-27",
+            "place": "Quia minus quo quia ",
+            "height": "36",
+            "weight": "7",
+            "exclub": "Adipisci aperiam mol",
+            "education": "Dolorum possimus qu",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 26,
+        "fields": {
+            "name": "Alea Floyd",
+            "email": "resokedicy@mailinator.com",
+            "contactnum": "13",
+            "guardiannum": "94",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "70",
+            "dob": "2016-04-17",
+            "place": "Aut ratione fuga Qu",
+            "height": "30",
+            "weight": "76",
+            "exclub": "Dolores facilis offi",
+            "education": "Est placeat mollit ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 27,
+        "fields": {
+            "name": "Octavius Richardson",
+            "email": "maxoci@mailinator.com",
+            "contactnum": "9",
+            "guardiannum": "84",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "78",
+            "dob": "1980-03-17",
+            "place": "Quasi sed sequi prae",
+            "height": "60",
+            "weight": "59",
+            "exclub": "Corrupti et distinc",
+            "education": "Quia eu et dolor dol",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 28,
+        "fields": {
+            "name": "Reese Brennan",
+            "email": "jawywydo@mailinator.com",
+            "contactnum": "89",
+            "guardiannum": "76",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "70",
+            "dob": "1975-01-22",
+            "place": "Dolor iusto eveniet",
+            "height": "67",
+            "weight": "27",
+            "exclub": "Amet porro dolorem ",
+            "education": "Pariatur Qui quasi ",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 29,
+        "fields": {
+            "name": "Aretha Johnston",
+            "email": "lamomy@mailinator.com",
+            "contactnum": "18",
+            "guardiannum": "56",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "66",
+            "dob": "1997-07-11",
+            "place": "In ea perferendis qu",
+            "height": "81",
+            "weight": "38",
+            "exclub": "Nihil quisquam illo ",
+            "education": "Nesciunt consectetu",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 30,
+        "fields": {
+            "name": "Cynthia Porter",
+            "email": "jadobika@mailinator.com",
+            "contactnum": "84",
+            "guardiannum": "23",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "74",
+            "dob": "2003-06-03",
+            "place": "Ut consectetur expl",
+            "height": "81",
+            "weight": "15",
+            "exclub": "Sit veritatis except",
+            "education": "Nisi dolorum ullam d",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.registration",
+        "pk": 31,
+        "fields": {
+            "name": "Signe Webb",
+            "email": "logysacivo@mailinator.com",
+            "contactnum": "34",
+            "guardiannum": "18",
+            "photo": "Photo Not Uploded",
+            "ppoi": "0.5x0.5",
+            "age": "91",
+            "dob": "1979-08-11",
+            "place": "Nemo quae voluptas q",
+            "height": "67",
+            "weight": "94",
+            "exclub": "Magni assumenda saep",
+            "education": "Ut molestiae fuga Q",
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 1,
+        "fields": {
+            "product": 2,
+            "name": "Shahil khan",
+            "contactnum": "231",
+            "place": "kadalundi",
+            "pin": "674537",
+            "Address": "dqwed",
+            "size": "2",
+            "quantity": 1,
+            "totalprice": 2322,
+            "status": ""
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 2,
+        "fields": {
+            "product": 2,
+            "name": "Donovan Barry",
+            "contactnum": "15",
+            "place": "Occaecat eos expedi",
+            "pin": "Aspernatur eos quis",
+            "Address": "Vel quibusdam fugit",
+            "size": "Iusto explicabo Quo",
+            "quantity": 689,
+            "totalprice": 1599858,
+            "status": ""
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 3,
+        "fields": {
+            "product": 2,
+            "name": "Bryar Barton",
+            "contactnum": "6",
+            "place": "Cupidatat in fugit ",
+            "pin": "Nam voluptate enim d",
+            "Address": "Officiis sit dolor ",
+            "size": "Consectetur quisqua",
+            "quantity": 784,
+            "totalprice": 1820448,
+            "status": ""
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 4,
+        "fields": {
+            "product": 2,
+            "name": "shahil",
+            "contactnum": "22",
+            "place": "arimbra",
+            "pin": "673638",
+            "Address": "2ewqdqd",
+            "size": "1",
+            "quantity": 3,
+            "totalprice": 6966,
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 5,
+        "fields": {
+            "product": 1,
+            "name": "shahil",
+            "contactnum": "3",
+            "place": "ssssssssssss",
+            "pin": "673638",
+            "Address": "3",
+            "size": "At ea pariatur Eum ",
+            "quantity": 234,
+            "totalprice": 25974,
+            "status": "Not Seen"
+        }
+    },
+    {
+        "model": "app.orderlist",
+        "pk": 6,
+        "fields": {
+            "product": 1,
+            "name": "Jillian Larsen",
+            "contactnum": "21",
+            "place": "Qui molestias fuga ",
+            "pin": "Numquam deserunt eum",
+            "Address": "Vitae optio ex quae",
+            "size": "",
+            "quantity": 313,
+            "totalprice": 34743,
+            "status": "Not Seen"
+        }
+    }
+]

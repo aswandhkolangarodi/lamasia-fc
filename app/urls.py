@@ -29,6 +29,7 @@ urlpatterns = [
     path('productsingle/<int:id>', views.productsingle, name='productsingle'),
     path('productsell', views.productsell, name='productsell'),
     path('singleleaguedetails', views.singleleaguedetails, name='singleleaguedetails'),
+    path('userregistration', views.userregistration, name='userregistration'),
     
 
 ]
