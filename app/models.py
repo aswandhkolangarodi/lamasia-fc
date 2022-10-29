@@ -1,5 +1,5 @@
 from email.policy import default
-
+from tinymce.models import HTMLField
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.db import models
 from datetime import  date, datetime
@@ -312,6 +312,18 @@ class LeagueMatchesPoint(models.Model):
     goalgained= models.IntegerField(default=0)
 
 
+
+class ClubDetails(models.Model):
+    club = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    president = models.CharField(max_length=100, null=True)
+    manager = models.CharField(max_length=100, null=True)
+    coach = models.CharField(max_length=100, null=True)
+    location = models.CharField(max_length=100, null=True)
+    established = models.CharField(max_length=100, null=True)
+    champions = models.CharField(max_length=100, null=True)
+    players = models.CharField(max_length=100, null=True)
+    about = HTMLField(null=True, blank=True)
+    bannerpic = VersatileImageField(upload_to='banner pic/', null=True)
 
 
 

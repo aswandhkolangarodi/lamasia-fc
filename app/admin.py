@@ -114,3 +114,11 @@ class LeagueMatchesPoints(admin.ModelAdmin):
     list_display = ['league','team','match','win','lose','draw']
     search_fields=('team','league')
 admin.site.register(LeagueMatchesPoint,LeagueMatchesPoints)
+
+
+
+class ClubDetailss(admin.ModelAdmin):
+    model = ClubDetails
+    list_display = ['club','president']
+    search_fields=('club','president')
+admin.site.register(ClubDetails,ClubDetailss)

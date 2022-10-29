@@ -22,84 +22,85 @@
             <div class="container">
                 <div class="rs-match-result style1 modify-style fly-box">
                     <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="1" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="1" data-md-device-nav="true" data-md-device-dots="false">
+                        
+                        {% for i in matchlist2 %}
                         <div class="items">
                             <a href="#">
                                 <div class="vanues">
-                                    <div class="date">April 04, 2019</div>
+                                    <div class="date">{{i.match_date}}</div>
                                 </div>
                                 <div class="teams">
                                     <div class="logo">
-                                        <img class="size-80" src="{% static 'images/team-logo/8.png' %}" alt="Man City">
-                                        <div class="name">Man City</div>
+                                        <img class="size-80" src="{{i.team1.teamlogo.url}}" alt="{{i.team1.team }}">
+                                        <div class="name">{{i.team1.team }}</div>
                                     </div>
                                     <div class="time-vs">
-                                        <span class="time primary-color">12:00</span>
                                         <span class="vs">vs</span>
                                     </div>
                                     <div class="logo">
-                                        <img class="size-80" src="{% static 'images/team-logo/7.png' %}" alt="Arsenal">
-                                        <div class="name">Arsenal</div>
+                                        <img class="size-80" src="{{i.team2.teamlogo.url}}" alt="{{i.team2.team }}">
+                                        <div class="name">{{i.team2.team }}</div>
                                     </div>
                                 </div>
                                 <div class="vanues">
-                                    <div class="stadium"><span>Venue:</span>Camp Nou Stadium</div>
+                                    <div class="stadium"><span>Venue:</span>{{i.stadium}}</div>
                                 </div>
                             </a>
                         </div>
+                        {% endfor %}
+                        {% for i in matchlist1 %}
                         <div class="items">
                             <a href="#">
                                 <div class="vanues">
-                                    <div class="date">April 04, 2019</div>
+                                    <div class="date">{{i.match_date}}</div>
                                 </div>
                                 <div class="teams">
                                     <div class="logo">
-                                        <img class="size-80" src="{% static 'images/team-logo/9.png' %}" alt="Barcelona">
-                                        <div class="name">Barcelona</div>
+                                        <img class="size-80" src="{{i.team1.teamlogo.url}}" alt="{{i.team1.team }}">
+                                        <div class="name">{{i.team1.team }}</div>
                                     </div>
                                     <div class="time-vs">
-                                        <span class="time primary-color">03:00</span>
                                         <span class="vs">vs</span>
                                     </div>
                                     <div class="logo">
-                                        <img class="size-80" src="{% static 'images/team-logo/7.png' %}" alt="Arsenal">
-                                        <div class="name">Arsenal</div>
+                                        <img class="size-80" src="{{i.team2.teamlogo.url}}" alt="{{i.team2.team }}">
+                                        <div class="name">{{i.team2.team }}</div>
                                     </div>
                                 </div>
                                 <div class="vanues">
-                                    <div class="stadium"><span>Venue:</span>Stamford Bridge</div>
+                                    <div class="stadium"><span>Venue:</span>{{i.stadium}}</div>
                                 </div>
                             </a>
                         </div>
+                        {% endfor %}
+                       
                     </div>
                 </div>
                 <div class="row pt-100 md-pt-80">
                     <div class="col-lg-3 col-md-12 md-mb-30">
                         <div class="club-logo text-center">
-                            <img src="{% static 'images/team-logo/7.png' %}" alt="Arsenal">
+                            <img src="{{clubdetails.club.teamlogo.url}}" alt="{{clubdetails.club.team}}">
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-12">
                         <div class="club-details center-md mb-30">
                             <ul class="team-info-list">
                                 <li>
-                                    <strong>Former President</strong>
-                                    <span>David Frunk</span>
+                                    <strong> President</strong>
+                                    <span>{{clubdetails.president}}</span>
                                 </li>
                                 <li>
                                     <strong>Manager Name</strong>
-                                    <span>Steve Mark</span>
+                                    <span>{{clubdetails.manager}}</span>
                                 </li>
+                              
                                 <li>
-                                    <strong>Past Coach</strong>
-                                    <span>Fiderel Starc</span>
-                                </li>
-                                <li>
-                                    <strong>Current Coach</strong>
-                                    <span>Alex Zampa</span>
+                                    <strong> Coach</strong>
+                                    <span>{{clubdetails.coach}}</span>
                                 </li>
                                  <li>
                                     <strong>Location</strong>
-                                    <span>England</span>
+                                    <span>{{clubdetails.location}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -107,28 +108,28 @@
                             <div class="row">
                                 <div class="col-lg-3 col-6 md-mb-30">
                                     <div class="rs-counter-list">
-                                        <h2 class="counter-number">1890</h2>
+                                        <h2 class="counter-number">{{clubdetails.established}}</h2>
                                         <h4 class="counter-text">Established in</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-6 md-mb-30">
                                     <div class="rs-counter-list">
-                                        <h2 class="counter-number">124</h2>
+                                        <h2 class="counter-number">{{clubdetails.champions}}</h2>
                                         <h4 class="counter-text">Champions</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-6">
                                     <div class="rs-counter-list">
-                                        <h2 class="counter-number">168</h2>
+                                        <h2 class="counter-number">{{clubdetails.players}}</h2>
                                         <h4 class="counter-text">Current Players</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-6">
+                                {% comment %} <div class="col-lg-3 col-6">
                                     <div class="rs-counter-list">
                                         <h2 class="counter-number">82</h2>
                                         <h4 class="counter-text">Top Players</h4>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -154,10 +155,9 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="club-history">
-                                <div class="about-club">
-                                    <p><img class="alignright" src="{% static 'images/about/club-details.jpg' %}" alt="">
-                                    It is a long established fact that a reader will It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum their infancy.</p>
-                                    <p class="margin-0">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                                <div class="about-club ">
+                                    <p><img class="alignright" src=" {{clubdetails.bannerpic.crop.220x311}}" alt="">
+                                        {{clubdetails.about|safe}}
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="squad-list">

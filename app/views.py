@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, get_user_model, login, logout
-from app.models import LeagueMatchesPoint, Leagueteam,League,LeagueMatches, Customer, AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
+from app.models import ClubDetails, LeagueMatchesPoint, Leagueteam,League,LeagueMatches, Customer, AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
 from datetime import date, datetime
 from django.db.models import Q
 from django.http import JsonResponse
@@ -106,14 +106,30 @@ def news(request):
 
 
 
-def club(request):
-    sponsors = SponsorLogo.objects.all()
-    context = {
-        'sponsors':sponsors,
-        
-    }
-    return render(request, 'single-club.html', context)
+def club(request,id):
+    teamlist=Leagueteam.objects.get(id=id)
+    if ClubDetails.objects.filter(club=teamlist).exists():
+        clubdetails= ClubDetails.objects.get(club=teamlist)
+        matchlist1=LeagueMatches.objects.filter(team1=teamlist,completed=False)
+        matchlist2=LeagueMatches.objects.filter(team2=teamlist,completed=False)
+        print(matchlist1)
+        sponsors = SponsorLogo.objects.all()
+        context = {
+            'sponsors':sponsors,
+            "clubdetails":clubdetails,
+            "matchlist1":matchlist1,
+            "matchlist2":matchlist2
 
+            
+        }
+        return render(request, 'single-club.html', context)
+    else:
+        sponsors = SponsorLogo.objects.all()
+        context = {
+            'sponsors':sponsors,
+            
+        }
+        return render(request, 'single-club.html', context)
 
 def reserve_senior(request):
     sponsors = SponsorLogo.objects.all()
