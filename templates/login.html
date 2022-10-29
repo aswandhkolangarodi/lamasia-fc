@@ -1,0 +1,63 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-wrap">
+        <img src="{% static 'images/New3.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title mb-17"> Login </h1>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Login</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                
+</div>
+
+
+ <div id="rs-my-account" class="rs-my-account pt-100 md-pb-80 md-pt-80">
+    <div class="container">
+        <div class="row pb-100 md-pb-72">
+          
+            <div class="col-lg-6">
+                <div class="login-side">
+                    <div class="sec-title">
+                        <h2 class="title">Login</h2>
+                    </div>
+                    <form class="login-form" method="post">
+                        {% csrf_token %}
+                        <label class="input-label">Username  <span>*</span></label>
+                        <input class="input-control" type="text" name="username" required>
+                        <label class="input-label">Password <span>*</span></label>
+                        <input class="input-control" type="password" name="password" required>
+                        <div class="login-control">
+                            <button type="submit" class="readon">Login</button>
+                            
+                        </div>
+                        <a class="psw-recover" href="/userregistration">Register New Account</a>
+                    </form>
+                    {{msg}}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="{% static 'images/about/about-inner4.jpeg' %}" alt="">
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Subscribe Section Start -->
+      
+        <!-- Subscribe Section End -->
+    </div>
+</div>
+{% endblock %}

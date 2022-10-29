@@ -709,67 +709,21 @@
             <span class="line-bg y-b pt-10"></span>
         </div>
         <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
-          
+            {% for i in products %}
             <div class="products">
                 <div class="product-img">
-                    <a href="/productsingle/2"><img src="{% static 'images/products/2.png' %}" alt=""></a>
+                    <a href="/productsingle/{{i.id}}"><img src="{{i.product_image.crop.220x211}}" alt=""></a>
                 </div>
-                <h4 class="product-title"><a href="#">T-shirt Pet Yellow</a></h4>
+                <h4 class="product-title"><a href="#">{{i.category.category_name}}</a></h4>
                 <span class="product-price">
-                    <span class="symbol">£</span>65.00
+                    <span class="symbol">RS</span> {{i.price}}
                 </span>
                 <div class="cart-button">
                     <a href="/cart"><i class="flaticon-basket"></i></a>
                 </div>
             </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="/productsingle/2"><img src="{% static 'images/products/3.png' %}" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Dark Green</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="/cart"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="/productsingle/2"><img src="{% static 'images/products/4.png' %}" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Creem Pink</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="/cart"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="/productsingle/2"><img src="{% static 'images/products/5.png' %}" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">T-shirt Drak Blue</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="/cart"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
-            <div class="products">
-                <div class="product-img">
-                    <a href="/productsingle/2"><img src="{% static 'images/products/6.png' %}" alt=""></a>
-                </div>
-                <h4 class="product-title"><a href="#">Sports Back Cap</a></h4>
-                <span class="product-price">
-                    <span class="symbol">£</span>65.00
-                </span>
-                <div class="cart-button">
-                    <a href="/cart"><i class="flaticon-basket"></i></a>
-                </div>
-            </div>
+            {% endfor %}
+            
             
         </div>
         <div class="read-btn text-center" style="margin-top: -57px; margin-bottom: 10px;">

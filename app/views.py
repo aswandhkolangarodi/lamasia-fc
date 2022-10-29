@@ -1,13 +1,15 @@
-from django.shortcuts import render
-
-from app.models import AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
+from django.shortcuts import render,redirect
+from django.contrib.auth import authenticate, get_user_model, login, logout
+from app.models import LeagueMatchesPoint, Leagueteam,League,LeagueMatches, Customer, AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
 from datetime import date, datetime
 from django.db.models import Q
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
  # Create your views here.
 
 
 def index(request):
+    print(request.user)
     banner1=Banner.objects.all()
     # banner2=Banner.objects.all().last()
     print(datetime.now())
@@ -231,7 +233,7 @@ def shop(request):
     }
     return render(request, 'shop.html', context)
 
-
+@login_required(login_url="/login")
 def cart(request):
     sponsors = SponsorLogo.objects.all()
     context = {
@@ -337,10 +339,14 @@ def league(request):
 def productsingle(request,id):
     sponsors = SponsorLogo.objects.all()
     product= Product.objects.get(id=id)
+    # print(product.category.category_name)
+    relatedproducts=Product.objects.filter(category__category_name=product.category.category_name)
+    # print(relatedproducts)
     context = {
         'is_productsingle':True,
         "sponsors":sponsors,
-        "product":product
+        "product":product,
+        "relatedproducts":relatedproducts
     }
     return render(request, 'productsingle.html', context)
 
@@ -369,10 +375,52 @@ def productsell(request):
 
 
 
-def singleleaguedetails(request):
+def singleleaguedetails(request,name):
     sponsors = SponsorLogo.objects.all()
+    leagueteam=Leagueteam.objects.all()
+    leagues= League.objects.get(title=name)
+
+    matchfixture=LeagueMatches.objects.filter(league=leagues,completed=False)
+    completedmatch=LeagueMatches.objects.filter(league=leagues,completed=True).order_by('id')[:3]
+    pointtable= LeagueMatchesPoint.objects.filter(league=leagues)
+    # print(pointtable,"@"*10)
+    class calculationpoints:
+        def __init__(self, team,pic, match, win,lose,draw,goalscore,goalgained,goaldifference,totalpoint):
+            self.team = team
+            self.pic = pic
+            self.match = match
+            self.win = win
+            self.lose = lose
+            self.draw = draw
+            self.goalscore = goalscore
+            self.goalgained = goalgained
+            self.goaldifference = goaldifference
+            self.totalpoint = totalpoint
+
+    pointlist = []
+    for i in pointtable:
+        team =i.team.team
+        pic =i.team.teamlogo
+        match=i.match
+        win=i.win
+        lose=i.lose
+        draw=i.draw
+        goalscore=i.goalscore
+        goalgained=i.goalgained
+        goaldifference=goalscore-goalgained
+        totalpoint =(win*3)+(draw*1)+(lose*0)
+
+        pointlist.append(calculationpoints(team, pic, match,win,lose,draw, goalscore,goalgained, goaldifference,totalpoint ))
+            
+
+
     context = {
         "sponsors":sponsors,
+        "name":name,
+        "leagueteam":leagueteam,
+        "matchfixture":matchfixture,
+        "completedmatch":completedmatch,
+        "pointlist":pointlist
         
     }
     return render(request, 'singleleaguedetails.html', context)
@@ -385,9 +433,14 @@ def userregistration(request):
         username=request.POST['username']
         password=request.POST['password']
         pin=request.POST['pin']
+        phone=request.POST['phone']
         city=request.POST['city']
         address=request.POST['address']
-
+        reguser = Customer(name=name, username=username, phone=phone, email=email, password=password, place=place, city=city, address=address, pin=pin, status="Not Seen")
+        reguser.save()
+        User = get_user_model()
+        User.objects.create_user(username=username, password=password,customer=reguser)
+        return redirect('/')
 
 
     else:
@@ -398,3 +451,24 @@ def userregistration(request):
         }
         return render(request, 'userregistration.html', context)
 
+
+def login_user(request):
+    if request.method == "POST":
+        username=request.POST['username']
+        password=request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            if user.is_superuser == True:
+                return redirect('/')
+            elif user.customer !=None:
+                return redirect('/')
+        else:
+            msg = "* Incorrect Username or password *"
+            return render(request,'login.html',{'msg':msg,})
+
+    return render(request, 'login.html')
+
+def logout_user(request):
+    logout(request)
+    return redirect('/')

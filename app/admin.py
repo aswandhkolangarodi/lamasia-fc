@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import AccademyFee, Customer,Award, Banner, Contact, Gallery, LatestNews, Matche,LastMatchHighlight, Product, ProductCategory,BoardManagement, SponsorLogo,TeamPlayer,Tournament,Registration,OrderList
+from app.models import *
 # Register your models here.
 
 
@@ -86,3 +86,31 @@ admin.site.register(Customer,Customers)
 
 
 
+admin.site.register(User)
+
+class Leagues(admin.ModelAdmin):
+    model = League
+    list_display = ['title']
+admin.site.register(League,Leagues)
+
+class Leagueteams(admin.ModelAdmin):
+    model = Leagueteam
+    list_display = ['team']
+admin.site.register(Leagueteam,Leagueteams)
+
+
+
+class LeagueMatchess(admin.ModelAdmin):
+    model = LeagueMatches
+    list_display = ['team1','team2','league']
+    search_fields=('team1','team2','league')
+admin.site.register(LeagueMatches,LeagueMatchess)
+
+
+
+
+class LeagueMatchesPoints(admin.ModelAdmin):
+    model = LeagueMatchesPoint
+    list_display = ['league','team','match','win','lose','draw']
+    search_fields=('team','league')
+admin.site.register(LeagueMatchesPoint,LeagueMatchesPoints)

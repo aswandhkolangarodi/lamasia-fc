@@ -1,4 +1,5 @@
 from email.policy import default
+
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.db import models
 from datetime import  date, datetime
@@ -270,3 +271,51 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
    
+class League(models.Model):
+    choices = (
+        ("999 FOOTBALL LEAGUE", "999 FOOTBALL LEAGUE"),
+        ("GEDEXO KERALA SUPER LEAGUE", "GEDEXO KERALA SUPER LEAGUE"),
+        ("IMPEX SUPER CUP", "IMPEX SUPER CUP"),
+    )
+    title= models.CharField(max_length=75,  choices=choices)
+    def __str__(self):
+        return self.title
+
+class Leagueteam(models.Model):
+    team =models.CharField(max_length=100)
+    teamlogo = VersatileImageField(upload_to='team logo/', null=True)
+    def __str__(self):
+        return self.team
+   
+
+class LeagueMatches(models.Model):
+    league=models.ForeignKey(League, on_delete=models.CASCADE, null=True)
+    team1 = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True,related_name='team1')
+    team2 = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True,related_name='team2')
+    match_date = models.DateTimeField(null=True)
+    stadium  = models.CharField(max_length=200)
+    team1_goals = models.CharField(max_length=100, null=True, default="0")
+    team2_goals = models.CharField(max_length=100, null=True, default="0")
+    completed = models.BooleanField(default=False)
+    # def __str__(self):
+    #     return self.team1.team
+
+    
+class LeagueMatchesPoint(models.Model):
+    league=models.ForeignKey(League, on_delete=models.CASCADE, null=True)
+    team = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    match= models.IntegerField(default=0)
+    win= models.IntegerField(default=0)
+    lose= models.IntegerField(default=0)
+    draw= models.IntegerField(default=0)
+    goalscore= models.IntegerField(default=0)
+    goalgained= models.IntegerField(default=0)
+
+
+
+
+
+
+
+
+

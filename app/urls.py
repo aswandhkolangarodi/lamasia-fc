@@ -28,8 +28,10 @@ urlpatterns = [
     path('league', views.league, name='league'),
     path('productsingle/<int:id>', views.productsingle, name='productsingle'),
     path('productsell', views.productsell, name='productsell'),
-    path('singleleaguedetails', views.singleleaguedetails, name='singleleaguedetails'),
+    path('singleleaguedetails/<str:name>', views.singleleaguedetails, name='singleleaguedetails'),
     path('userregistration', views.userregistration, name='userregistration'),
+    path('login', views.login_user, name='login'),
+    path('logout', views.logout_user, name='logout'),
     
 
 ]
