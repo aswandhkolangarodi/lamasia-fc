@@ -227,8 +227,10 @@ def gallery(request):
 
 def shop(request):
     sponsors = SponsorLogo.objects.all()
+    product=Product.objects.all()
     context = {
         'sponsors':sponsors,
+        "product":product
         
     }
     return render(request, 'shop.html', context)
