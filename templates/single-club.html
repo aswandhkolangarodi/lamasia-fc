@@ -9,7 +9,7 @@
                 <div class="breadcrumbs-inner vertical-middle">
                     <div class="container">
                         <div class="breadcrumbs-text">
-                            <h1 class="breadcrumbs-title margin-0">ABC Club</h1>
+                            <h1 class="breadcrumbs-title margin-0">{{clubdetails.club.team}}</h1>
                         </div>
                     </div>
                 </div>
@@ -18,8 +18,10 @@
         <!-- Breadcrumbs Section End -->
 
         <!-- Single Club Section Start -->
-        <div class="rs-single-club sec-bg md-pb-80">
+        <div class="rs-single-club sec-bg md-pb-80" style="margin-top: 20px;">
             <div class="container">
+                <!-- {% if completematch == 1 %}
+                {% else %}
                 <div class="rs-match-result style1 modify-style fly-box">
                     <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="1" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="1" data-md-device-nav="true" data-md-device-dots="false">
                         
@@ -75,7 +77,65 @@
                         {% endfor %}
                        
                     </div>
-                </div>
+                </div>  
+                {% endif %} -->
+                <div class="rs-match-result style1 modify-style fly-box">
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="1" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="1" data-md-device-nav="true" data-md-device-dots="false">
+                        
+                        {% for i in matchlist2 %}
+                        <div class="items">
+                            <a href="#">
+                                <div class="vanues">
+                                    <div class="date">{{i.match_date}}</div>
+                                </div>
+                                <div class="teams">
+                                    <div class="logo">
+                                        <img class="size-80" src="{{i.team1.teamlogo.url}}" alt="{{i.team1.team }}">
+                                        <div class="name">{{i.team1.team }}</div>
+                                    </div>
+                                    <div class="time-vs">
+                                        <span class="vs">vs</span>
+                                    </div>
+                                    <div class="logo">
+                                        <img class="size-80" src="{{i.team2.teamlogo.url}}" alt="{{i.team2.team }}">
+                                        <div class="name">{{i.team2.team }}</div>
+                                    </div>
+                                </div>
+                                <div class="vanues">
+                                    <div class="stadium"><span>Venue:</span>{{i.stadium}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                        {% for i in matchlist1 %}
+                        <div class="items">
+                            <a href="#">
+                                <div class="vanues">
+                                    <div class="date">{{i.match_date}}</div>
+                                </div>
+                                <div class="teams">
+                                    <div class="logo">
+                                        <img class="size-80" src="{{i.team1.teamlogo.url}}" alt="{{i.team1.team }}">
+                                        <div class="name">{{i.team1.team }}</div>
+                                    </div>
+                                    <div class="time-vs">
+                                        <span class="vs">vs</span>
+                                    </div>
+                                    <div class="logo">
+                                        <img class="size-80" src="{{i.team2.teamlogo.url}}" alt="{{i.team2.team }}">
+                                        <div class="name">{{i.team2.team }}</div>
+                                    </div>
+                                </div>
+                                <div class="vanues">
+                                    <div class="stadium"><span>Venue:</span>{{i.stadium}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                       
+                    </div>
+                </div>  
+                
                 <div class="row pt-100 md-pt-80">
                     <div class="col-lg-3 col-md-12 md-mb-30">
                         <div class="club-logo text-center">
@@ -156,219 +216,91 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="club-history">
                                 <div class="about-club ">
-                                    <p><img class="alignright" src=" {{clubdetails.bannerpic.crop.220x311}}" alt="">
-                                        {{clubdetails.about|safe}}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p> {{clubdetails.about|safe}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="alignright" src=" {{clubdetails.bannerpic.url}}" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- <p>
+                                        {{clubdetails.about|safe}} -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="squad-list">
                                 <div class="squad-list">
                                     <div class="row">
+                                        {% for i in players %}
                                         <div class="col-xl-3 col-lg-4 col-md-6 lg-mb-30">
                                             <div class="squad-list-item">
-                                                <a href="team-single.html">
-                                                    <img src="{% static 'images/team/3.jpg' %}" alt="">
+                                                <a >
+                                                    <img src="{{i.photo.url}}" alt="">
                                                 </a>
                                                 <div class="name">
-                                                    <a href="team-single.html">Debasti Nikor</a>
+                                                    <a >{{i.name}}</a>
                                                 </div>
-                                                <div class="position">Defender</div>
-                                                <div class="jersy">11</div>
+                                                <div class="position">{{i.position}}</div>
+                                                <div class="jersy">{{i.kit_number}}</div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 lg-mb-30">
-                                            <div class="squad-list-item">
-                                                <a href="team-single.html">
-                                                    <img src="{% static 'images/team/5.jpg' %}" alt="">
-                                                </a>
-                                                <div class="name">
-                                                    <a href="team-single.html">Ores Luperto</a>
-                                                </div>
-                                                <div class="position">Forward</div>
-                                                <div class="jersy">06</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 sm-mb-30">
-                                            <div class="squad-list-item">
-                                                <a href="team-single.html">
-                                                    <img src="{% static 'images/team/7.jpg' %}" alt="">
-                                                </a>
-                                                <div class="name">
-                                                    <a href="team-single.html">Fernando Grape</a>
-                                                </div>
-                                                <div class="position">Forward</div>
-                                                <div class="jersy">12</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6">
-                                            <div class="squad-list-item">
-                                                <a href="team-single.html">
-                                                    <img src="{% static 'images/team/8.jpg' %}" alt="">
-                                                </a>
-                                                <div class="name">
-                                                    <a href="team-single.html">Alex Grape</a>
-                                                </div>
-                                                <div class="position">Forward</div>
-                                                <div class="jersy">19</div>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="champion">
                                 <div class="club-awards">
                                     <div class="row">
+                                        {% for i in awards %}
                                         <div class="col-xl-3 col-lg-4 col-md-6 lg-mb-30">
                                             <div class="award-wrap">
                                                 <div class="champion-logo">
-                                                    <img src="{% static 'images/award/1.png' %}" alt="Award">
+                                                    <img src="{{i.photo.crop.247x323}}" alt="Award">
                                                 </div>
                                                 <div class="champion-details">
                                                     <div class="year-details">
-                                                        <h4 class="title mb-17">UEFA Champions League</h4>
-                                                        <span>2002 2008 2013 2017</span>
+                                                        <h4 class="title mb-17">{{i.awardname}}</h4>
+                                                        <span>{{i.year}}</span>
                                                     </div>
-                                                    <div class="champion-no">5</div>
+                                                    {% comment %} <div class="champion-no">5</div> {% endcomment %}
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 lg-mb-30">
-                                            <div class="award-wrap">
-                                                <div class="champion-logo">
-                                                    <img src="{% static 'images/award/2.png' %}" alt="Award">
-                                                </div>
-                                                <div class="champion-details">
-                                                    <div class="year-details">
-                                                        <h4 class="title mb-17">UEFA Europa League</h4>
-                                                        <span>1971–72 1983–84 1985–86 1992–93 1994–95</span>
-                                                    </div>
-                                                    <div class="champion-no">7</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 sm-mb-30">
-                                            <div class="award-wrap">
-                                                <div class="champion-logo">
-                                                    <img src="{% static 'images/award/3.png' %}" alt="Award">
-                                                </div>
-                                                <div class="champion-details">
-                                                    <div class="year-details">
-                                                        <h4 class="title mb-17">UEFA Super Cup</h4>
-                                                        <span>1998 2000 2002 2007 2010 2013</span>
-                                                    </div>
-                                                    <div class="champion-no">6</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6">
-                                            <div class="award-wrap">
-                                                <div class="champion-logo">
-                                                    <img src="{% static 'images/award/4.png' %}" alt="Award">
-                                                </div>
-                                                <div class="champion-details">
-                                                    <div class="year-details">
-                                                        <h4 class="title mb-17">FIFA Club World Cup</h4>
-                                                        <span>1998 2002 2014</span>
-                                                    </div>
-                                                    <div class="champion-no">3</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      {% endfor %}
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="gallery">
                                 <div class="club-gallery">
                                     <div class="row">
+                                        {% for i in gallery %}
                                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-30">
                                             <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/1.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/1.jpg' %}">
+                                                <img src="{{i.photo.crop.400x400}}" alt="">
+                                                <a class="image-popup" href="{{i.photo.url}}">
                                                     <i class="flaticon-add-circular-button"></i>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/2.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/2.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/3.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/3.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/4.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/4.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 lg-mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/5.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/5.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 lg-mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/6.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/6.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 sm-mb-30">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/7.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/7.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="gallery-wrap">
-                                                <img src="{% static 'images/gallery/tab/8.jpg' %}" alt="">
-                                                <a class="image-popup" href="{% static 'images/gallery/tab/8.jpg' %}">
-                                                    <i class="flaticon-add-circular-button"></i>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="jersy">
                                 <div class="club-jersy">
                                     <div class="row">
+                                        {% for i in jersey %}
                                         <div class="col-lg-4 col-md-6 sm-mb-30">
                                             <div class="champion-logo">
-                                                <img src="{% static 'images/jersy/1.jpg' %}" alt="jersy">
+                                                <img src="{{i.photo.crop.400x400}}" alt="jersy">
                                             </div>
                                             <div class="champion-details">
                                                 <div class="year-details">
-                                                    <h3>Home Kit (2018-19)</h3>
+                                                    <h3>{{i.title}}</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="champion-logo">
-                                                <img src="{% static 'images/jersy/2.jpg' %}" alt="jersy">
-                                            </div>
-                                            <div class="champion-details">
-                                                <div class="year-details">
-                                                    <h3>Away Kit (2018-19)</h3>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       {% endfor %}
                                     </div>
                                 </div>
                             </div>

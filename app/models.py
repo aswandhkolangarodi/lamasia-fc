@@ -1,4 +1,5 @@
 from email.policy import default
+from itertools import product
 from tinymce.models import HTMLField
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.db import models
@@ -156,6 +157,7 @@ class ProductCategory(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, null=True)
+    productname = models.CharField(max_length=500 ,null=True, blank=True)
     product_image = VersatileImageField(upload_to='products/', null=True)
     price = models.IntegerField()
     description = models.CharField(max_length=500 ,null=True, blank=True)
@@ -221,24 +223,6 @@ class Registration(models.Model):
         return self.name
 
 
-
-class OrderList(models.Model): 
-    choices = (
-        ("Not Seen", "Not Seen"),
-        ("Seen", "Seen"),
-        ("Called", "Called"),
-        ("Completed", "Completed"),
-    )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
-    name = models.CharField(max_length=100, null=True,blank=True)
-    contactnum = models.CharField(null=True,blank=True,max_length=15)
-    place = models.CharField(null=True,blank=True,max_length=155)
-    pin = models.CharField(null=True,blank=True,max_length=155)
-    Address = models.CharField(null=True,blank=True,max_length=155)
-    size = models.CharField(null=True,blank=True,max_length=155)
-    quantity = models.IntegerField()
-    totalprice = models.IntegerField()
-    status= models.CharField(max_length=15,  choices=choices)
 
 
 class Customer(models.Model):
@@ -326,8 +310,60 @@ class ClubDetails(models.Model):
     bannerpic = VersatileImageField(upload_to='banner pic/', null=True)
 
 
+class ClubPlayer(models.Model):
+    choices = [
+        ('GOALKEEPER','Goal Keeper'),
+        ('LEFT_BACK','Left Back'),
+        ('RIGHT_BACK','Right Back'),
+        ('DEFENSIVE_MIDFIELDER','Defensive Midfielder'),
+        ('ATTACKING_MIDFIELDER','Attacking Midfielder'),
+        ('CENTER_MIDFIELDER','Center Midfielder'),
+        ('LEFT_WING_FORWARD','Left Wing Forward'),
+        ('RIGHT_WING_FORWARD','Right Wing Forward'),
+        ('CENTER_FORWARD','Center Forward')
+    ]
+    club = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    name = models.CharField(max_length=100)
+    photo = VersatileImageField("clubplayers",upload_to='clubplayers/', null=True)
+    kit_number = models.IntegerField()
+    position = models.CharField(choices=choices, max_length=100)
+    def __str__(self):
+        return self.name
+
+class ClubAward(models.Model):
+    club = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    awardname = models.CharField(max_length=100)
+    photo = VersatileImageField("clubplayers",upload_to='clubplayers/', null=True)
+    year=models.CharField(max_length=100)
+    def __str__(self):
+        return self.awardname
+
+class ClubGallery(models.Model):
+    club = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    photo = VersatileImageField("clubgallery",upload_to='clubgallery/', null=True)
+    
+
+class ClubJersy(models.Model):
+    club = models.ForeignKey(Leagueteam, on_delete=models.CASCADE, null=True)
+    photo = VersatileImageField("clubjersy",upload_to='clubjersy/', null=True)
+    title = models.CharField(max_length=100)
 
 
 
 
+class CartIteams(models.Model):
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE, null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+    qty=models.IntegerField(default=0)
+    total=models.IntegerField(default=0)
+    # def __str__(self):
+    #     return self.user
 
+class Order(models.Model):
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE, null=True)
+    date=models.DateField(auto_now=True)
+
+class OrderList(models.Model): 
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
+    totalprice = models.IntegerField()
+    status= models.CharField(max_length=15,  default="Not Paid")

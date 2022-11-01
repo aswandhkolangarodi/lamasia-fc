@@ -150,16 +150,23 @@
                     <p style="color: red;" class="title-color"> Rs {{product.price}}</p>
 
                 </div>
-                <div class="slider-btn text-end">
-                    <a href="/cart" class="readon" style="color: white;">Add To Cart</a>
-                    {% comment %} <a data-target="#register" data-toggle="modal" class="readon" style="color: white;">Buy Now</a> {% endcomment %}
+                <div class="about-wrap">
+                    <span style="font-size: 20px; font-weight: 700; ">Quantity</span>
+                    <input type="number" id="qty" required class="form-control">
+                    <p style="color: red;" id="msg"></p>
+
+                </div>
+                <div class="slider-btn text-end" style="margin-top: 10px;">
+                    <a onClick="AddCart({{product.id}})" class="readon" style="color: white;">Add To Cart</a>
+                    {% comment %} <a data-target="#register" data-toggle="modal" class="readon"
+                        style="color: white;">Buy Now</a> {% endcomment %}
                 </div>
 
             </div>
         </div>
     </div>
 </div>
-    
+
 
 
 <div class="rs-products nav-style ">
@@ -168,8 +175,13 @@
             <h2 class="margin-0 uppercase">Related Products</h2>
             <span class="line-bg y-b pt-10"></span>
         </div>
-        <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
-          
+        <div class="rs-carousel owl-carousel mb-100 md-mb-80" data-loop="true" data-items="4" data-margin="30"
+            data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true"
+            data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
+            data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
+            data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true"
+            data-md-device-dots="false">
+
             {% for i in relatedproducts %}
             <div class="products">
                 <div class="product-img">
@@ -179,19 +191,19 @@
                 <span class="product-price">
                     <span class="symbol">RS</span> {{i.price}}
                 </span>
-                <div class="cart-button">
+                {% comment %} <div class="cart-button">
                     <a href="/cart"><i class="flaticon-basket"></i></a>
-                </div>
+                </div> {% endcomment %}
             </div>
             {% endfor %}
-            
+
         </div>
         <div class="read-btn text-center" style="margin-top: -57px;">
             <a class="readon"
                 style="background-image: linear-gradient(to right, #ea950b 0%, #d2202e 51% , #ea950b 100% ); color: white;"
                 href="/shop">View more</a>
         </div>
-       
+
     </div>
 </div>
 
@@ -204,7 +216,7 @@
                 <i class="fa fa-times fa-2x"></i>
             </div>
             <div class="container-fluid mt-5">
-                <form  id="ProductBuy"  >
+                <form id="ProductBuy">
                     {% csrf_token %}
                     <div class="form-group text-center pb-2">
                         <h4>Buy Product</h4>
@@ -212,57 +224,63 @@
                     <div class="form-row">
                         <div class="form-group col">
                             <label for="name">Name</label><span style="color: red;">*</span>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name"
+                                required>
                         </div>
                         <div class="form-group col">
                             <label>Place</label><span style="color: red;">*</span>
-                            <input type="text" name="place" class="form-control" placeholder="Enter Your Place" required>
+                            <input type="text" name="place" class="form-control" placeholder="Enter Your Place"
+                                required>
                         </div>
                     </div>
-                    
+
                     <div class="form-row mb-1">
                         <div class="form-group col">
                             <label>Contact Number</label><span style="color: red;">*</span>
-                            <input type="number" name="contactnum" required class="form-control" placeholder="Enter Your Number">
+                            <input type="number" name="contactnum" required class="form-control"
+                                placeholder="Enter Your Number">
 
                         </div>
                         <div class="form-group col">
                             <label>Pin Code</label><span style="color: red;">*</span>
-                            <input type="text" name="pin" class="form-control" placeholder="Enter Your Pincode" required>
+                            <input type="text" name="pin" class="form-control" placeholder="Enter Your Pincode"
+                                required>
                             <input type="hidden" name="id" value={{product.id}} class="form-control">
 
                         </div>
                     </div>
-                    
-                   
+
+
                     <div class="form-row mb-1">
                         <div class="form-group col">
                             <label>Address</label><span style="color: red;">*</span>
-                            <textarea name="Address" required id="" class="form-control"cols="20" rows="4"></textarea>
+                            <textarea name="Address" required id="" class="form-control" cols="20" rows="4"></textarea>
 
                         </div>
-                        
+
                     </div>
                     <div class="form-row mb-1">
                         <div class="form-group col">
                             <label>Size</label>
-                            <input type="text"  name="size" class="form-control" placeholder="Enter Your size">
+                            <input type="text" name="size" class="form-control" placeholder="Enter Your size">
 
                         </div>
                         <div class="form-group col">
                             <label>Quantity</label><span style="color: red;">*</span>
-                            <input type="text" onchange="changeqty()" name="quantity" id="qty"  class="form-control" placeholder="Enter Your Quantity" required>
+                            <input type="text" onchange="changeqty()" name="quantity" id="qty" class="form-control"
+                                placeholder="Enter Your Quantity" required>
                         </div>
                     </div>
                     <div class="form-row mb-1">
                         <div class="form-group col">
                             <label>Price</label>
-                            <input type="number" readonly  name="price" id="unitprice" value="{{product.price}}" class="form-control" >
+                            <input type="number" readonly name="price" id="unitprice" value="{{product.price}}"
+                                class="form-control">
 
                         </div>
                         <div class="form-group col">
                             <label>Total Price</label>
-                            <input type="text" readonly name="totalprice" id="Grandtotal" class="form-control"  >
+                            <input type="text" readonly name="totalprice" id="Grandtotal" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -274,54 +292,7 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
-    function changeqty(){
-        var qty = $("#qty").val()
-        var unitprice = $("#unitprice").val()
-        sum= qty*unitprice
-        $("#Grandtotal").val(sum)
-        // Grandtotal
-        // alert(sum)
-    }
-
-
-
-    $(document).ready(function () {
-        $("#ProductBuy").submit(function (e) {
-            // var data = $("#categorysave").serializeArray();
-            var formData = new FormData(e.target);
-            console.log(formData)
-            e.preventDefault();
-            console.log(formData)
-            $.ajax({
-                url: "/registration",
-                type: "POST",
-                data: formData,
-                contentType: false,
-                processData: false,
-                cache: false,
-                success: function (responce) {
-                    Swal.fire({
-                        position: 'top-center',
-                        icon: 'success',
-                        title: 'Your Registration Has Been Completed',
-                        showConfirmButton: false,
-                        timer: 3000
-                      })
-                      setInterval('location.reload()', 3000);   
-                 
-                }
-                
-            });
-
-        });
-        return false;
-
-    });
-       
-</script>
 
 
 {% endblock %}
@@ -332,17 +303,43 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+
 <script>
-    function changeqty(){
+    function changeqty() {
         var qty = $("#qty").val()
         var unitprice = $("#unitprice").val()
-        sum= qty*unitprice
+        sum = qty * unitprice
         $("#Grandtotal").val(sum)
         // Grandtotal
         // alert(sum)
     }
 
+    function AddCart(id) {
+        qty = $("#qty").val()
+        if (qty != "") {
+            $.ajax({
+                url: "/addtocart",
+                type: 'POST',
+                data: {
+                    'id': id,
+                    "qty": $("#qty").val()
 
+                },
+
+                success: function (responce) {
+
+                    location.href = '/cart'
+
+                }
+
+            })
+        }
+        else{
+            $("#msg").html('This Field is Requried')
+        }
+
+    }
 
     $(document).ready(function () {
         $("#ProductBuy").submit(function (e) {
@@ -365,17 +362,20 @@
                         title: 'Your Registration Has Been Completed Our Team Will Contact To You Within Few Days',
                         showConfirmButton: false,
                         timer: 3000
-                      })
-                      setInterval('window.location.href="/"', 3000);   
-                 
+                    })
+                    setInterval('window.location.href="/"', 3000);
+
                 }
-                
+
             });
 
         });
         return false;
 
     });
-       
+
+
+
+
 </script>
 {% endblock %}

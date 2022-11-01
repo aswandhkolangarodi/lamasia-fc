@@ -49,25 +49,21 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for i in cartitems%}
                         <tr>
-                            <td class="product-remove"><a href="#">×</a></td>
-                            <td class="product-thumbnail"><a href="#"><img src="{% static 'images/products/6.png' %}" alt=""></a></td>
-                            <td class="product-name"><a href="#">Sports Back Cap</a></td>
-                            <td class="product-price"><span>£</span>65.00</td>
-                            <td class="product-quantity"><input type="number" class="input-text" step="1" min="0" max=""
-                                    value="1" pattern="[0-9]*"></td>
-                            <td class="subtotal"><span class="amount"><span class="symbol">£</span>65.00</span></td>
+                            <td class="product-remove"><a onclick="DeleteItem({{i.product.id}})">×</a></td>
+                            <td class="product-thumbnail"><a href="#"><img src="{{i.product.product_image.url}}"
+                                        alt=""></a></td>
+                            <td class="product-name"><a href="#">{{ i.product.productname}}</a></td>
+                            <td class="product-price"><span>£</span><span id="price{{i.id}}">{{ i.product.price}}</span>
+                            </td>
+                            <td class="product-quantity"><input type="number" id="qty{{i.id}}"
+                                    onchange="changeqty({{i.id}})" class="input-text" step="1" min="0" max="" value="{{i.qty}}"
+                                    pattern="[0-9]*"></td>
+                            <td class="subtotal"><span class="amount"><span class="symbol">RS </span> <span>{{i.total}}</span> </span></td>
                         </tr>
-                        <tr>
-                            <td class="product-remove"><a href="#">×</a></td>
-                            <td class="product-thumbnail"><a href="#"><img src="{% static 'images/products/1.png' %}" alt=""></a></td>
-                            <td class="product-name"><a href="#">T-shirt Lol Red</a></td>
-                            <td class="product-price"><span>£</span>65.00</td>
-                            <td class="product-quantity"><input type="number" class="input-text" step="1" min="0" max=""
-                                    value="1" pattern="[0-9]*"></td>
-                            <td class="subtotal"><span class="amount"><span class="symbol">£</span>65.00</span></td>
-                        </tr>
-                        <tr>
+                        {% endfor %}
+                        <!-- <tr>
                             <td colspan="6" class="action text-right">
                                 <div class="coupon">
                                     <form>
@@ -79,7 +75,7 @@
                                     <a href="#" class="readon">Update cart</a>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </form>
@@ -88,21 +84,71 @@
                     <h5 class="title mb-25">Cart totals</h5>
                     <table class="cart-total-table">
                         <tbody>
-                            <tr class="cart-subtotal">
+                            <!-- <tr class="cart-subtotal">
                                 <th>Subtotal</th>
                                 <td><span class="amount"><span>£</span>130.00</span></td>
-                            </tr>
+                            </tr> -->
                             <tr class="order-total">
                                 <th>Total</th>
-                                <td><strong><span class="amount"><span>£</span>130.00</span></strong></td>
+                                <td><strong><span class="amount"><span>£</span><span >{{totalAmonut}}</span></span></strong>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="wc-proceed-to-checkout">
-                        <a href="#" class="readon d-block"> Proceed to checkout</a>
+                        <a onclick="SaveAndProceed()" class="readon d-block text-white"> Proceed to checkout</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<script>
+    // function changeqty(id) {
+    //     var completeTotal = 0
+    //     var qty = $("#qty" + id).val()
+    //     price = $("#price" + id).html()
+    //     sum = qty * price
+    //     $("#Grandtotal" + id).html(sum)
+    //     var total = $("#total").html()
+    //     completeTotal = parseInt(total) + sum
+    //     $("#total").html(completeTotal)
+    // }
+    function DeleteItem(id){
+        $.ajax({
+            url: "/deletecartitem",
+            type: 'POST',
+            data: {
+                'id': id,
 
-        {% endblock %}
+            },
+
+            success: function (responce) {
+
+               location.reload()
+                
+            }
+
+        })
+    }
+
+    function SaveAndProceed(){
+        $.ajax({
+            url: "/savedata",
+            type: 'GET',
+            // data: {
+            //     'id': id,
+
+            // },
+
+            success: function (responce) {
+
+               location.reload()
+                
+            }
+
+        })
+    }
+</script>
+
+{% endblock %}

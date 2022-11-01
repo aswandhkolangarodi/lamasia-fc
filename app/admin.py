@@ -71,11 +71,7 @@ class Registrations(admin.ModelAdmin):
 admin.site.register(Registration,Registrations)
 
 
-class OrderLists(admin.ModelAdmin):
-    model = OrderList
-    list_display = ['name','contactnum','place']
-    search_fields=('name','contactnum','place')
-admin.site.register(OrderList,OrderLists)
+
 
 class Customers(admin.ModelAdmin):
     model = Customer
@@ -122,3 +118,44 @@ class ClubDetailss(admin.ModelAdmin):
     list_display = ['club','president']
     search_fields=('club','president')
 admin.site.register(ClubDetails,ClubDetailss)
+
+class ClubPlayers(admin.ModelAdmin):
+    model = ClubPlayer
+    list_display = ['name','club','kit_number']
+    search_fields=('name','club','kit_number')
+admin.site.register(ClubPlayer,ClubPlayers)
+
+
+
+class ClubAwards(admin.ModelAdmin):
+    model = ClubAward
+    list_display = ['awardname','club']
+    search_fields=('awardname','club')
+admin.site.register(ClubAward,ClubAwards)
+
+
+
+
+class ClubGallerys(admin.ModelAdmin):
+    model = ClubGallery
+    list_display = ['club','photo']
+    search_fields=('photo','club')
+admin.site.register(ClubGallery,ClubGallerys)
+
+
+class ClubJersys(admin.ModelAdmin):
+    model = ClubJersy
+    list_display = ['club','title']
+    search_fields=('club','title')
+admin.site.register(ClubJersy,ClubJersys)
+
+
+
+admin.site.register(CartIteams)
+
+admin.site.register(Order)
+
+class OrderLists(admin.ModelAdmin):
+    model = OrderList
+    list_display = ['order']
+admin.site.register(OrderList,OrderLists)

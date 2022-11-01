@@ -1,10 +1,12 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, get_user_model, login, logout
-from app.models import ClubDetails, LeagueMatchesPoint, Leagueteam,League,LeagueMatches, Customer, AccademyFee,OrderList, Award, Banner, BoardManagement, Contact, Gallery, LastMatchHighlight, LatestNews,Matche, Product, SponsorLogo, TeamPlayer,Registration
+from . models import *
 from datetime import date, datetime
 from django.db.models import Q
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+from django.db.models import  Sum
  # Create your views here.
 
 
@@ -112,17 +114,43 @@ def club(request,id):
         clubdetails= ClubDetails.objects.get(club=teamlist)
         matchlist1=LeagueMatches.objects.filter(team1=teamlist,completed=False)
         matchlist2=LeagueMatches.objects.filter(team2=teamlist,completed=False)
-        print(matchlist1)
+        totalmatches1=LeagueMatches.objects.filter(team1=teamlist,completed=False).count()
+        totalmatches2=LeagueMatches.objects.filter(team2=teamlist,completed=False).count()
+        completematch=totalmatches1+totalmatches2
+        print(completematch)
         sponsors = SponsorLogo.objects.all()
-        context = {
+        players = ClubPlayer.objects.filter(club=teamlist)
+        awards =ClubAward.objects.filter(club=teamlist)
+        gallery=ClubGallery.objects.filter(club=teamlist)
+        jersey=ClubJersy.objects.filter(club=teamlist)
+        if completematch <= 1:
+
+            context = {
+            'sponsors':sponsors,
+            "clubdetails":clubdetails,
+            "players":players,
+            "awards":awards,
+            "gallery":gallery,
+            "jersey":jersey,
+
+            
+            }
+            return render(request, 'single-club.html', context)
+        else:
+            context = {
             'sponsors':sponsors,
             "clubdetails":clubdetails,
             "matchlist1":matchlist1,
-            "matchlist2":matchlist2
+            "matchlist2":matchlist2,
+            "players":players,
+            "awards":awards,
+            "gallery":gallery,
+            "jersey":jersey,
 
             
         }
         return render(request, 'single-club.html', context)
+        
     else:
         sponsors = SponsorLogo.objects.all()
         context = {
@@ -254,8 +282,16 @@ def shop(request):
 @login_required(login_url="/login")
 def cart(request):
     sponsors = SponsorLogo.objects.all()
+    custid=Customer.objects.get(id=request.user.customer.id)
+    cartitems= CartIteams.objects.filter(user=custid)
+    totalvalue=cartitems.aggregate(Sum('total'))
+    totalAmonut = totalvalue['total__sum']
+    print(totalAmonut)
+  
     context = {
         'sponsors':sponsors,
+        "cartitems":cartitems,
+        "totalAmonut":totalAmonut
         
     }
     return render(request, 'cart.html', context)
@@ -490,3 +526,44 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return redirect('/')
+
+@login_required(login_url="/login")
+@csrf_exempt
+def addtocart(request):
+    id = request.POST["id"]
+    productid=Product.objects.get(id=id)
+    userid=request.user.customer
+    qty=request.POST['qty']
+    price=productid.price
+    totalmoumt= int(price) * int(qty)
+
+    addeditem=CartIteams(product=productid,user=userid,qty=qty,total=totalmoumt)
+    addeditem.save()
+    return JsonResponse({"value": "msg"})
+
+@csrf_exempt
+def deletecartitem(request):
+    id = request.POST["id"]
+    print(id)
+    productid=Product.objects.get(id=id)
+    print(productid)
+    prodelect =CartIteams.objects.filter(product=productid).delete()
+    print(prodelect)
+    return JsonResponse({"value": "msg"})
+
+
+@csrf_exempt
+def savedata(request):
+    userid=request.user.customer
+    dataorder=Order(user=userid)
+    dataorder.save()
+    print(dataorder.id)
+    orderdet=Order.objects.get(id=dataorder.id)
+    cartitems=CartIteams.objects.filter(user=userid)
+    totalvalue=cartitems.aggregate(Sum('total'))
+    totalAmonut = totalvalue['total__sum']
+    print(totalAmonut)
+    orderditem=OrderList(order=orderdet,totalprice=totalAmonut)
+    orderditem.save()
+    CartIteams.objects.filter(user=userid).delete()
+    return JsonResponse({"value": "msg"})
