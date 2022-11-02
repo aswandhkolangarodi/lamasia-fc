@@ -151,9 +151,22 @@ admin.site.register(ClubJersy,ClubJersys)
 
 
 
-admin.site.register(CartIteams)
 
-admin.site.register(Order)
+class CartIteamss(admin.ModelAdmin):
+    model = CartIteams
+    list_display = ['user','product']
+    search_fields=('user','product')
+admin.site.register(CartIteams,CartIteamss)
+
+
+
+
+
+
+class Orders(admin.ModelAdmin):
+    model = Order
+    list_display = ['user']
+admin.site.register(Order,Orders)
 
 class OrderLists(admin.ModelAdmin):
     model = OrderList

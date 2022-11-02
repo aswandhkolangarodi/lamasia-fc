@@ -103,6 +103,18 @@
                     <div class="col-lg-10 mobile-menu-area col-10">
                         <div class="rs-menu-area display-flex-center">
                             <!-- <button>jhjk</button> -->
+                            {% comment %} <span class="menu-cart-area mini-cart-active">
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="icon-num">0</span>
+                                </a>
+                                <!-- woocommerce-mini -->
+                                <div class="woocommerce-mini-cart text-left">
+                                    <div class="cart-bottom-part">
+                                        <h2 class="widget-title">No products in the cart.</h2>
+                                    </div>
+                                </div> 
+                            </span> {% endcomment %}
                             <div class="main-menu">
                                 <!-- <button>ertqwerfw</button> -->
                                 <a class="rs-menu-toggle togglewith">
@@ -110,9 +122,9 @@
 
                                 </a>
                                 
-
+                                
                                 <nav class="rs-menu">
-                                   
+                                    
                                     <ul class="nav-menu text-right">
                                         <!-- Home -->
                                         <li class="{% if is_index %} current-menu-item {% endif %}  "> <a href="/"
@@ -161,7 +173,8 @@
 
 
 
-
+                                        
+                                        
 
                                         <!-- About End -->
                                        <!-- <li class="{% if is_match %} current-menu-item {% endif %}"> <a
@@ -187,6 +200,12 @@
                                         <!--Contact Menu Start-->
                                         <li class="{% if is_contact %} current-menu-item {% endif %}"><a
                                                 href="/contact">Contact</a></li>
+                                                <li>
+                                                    <a href="/cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <span class="icon-num"></span>
+                                                    </a>
+                                                </li>
                                         <!--Contact Menu End-->
                                         <!-- <li>
                                             <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>
@@ -230,7 +249,7 @@
                                     <i style="font-size: 20px;" class="fa fa-bars" ></i>
 
                                 </a>
-                                
+                               
 
                                 <nav class="rs-menu">
                                    
@@ -309,6 +328,12 @@
                                         <!--Contact Menu Start-->
                                         <li class="{% if is_contact %} current-menu-item {% endif %}"><a
                                                 href="/contact">Contact</a></li>
+                                                <li>
+                                                    <a href="/cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <span class="icon-num"></span>
+                                                    </a>
+                                                </li>
                                         <!--Contact Menu End-->
                                         <!-- <li>
                                             <a href="/joinacademy"> <button class="button-62" role="button">Join Academy</button> </a>

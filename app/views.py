@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from . models import *
@@ -7,6 +8,14 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import  Sum
+from django.http import HttpResponseRedirect
+from django.conf import settings
+
+import stripe
+import uuid
+stripe.api_key = settings.STRIPE_PRIVATE_KEY
+
+YOUR_DOMAIN = 'http://127.0.0.1:8000'
  # Create your views here.
 
 
@@ -43,7 +52,8 @@ def index(request):
         'upComingMatch':upComingMatch,
         'banner':banner1,
         'fee':fee,
-        'is_index':True
+        'is_index':True,
+        "status":0
     }
     return render(request, "index.html", context)
     
@@ -291,7 +301,8 @@ def cart(request):
     context = {
         'sponsors':sponsors,
         "cartitems":cartitems,
-        "totalAmonut":totalAmonut
+        "totalAmonut":totalAmonut,
+        "status":0
         
     }
     return render(request, 'cart.html', context)
@@ -494,7 +505,7 @@ def userregistration(request):
         reguser.save()
         User = get_user_model()
         User.objects.create_user(username=username, password=password,customer=reguser)
-        return redirect('/')
+        return redirect('/login')
 
 
     else:
@@ -554,6 +565,54 @@ def deletecartitem(request):
 
 @csrf_exempt
 def savedata(request):
+    # userid=request.user.customer
+    # dataorder=Order(user=userid)
+    # dataorder.save()
+    # print(dataorder.id)
+    # orderdet=Order.objects.get(id=dataorder.id)
+    # cartitems=CartIteams.objects.filter(user=userid)
+    # totalvalue=cartitems.aggregate(Sum('total'))
+    # totalAmonut = totalvalue['total__sum']
+    # print(totalAmonut)
+    # orderditem=OrderList(order=orderdet,totalprice=totalAmonut)
+    # orderditem.save()
+    # CartIteams.objects.filter(user=userid).delete()
+    return JsonResponse({"value": "msg"})
+
+
+# payment
+
+@csrf_exempt
+def create_checkout_session(request):
+    userid=request.user.customer
+    cartitems=CartIteams.objects.filter(user=userid)
+    totalvalue=cartitems.aggregate(Sum('total'))
+    totalAmonut = totalvalue['total__sum']
+    print(totalAmonut)
+    amount = int(totalAmonut)
+    pmnt_id = uuid.uuid4()
+    session = stripe.checkout.Session.create(
+    payment_method_types=['card'],
+    line_items=[{
+      'price_data': {
+        'currency': 'inr',
+        'product_data': {
+          'name': "Lamasia Football",
+        },
+        'unit_amount': amount*100,
+      },
+      'quantity': 1,
+    }],
+    mode='payment',
+    success_url= f'http://127.0.0.1:8000/success',
+    cancel_url=YOUR_DOMAIN + '/cancel',
+    )     
+    print(session.get("url"))
+    return HttpResponseRedirect(session.get("url"))
+    # return JsonResponse({'id': session.id})
+
+
+def success(request):
     userid=request.user.customer
     dataorder=Order(user=userid)
     dataorder.save()
@@ -566,4 +625,16 @@ def savedata(request):
     orderditem=OrderList(order=orderdet,totalprice=totalAmonut)
     orderditem.save()
     CartIteams.objects.filter(user=userid).delete()
-    return JsonResponse({"value": "msg"})
+    context={
+        "status":1
+    }
+    return render(request, "index.html", context)
+
+
+def cancel(request):
+    context={
+        "msg":"payment is not completed",
+        "status":1
+    }
+    return render(request, 'cart.html', context)
+

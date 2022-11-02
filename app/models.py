@@ -242,7 +242,8 @@ class Customer(models.Model):
     address = models.CharField( null=True, max_length=15)
     pin = models.CharField( null=True, max_length=15)
     status= models.CharField(max_length=15,  choices=choices)
-
+    def __str__(self):
+        return self.name    
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50, unique=True)

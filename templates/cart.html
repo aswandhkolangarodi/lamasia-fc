@@ -58,9 +58,10 @@
                             <td class="product-price"><span>£</span><span id="price{{i.id}}">{{ i.product.price}}</span>
                             </td>
                             <td class="product-quantity"><input type="number" id="qty{{i.id}}"
-                                    onchange="changeqty({{i.id}})" class="input-text" step="1" min="0" max="" value="{{i.qty}}"
-                                    pattern="[0-9]*"></td>
-                            <td class="subtotal"><span class="amount"><span class="symbol">RS </span> <span>{{i.total}}</span> </span></td>
+                                    onchange="changeqty({{i.id}})" class="input-text" step="1" min="0" max=""
+                                    value="{{i.qty}}" pattern="[0-9]*"></td>
+                            <td class="subtotal"><span class="amount"><span class="symbol">RS </span>
+                                    <span>{{i.total}}</span> </span></td>
                         </tr>
                         {% endfor %}
                         <!-- <tr>
@@ -90,16 +91,28 @@
                             </tr> -->
                             <tr class="order-total">
                                 <th>Total</th>
-                                <td><strong><span class="amount"><span>£</span><span >{{totalAmonut}}</span></span></strong>
+                                <td><strong><span
+                                            class="amount"><span>£</span><span>{{totalAmonut}}</span></span></strong>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="wc-proceed-to-checkout">
-                        <a onclick="SaveAndProceed()" class="readon d-block text-white"> Proceed to checkout</a>
+                        <a href="/create-checkout-session" class="readon d-block text-white"> Proceed to checkout</a>
+
+                        {% comment %} <a onclick="SaveAndProceed()" class="readon d-block text-white"> Proceed to
+                            checkout</a> {% endcomment %}
                     </div>
                 </div>
+
+
             </div>
+            {% if status == 1 %}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+            {% else %}
+            {% endif %}
         </div>
     </div>
 </div>
@@ -114,7 +127,7 @@
     //     completeTotal = parseInt(total) + sum
     //     $("#total").html(completeTotal)
     // }
-    function DeleteItem(id){
+    function DeleteItem(id) {
         $.ajax({
             url: "/deletecartitem",
             type: 'POST',
@@ -125,14 +138,14 @@
 
             success: function (responce) {
 
-               location.reload()
-                
+                location.reload()
+
             }
 
         })
     }
 
-    function SaveAndProceed(){
+    function SaveAndProceed() {
         $.ajax({
             url: "/savedata",
             type: 'GET',
@@ -143,8 +156,8 @@
 
             success: function (responce) {
 
-               location.reload()
-                
+                location.reload()
+
             }
 
         })

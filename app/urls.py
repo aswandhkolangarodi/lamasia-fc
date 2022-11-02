@@ -36,6 +36,11 @@ urlpatterns = [
     path('deletecartitem', views.deletecartitem, name='deletecartitem'),
     path('savedata', views.savedata, name='savedata'),
     
+
+    # payment
+    path('create-checkout-session/',views.create_checkout_session, name='checkout'),
+    path('success',views.success,name='success'),
+    path('cancel/',views.cancel,name='cancel'),
     
 
 ]

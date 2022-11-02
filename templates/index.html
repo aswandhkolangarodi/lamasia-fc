@@ -782,7 +782,23 @@
 <!-- video popup modal end -->
 
 
-
+{% if status == 1 %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Your Order Has Been Completed Our Team Will Contact To You Within Few Days',
+        showConfirmButton: true,
+        timer: 6000
+        })
+        setInterval('window.location.href="/"', 3000);
+    })
+    
+</script>
+{% endif %}
 
 {% endblock %}
 
