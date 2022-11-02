@@ -58,7 +58,7 @@
                             <td class="product-price"><span>£</span><span id="price{{i.id}}">{{ i.product.price}}</span>
                             </td>
                             <td class="product-quantity"><input type="number" id="qty{{i.id}}"
-                                    onchange="changeqty({{i.id}})" class="input-text" step="1" min="0" max=""
+                                    onchange="changeqty({{i.id}})" readonly class="input-text" step="1" min="0" max=""
                                     value="{{i.qty}}" pattern="[0-9]*"></td>
                             <td class="subtotal"><span class="amount"><span class="symbol">RS </span>
                                     <span>{{i.total}}</span> </span></td>
